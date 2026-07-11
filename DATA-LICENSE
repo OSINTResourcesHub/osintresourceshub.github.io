@@ -1,0 +1,27 @@
+# Data licence — the catalog
+
+The **data** in this repository — `data/tools.json` and `data/status.json`, i.e.
+the catalog of tools, our taxonomy/tagging, and the link-health results — is
+licensed under:
+
+**Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**
+https://creativecommons.org/licenses/by-sa/4.0/
+
+You are free to share and adapt the catalog, for any purpose, provided you:
+
+- **Attribute** — credit "OSINT Resources Hub" with a link to
+  https://osintresourceshub.com, and
+- **ShareAlike** — distribute any derived catalog under the same CC BY-SA 4.0
+  terms.
+
+## What this does and does not cover
+
+- Individual **tool URLs are facts** and are not owned by anyone — they are
+  listed here for reference and each links to its origin.
+- This licence covers **our contribution**: the selection, the canonical
+  taxonomy, the tagging, provenance records, and the health data.
+- It does **not** grant rights over the third-party tools/websites themselves,
+  nor over any source collection's own structure. Sources are credited in
+  `SOURCES.md`.
+
+The **code** in this repository is under the MIT licence — see `LICENSE`.

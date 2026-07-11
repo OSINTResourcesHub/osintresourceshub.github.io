@@ -1,0 +1,64 @@
+name: Link-health refresh
+
+# Runs the rotbaseline checker over the catalog and commits data/status.json.
+# Scheduled daily; also runnable on demand from the Actions tab.
+
+on:
+  schedule:
+    - cron: "0 6 * * *"        # 06:00 UTC daily
+  workflow_dispatch: {}         # manual "Run workflow" button
+
+# Least-privilege: only allow committing back to this repo.
+permissions:
+  contents: write
+
+concurrency:
+  group: freshness
+  cancel-in-progress: false     # never interrupt a check mid-run
+
+env:
+  # The link-health engine, installed from its own public repo.
+  # Change to a tag/branch or a PyPI release when available.
+  ROTBASELINE_SPEC: "rotbaseline @ git+https://github.com/osintresourceshub/engine.git@main"
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install the checker
+        run: |
+          python -m pip install --upgrade pip
+          pip install "${ROTBASELINE_SPEC}"
+
+      # Persist the checker's append-only log + response cache between runs so a
+      # link is only promoted to `dead` after two failing observations >=24h apart.
+      - name: Restore checker state
+        uses: actions/cache@v4
+        with:
+          path: scripts/out
+          key: rotbaseline-state-${{ github.run_id }}
+          restore-keys: |
+            rotbaseline-state-
+
+      - name: Run link-health refresh
+        run: python scripts/refresh.py
+
+      - name: Commit status.json (only if changed)
+        run: |
+          git config user.name  "osint-resources-hub-bot"
+          git config user.email "bot@users.noreply.github.com"
+          if ! git diff --quiet -- data/status.json; then
+            git add data/status.json
+            git commit -m "chore(freshness): refresh link-health $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "no health changes — nothing to commit"
+          fi
