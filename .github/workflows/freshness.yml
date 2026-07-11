@@ -55,10 +55,21 @@ jobs:
         run: |
           git config user.name  "osint-resources-hub-bot"
           git config user.email "bot@users.noreply.github.com"
-          if ! git diff --quiet -- data/status.json; then
-            git add data/status.json
-            git commit -m "chore(freshness): refresh link-health $(date -u +%Y-%m-%d)"
-            git push
-          else
+          if git diff --quiet -- data/status.json; then
             echo "no health changes — nothing to commit"
+            exit 0
           fi
+          git add data/status.json
+          git commit -m "chore(freshness): refresh link-health $(date -u +%Y-%m-%d)"
+          # The check runs for many minutes, so main may have advanced since checkout
+          # (a manual push, or an overlapping run). Rebase onto latest and retry.
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "push rejected — rebasing onto latest main (attempt $attempt)"
+            git pull --rebase origin main || true
+          done
+          echo "failed to push status.json after 5 attempts"
+          exit 1
