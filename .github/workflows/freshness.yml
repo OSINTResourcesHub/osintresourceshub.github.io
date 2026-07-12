@@ -19,7 +19,7 @@ concurrency:
 env:
   # The link-health engine, installed from its own public repo.
   # Change to a tag/branch or a PyPI release when available.
-  ROTBASELINE_SPEC: "rotbaseline @ git+https://github.com/osintresourceshub/engine.git@main"
+  ROTBASELINE_SPEC: "rotbaseline @ git+https://github.com/osintresourceshub/engine.git@v0.1.0"
 
 jobs:
   refresh:
