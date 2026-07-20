@@ -108,6 +108,12 @@
   .persw{font-size:12px;color:var(--dim);margin:8px 0}
   .tg{background:var(--chip);border:1px solid var(--line);border-radius:20px;padding:3px 9px;cursor:pointer;font-size:11px;color:var(--dim)}.tg.on{background:rgba(78,201,176,.16);border-color:var(--accent);color:var(--accent)}
   .exp{width:100%;margin-top:10px;background:var(--accent);border:none;color:#062720;border-radius:8px;padding:9px;font-weight:700;cursor:pointer}
+/* nudge colour matches the slot it points to: verb/what=accent2(blue), who=warn(amber), why=#b98bff, have=accent. */
+.startballoon{display:none;width:fit-content;margin-top:12px;background:var(--accent2);color:#0a0f16;font-size:13px;font-weight:700;padding:6px 12px;border-radius:8px;animation:bob 1.1s ease-in-out infinite}
+.startballoon.show{display:block}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.kitline{padding:10px 22px 0}
+.kitbtn.big{font-size:14px;padding:8px 14px}
 </style>
 </head>
 <body>
@@ -115,12 +121,14 @@
   <span><b id="fCat">2,657</b> tools</span><span class="a">● <span id="fAlive"></span> alive</span>
   <span class="bl">● <span id="fBlock"></span> blocked?</span><span class="de">● <span id="fDead"></span> dead/dying</span>
   <span class="last">last 24h: <b>412</b> re-checked → <span class="a">6 changed</span></span>
-  <span class="kitbtn" onclick="openKit()">🧰 Kit <b id="kitn">0</b></span></div>
+  </div>
 <div class="subline">a project by <a href="https://osint-research.com" target="_blank" rel="noopener">OSINT-Research · osint-research.com</a></div>
+<div class="kitline"><span class="kitbtn big" onclick="openKit()">🧰 Investigation Kit <b id="kitn">0</b></span></div>
 
 <div class="hero">
   <div class="kick"><span class="eyewrap"><img src="assets/osint-research-lens-1024.png" alt=""></span> Here to help</div>
   <div class="sentence" id="sentence"></div>
+  <div class="startballoon" id="startBalloon">▲ Start here — tap the highlighted words</div>
   <div class="picker" id="picker"></div>
   <div class="summary" id="summary"></div>
   <div class="cont" id="cont"></div>
@@ -227,7 +235,7 @@ const CROSS={"company|person":[["Is this person an officer / UBO of it?","passiv
 
 // ---- state ----
 let task=null, why=null, letter={};
-const cse={ents:[]}; let active={t:'task'}; let confirmed=false;
+const cse={ents:[]}; let active={t:null}; let confirmed=false;
 function autoName(type){letter[type]=(letter[type]||0)+1;const L=String.fromCharCode(64+letter[type]);
   const base=({company:"Company",person:"Person",time:"Event",place:"Place",online:"Site",media:"Media",connection:"Connection",family:"contact",asset:"Asset",infra:"Infra"}[type])||"Item";
   return base+" "+(base===base.toLowerCase()?L.toLowerCase():L);}
@@ -266,8 +274,9 @@ function renderHoldings(){
 function heldList(e,idx){return e.held.map((hh,j)=>{const lbl=(HELDLIB.find(x=>x.id===hh.id)||{l:hh.id}).l;const d=hh.detail&&hh.detail.length?` (${hh.detail.join(', ')})`:'';return `<span class="slot have filled" onclick="rmHeld(${idx},${j})" title="remove">${lbl}${d}</span>`;}).join('<span class="tok"> and </span>');}
 function entRef(e,i){const o=eObj(e.type);const label=i===0?o.l:e.name;return `<span class="slot who filled" style="color:var(--warn);border-bottom-color:rgba(227,179,65,.5)" onclick="${i===0?"setA('primEnt')":''}">${o.e} ${label}</span>`;}
 
-function setA(t){active={t};renderPicker();}
-function renderPicker(){const p=document.getElementById('picker');const t=active.t;
+function hideBalloon(){const b=document.getElementById('startBalloon');if(b)b.classList.remove('show');}
+function setA(t){active={t};hideBalloon();renderPicker();}
+function renderPicker(){const p=document.getElementById('picker');const t=active.t;if(!t){p.innerHTML='';return;}
   if(t==='task'){p.innerHTML=pl("what do you want to do?")+opts(TASKS.map(x=>`<span class="opt" onclick="pickTask('${x.id}')">${x.l}</span>`).join('')+`<span class="opt skip" onclick="skipTask()">skip — just help me look</span>`);return;}
   if(t==='why'){p.innerHTML=pl("why? (this is your field — it tailors everything)")+opts(WHY.map(x=>`<span class="opt" onclick="pickWhy('${x.id}')">${x.l}</span>`).join(''));return;}
   if(t==='primEnt'){p.innerHTML=pl("who, what or where do you want to research?")+opts(ENT.map(e=>`<span class="opt" onclick="pickEnt('${e.id}')">${e.e} ${e.l}</span>`).join(''));return;}
@@ -287,7 +296,7 @@ function pickEnt(id){const cl=(eObj(id)||{}).close||null;
   else{cse.ents[0].type=id;cse.ents[0].close=cl;}
   active={t:id==='time'?'eventTime:0':(why?null:'why')};render();}
 function pickTime(i,val){cse.ents[i].time=val;active={t:why?null:'why'};render();}
-function startBundle(){draft={held:[]};active={t:'bundle'};renderPicker();}
+function startBundle(){draft={held:[]};active={t:'bundle'};hideBalloon();renderPicker();}
 function toggleDraftHeld(id){const i=draft.held.findIndex(x=>x.id===id);if(i>=0)draft.held.splice(i,1);else draft.held.push({id,detail:[]});renderPicker();}
 function toggleDraftDetail(id,val){const hh=draft.held.find(x=>x.id===id);if(!hh)return;const k=hh.detail.indexOf(val);if(k>=0)hh.detail.splice(k,1);else hh.detail.push(val);renderPicker();}
 function fromList(){const a=[];if(cse.ents.length)a.push({id:'__subject__',e:'📌',l:"the one I'm researching"});
@@ -299,7 +308,7 @@ function finishBundle(fromId){if(!draft.held.length)return;let target;
   draft={held:[]};active={t:null};document.getElementById('picker').innerHTML='';render();}
 function rmHeld(idx,j){cse.ents[idx].held.splice(j,1);if(idx>0&&!cse.ents[idx].held.length)cse.ents.splice(idx,1);render();}
 function quickAdd(id){if(!cse.ents.length)return;const t=cse.ents[0];if(!t.held.some(x=>x.id===id))t.held.push({id,detail:[]});render();}
-function resetAll(){task=null;why=null;letter={};cse.ents=[];draft={held:[]};active={t:'task'};confirmed=false;
+function resetAll(){task=null;why=null;letter={};cse.ents=[];draft={held:[]};active={t:null};confirmed=false;
   document.getElementById('summary').classList.remove('show');document.getElementById('cont').classList.remove('show');render();}
 
 // ---- summarize & check ----
@@ -380,6 +389,7 @@ function initFresh(){const b=DATA.by_state||{};document.getElementById('fCat').t
 document.getElementById('foot').innerHTML="B5 v4 — three-question hero (What·Who·Why + “I have one or more … from a —”). The <b>detective helper</b> presents the summarise-&-check (auto-opens when your case is ready, live-updates, ＋ suggests inputs) and “Looks right → show my moves” reveals moves with real catalog tools &amp; live health. Guide lanes ⇄ browse · kit. Full <b>2,657-tool</b> catalog, loaded live from <code>./data/tools.json</code> + <code>status.json</code> when served. Read-only. No trackers.";
 kit=loadKit();
 initFresh();render();renderLanes();renderCats();renderKit();loadFullCatalog();
+setTimeout(()=>{if(!active.t&&!cse.ents.length&&!why){const b=document.getElementById('startBalloon');if(b)b.classList.add('show');}},1200);
 document.getElementById('persLocal').classList.toggle('on',persist==='local');document.getElementById('persSession').classList.toggle('on',persist==='session');
 
 // ---- helper agent ----
