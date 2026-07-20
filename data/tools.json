@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-11T14:07:02+00:00",
-  "count": 2657,
+  "generated_at": "2026-07-20T20:21:59+00:00",
+  "count": 2655,
   "categories": [
     "Analysis, Collaboration & Reporting",
     "Archiving & Preservation",
@@ -33,6 +33,7 @@
       "url": "https://hunter.io/",
       "name": "Find email addresses in seconds • Hunter (Email Hunter)",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -98,6 +99,7 @@
       "url": "https://whatsmyname.app/",
       "name": "WhatsMyName Username Search",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -303,6 +305,7 @@
       "url": "https://web-check.as93.net/",
       "name": "Domain Search - Web Check",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -327,6 +330,7 @@
       "url": "http://www.skymem.info/",
       "name": "Email addresses of companies - Skymem",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -339,6 +343,7 @@
       "url": "http://metricsparrow.com/toolkit/email-permutator/",
       "name": "Email Permutator | Metric Sparrow Toolkit",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -444,6 +449,18 @@
       "source_count": 2
     },
     {
+      "url": "https://flightaware.com",
+      "name": "FlightAware - Flight Tracker / Flight Status",
+      "category": "Transport & Logistics",
+      "payload_type": "link",
+      "source": "OSINT Combine",
+      "sources": [
+        "OSINT Combine",
+        "OSINT Research"
+      ],
+      "source_count": 2
+    },
+    {
       "url": "https://www.freemaptools.com/",
       "name": "Free Map Tools - Various Mapping Tools",
       "category": "Maps, Geolocation & Satellites",
@@ -519,6 +536,7 @@
       "url": "https://github.com/C3n7ral051nt4g3ncy/Prot1ntelligence",
       "name": "GitHub - C3n7ral051nt4g3ncy/Prot1ntelligence: Prot1ntelligence is a Python script for the OSINT & C...",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -531,6 +549,7 @@
       "url": "https://github.com/jivoi/awesome-osint#-other-tools",
       "name": "GitHub - jivoi/awesome-osint: A curated list of amazingly awesome OSINT",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -543,6 +562,7 @@
       "url": "https://github.com/thewhiteh4t/nexfil",
       "name": "GitHub - thewhiteh4t/nexfil: OSINT tool for finding profiles by username",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -603,6 +623,7 @@
       "url": "http://archive.org/",
       "name": "http://archive.org",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -723,6 +744,7 @@
       "url": "https://github.com/megadose/holehe",
       "name": "megadose/holehe: holehe allows you to check if the mail is used on different sites like twitter, in...",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -735,6 +757,7 @@
       "url": "https://github.com/mxrch/GHunt",
       "name": "mxrch/GHunt: 🕵️‍♂️ Offensive Google framework.",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -819,6 +842,7 @@
       "url": "https://osint.industries/email",
       "name": "OSINT Industries",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -855,6 +879,7 @@
       "url": "https://searchcode.com/",
       "name": "Other - Source Code Search Engine",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -879,6 +904,7 @@
       "url": "https://github.com/p1ngul1n0/blackbird",
       "name": "p1ngul1n0/blackbird: An OSINT tool to search for accounts by username in social networks.",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -927,6 +953,7 @@
       "url": "https://github.com/qeeqbox/social-analyzer",
       "name": "qeeqbox/social-analyzer: API, CLI & Web App for analyzing & finding a person's profile across socia...",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -987,6 +1014,7 @@
       "url": "https://emailrep.io/",
       "name": "Simple Email Reputation",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -1011,6 +1039,7 @@
       "url": "https://github.com/soxoj/marple",
       "name": "soxoj/marple: 📖 Collect links to profiles by username through search engines and analyze with vari...",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -1071,6 +1100,7 @@
       "url": "https://github.com/theahmadov/slash",
       "name": "theahmadov/slash: The Slash OSINT Tool",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -1179,6 +1209,7 @@
       "url": "https://builtwith.com/",
       "name": "Website Scan - BuiltWith",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -1203,6 +1234,7 @@
       "url": "https://whoisfreaks.com/",
       "name": "Whois Freaks - Domain Lookup",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -1342,6 +1374,7 @@
       "url": "https://10minutemail.com/",
       "name": "10 Minute Mail - Free Anonymous Temporary email - 10 Minute Mail - Free Anonymous Temporary email",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -1551,6 +1584,7 @@
       "url": "https://www.411.com/",
       "name": "411 - White Pages | Find Phone Numbers, People, Addresses & More",
       "category": "People & Identities",
+      "subcategory": "Phone",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -1672,6 +1706,7 @@
       "url": "https://t.me/iptools_robot",
       "name": "@iptools\\_robot",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -1683,6 +1718,7 @@
       "url": "https://t.me/maigret_osint_bot",
       "name": "@maigret\\_osint\\_bot",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -1760,6 +1796,7 @@
       "url": "https://t.me/UniversalSearchBot",
       "name": "@UniversalSearchBot",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -1881,6 +1918,7 @@
       "url": "https://osint.sh/adsense/",
       "name": "Adsense Identiicator Finder",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2046,6 +2084,7 @@
       "url": "https://www.radarbox24.com/@2.41699,27.25463,z3",
       "name": "AirNav RadarBox - Live Flight Tracker and Airport Status",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -2068,6 +2107,7 @@
       "url": "https://github.com/projectdiscovery/alterx",
       "name": "ALERTX",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2079,6 +2119,7 @@
       "url": "https://www.alexa.com/",
       "name": "Alexa",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2101,6 +2142,7 @@
       "url": "https://github.com/BLINKING-IDIOT/Aliens_eye",
       "name": "Aliens eye",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2112,6 +2154,7 @@
       "url": "https://github.com/ferreiraklet/Aline",
       "name": "Aline",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2156,6 +2199,7 @@
       "url": "https://datayze.com/alternate-spelling-finder",
       "name": "Alternate Spelling Finder",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2200,6 +2244,7 @@
       "url": "https://americanarchive.org/",
       "name": "American Archive of Public Broadcasting",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2244,6 +2289,7 @@
       "url": "https://github.com/Josue87/AnalyticsRelationships",
       "name": "AnalyticsRelationships",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2266,6 +2312,7 @@
       "url": "https://analyzeid.com/",
       "name": "analyzeid.com",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2277,6 +2324,7 @@
       "url": "https://analyzeid.com/username/",
       "name": "Analyzeid.com Username Search",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2299,6 +2347,7 @@
       "url": "https://annas-archive.org/search",
       "name": "Anna’s Archive",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2332,6 +2381,7 @@
       "url": "https://github.com/jonluca/Anubis",
       "name": "Anubis",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2376,6 +2426,7 @@
       "url": "https://github.com/D3Ext/AORT",
       "name": "AORT",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2420,6 +2471,7 @@
       "url": "https://api.domaindumper.com/",
       "name": "API Domaindumper",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2431,6 +2483,7 @@
       "url": "https://api-guesser.netlify.app/",
       "name": "API Guesser",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2541,6 +2594,7 @@
       "url": "https://app.buzzsumo.com/content/web",
       "name": "AppSumo Content Analyzer",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2596,6 +2650,7 @@
       "url": "https://github.com/MiniGlome/Archive.org-Downloader",
       "name": "Archive-org-Downloader",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2618,6 +2673,7 @@
       "url": "https://archive.md/",
       "name": "Archive.md",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2640,6 +2696,7 @@
       "url": "https://archive.vn/",
       "name": "Archive.vn",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2651,6 +2708,7 @@
       "url": "https://archivebox.io/",
       "name": "Archivebox",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2662,6 +2720,7 @@
       "url": "http://archiveready.com/",
       "name": "ArchiveReady",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2728,6 +2787,7 @@
       "url": "https://arquivo.pt/",
       "name": "Arquivo.pt",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2761,6 +2821,7 @@
       "url": "http://www.fepg.net/asia.HTML",
       "name": "Asia-East Free Email Providers",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -2794,6 +2855,7 @@
       "url": "https://d09r.github.io/assay-url-inspection-tools/",
       "name": "ASSAY",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2871,6 +2933,7 @@
       "url": "https://2gdpr.com/",
       "name": "Audits website cookies, online tracking and HTTPS usage for GDPR compliance",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2992,6 +3055,7 @@
       "url": "https://chrome.google.com/webstore/detail/auto-scroll-search-scroll/ieceeinfkigfaeoomfimmecebngempef/",
       "name": "Auto Scroll Search",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -3025,6 +3089,7 @@
       "url": "https://github.com/SirCryptic/autoexif",
       "name": "AutoExif",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -3058,6 +3123,7 @@
       "url": "https://avatarapi.com/",
       "name": "Avatar API",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -3102,6 +3168,7 @@
       "url": "https://awesometechstack.com/",
       "name": "Awesome Tech Stack",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -3113,6 +3180,7 @@
       "url": "https://awk.js.org/",
       "name": "AWK JS",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -3172,17 +3240,6 @@
       "source": "Bellingcat",
       "sources": [
         "Bellingcat"
-      ],
-      "source_count": 1
-    },
-    {
-      "url": "https://m.baidu.com/",
-      "name": "baidu.com",
-      "category": "Images, Video & Media Verification",
-      "payload_type": "link",
-      "source": "OSINT Combine",
-      "sources": [
-        "OSINT Combine"
       ],
       "source_count": 1
     },
@@ -3432,6 +3489,7 @@
       "url": "https://bgpview.io/",
       "name": "BGPView",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -3707,6 +3765,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/blackbird",
       "name": "Blackbird",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -4026,6 +4085,7 @@
       "url": "https://breachchecker.com/",
       "name": "Breachchecker.com",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -4070,6 +4130,7 @@
       "url": "https://chrome.google.com/webstore/detail/broken-link-checker/nibppfobembgfmejpjaaeocbogeonhch/related",
       "name": "Broken Link Checker",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -4081,6 +4142,7 @@
       "url": "https://github.com/MayankPandey01/BrokenLinkHijacker",
       "name": "Broken Link Hijacker",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -4202,6 +4264,7 @@
       "url": "https://cachedview.b4your.com/en/",
       "name": "cachedview.b4your.com",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -4345,6 +4408,7 @@
       "url": "https://www.canva.com/create/reports/",
       "name": "Canva",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -4367,6 +4431,7 @@
       "url": "https://github.com/Lazza/Carbon14",
       "name": "CARBON14",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -4422,6 +4487,7 @@
       "url": "https://castrickclues.com/",
       "name": "Castrickclues",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -4444,6 +4510,7 @@
       "url": "https://github.com/j3ssie/cdnstrip",
       "name": "CDNStrip",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -4466,6 +4533,7 @@
       "url": "https://github.com/citizenlab/chat-censorship/blob/master/wechat/709crackdown/all-keywords.csv",
       "name": "Censored words in China - citizenlab (GitHub)",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -4488,6 +4556,7 @@
       "url": "https://centralops.net/",
       "name": "Central - OPs - Investigate domains and IP addresses",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -4532,6 +4601,7 @@
       "url": "https://github.com/mathis2001/Cert4Recon",
       "name": "Cert4Recon",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -4686,6 +4756,7 @@
       "url": "https://github.com/chubin/cheat.sh",
       "name": "Cheat․sh",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -4697,6 +4768,7 @@
       "url": "https://www.vpnmentor.com/tools/test-the-great-china-firewall/",
       "name": "Check any website to see in real time if it is blocked in China",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -4708,6 +4780,7 @@
       "url": "https://chrome.google.com/webstore/detail/check-my-links/ojkcdipcgfaekbeaelaapakgnjflfglf/related",
       "name": "Check my links",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -4730,6 +4803,7 @@
       "url": "https://checkphish.bolster.ai/",
       "name": "CheckPhishAI",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -4939,6 +5013,7 @@
       "url": "https://github.com/chiasmod0n/chiasmodon",
       "name": "Chismodon",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -4972,6 +5047,7 @@
       "url": "https://chrome.google.com/webstore/detail/archive-page/gcaimhkfmliahedmeklebabdgagipbia/related",
       "name": "Chrome Web Store - Archive Page",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5236,6 +5312,7 @@
       "url": "https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=en",
       "name": "Chrome Web Store - Google Analytics Opt-out",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5555,6 +5632,7 @@
       "url": "https://github.com/spyboy-productions/CloakQuest3r",
       "name": "CloakQuest3r",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -5599,6 +5677,7 @@
       "url": "https://github.com/0xsha/CloudBrute",
       "name": "CloudBrute",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -5621,6 +5700,7 @@
       "url": "https://github.com/MrH0wl/Cloudmare",
       "name": "Cloudmare",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -5632,6 +5712,7 @@
       "url": "https://github.com/jordanpotti/CloudScraper",
       "name": "CloudScraper",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -5643,6 +5724,7 @@
       "url": "https://github.com/greycatz/CloudUnflare",
       "name": "CloudUnflare",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -5687,6 +5769,7 @@
       "url": "https://tools.cmlabs.co/en/technology-lookup",
       "name": "CMLabs Tools",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -5698,6 +5781,7 @@
       "url": "https://codebeautify.org/?__cf_chl_captcha_tk__=46a6845b710e1b0b793fd6dcf31bec60e561288f-1607423361-0-ASDqDXi-jCUM8MbJ9TXPaK23d0yjqzUIVYNUMJs_g4ZJhxLlAs6tkd7GBoqQh13UUKm8jrGtZlS6q9zvDT5eZ59nZF0RA7OjpnEQfvMnEJkK_rL3uNRZfZ4an3UQ4QnIw62GYBxnt5jfWsGhfCLx2pXx-BOWG1om0-ex67T1WKjtTl_IFIr-TW1pXIrUltGrdSHDP4oAwfSkvYhvmAB4Q7SkLTixujqoWCSyrntbXBj2wKjBAL8VgDSJfX4O6NBTRwQQojLoNVomwjUFVZEVtS0zPnUUol3rIoABUr_jnTc6AxnLkeNqEEJ9fQUfuV5rca30q1KEogqjIbC4uJqBI2NBpP1XN6SBFwVAV7zIxrZhGBl13l-JC34X3FwOkDuH2nn_xvdM4nZ9F_ej7zqIx1oJ8O4EWOWOFdvJy7QiaLP868U1th4u_lUKN8DmOmEKtplJu_1oWKrn3x6qZ03VQ5Wq-rkJDu3QlKdc2ApJQ0OuL75VERv3a8P30tlyuA78h1AADHPKbPSPFVDVaHmuvzg",
       "name": "Code Beautify - JSON/XML Tools",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5709,6 +5793,7 @@
       "url": "https://github.com/cipher387/code-understanding-tools",
       "name": "Code understanding tools list",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -5819,6 +5904,7 @@
       "url": "https://columbus.elmasy.com/",
       "name": "Columbus Project",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -5874,6 +5960,7 @@
       "url": "https://freemailscraper.herokuapp.com/complete-website-email-scraper",
       "name": "Complete Email Scraper",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -5940,6 +6027,7 @@
       "url": "https://github.com/vdrmota/Social-Media-and-Contact-Info-Extractor",
       "name": "Contacts Details Scraper",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -5984,6 +6072,7 @@
       "url": "https://cspvalidator.org/#url=https://cspvalidator.org/",
       "name": "Content Security Policy (CSP) Validator",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -6050,6 +6139,7 @@
       "url": "https://www.cookieserve.com/",
       "name": "cookieserve.com",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -6105,6 +6195,7 @@
       "url": "https://chrome.google.com/webstore/detail/copy-all-links-and-image/ccddopnnikeeoogpfbnfommfoeliaidg/related",
       "name": "Copy all links and image links to CSV or JSON",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -6160,6 +6251,7 @@
       "url": "https://chrome.google.com/webstore/detail/core-serp-vitals/oipmhlkineglclpndlecjmbleapbcilf/related",
       "name": "Core SERP Vitals",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -6226,6 +6318,7 @@
       "url": "https://github.com/N0tA1dan/Crab",
       "name": "Crab",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -6303,6 +6396,7 @@
       "url": "https://www.criminalip.io/",
       "name": "CriminalAPI",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -6413,6 +6507,7 @@
       "url": "https://cipher387.github.io/code_repository_google_custom_search_engines/",
       "name": "CSE for search 20 source code hosting services",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -6479,6 +6574,7 @@
       "url": "https://github.com/intel/cve-bin-tool",
       "name": "CVE Binary Tool",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -6490,6 +6586,7 @@
       "url": "https://github.com/projectdiscovery/cvemap",
       "name": "CVE MAP",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -6501,6 +6598,7 @@
       "url": "https://cvecrowd.com/",
       "name": "CVECrowd",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -6721,6 +6819,7 @@
       "url": "https://github.com/Drew-Alleman/DataSurgeon",
       "name": "DATA Surgeon",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -6765,6 +6864,7 @@
       "url": "https://dataset.domainsproject.org/",
       "name": "dataset.domainsproject.org",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -6842,6 +6942,7 @@
       "url": "https://lelinhtinh.github.io/de4js/",
       "name": "De4js",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -6974,6 +7075,7 @@
       "url": "https://defastra.com/",
       "name": "Defastra",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7018,6 +7120,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/dehashed",
       "name": "DeHashed",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -7150,6 +7253,7 @@
       "url": "https://www.cookiemetrix.com/",
       "name": "Determines if website is not comply with EU Cookie Law and gives you insight about cookies installed from website before the visitors consent",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7161,6 +7265,7 @@
       "url": "https://chrome.google.com/webstore/detail/developer-search-tool/bkolnanfonknnhpeakommihhllojnecf/related",
       "name": "Developer search tool",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7271,6 +7376,7 @@
       "url": "https://digitalfootprintcheck.com/checks/free-checker.html",
       "name": "Digital Footprint Check",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7282,6 +7388,7 @@
       "url": "https://doaj.org/search/journals",
       "name": "Directory of Open Access Journals",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7304,6 +7411,7 @@
       "url": "https://github.com/Nekmo/dirhunt",
       "name": "Dirhunt",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7315,6 +7423,7 @@
       "url": "https://github.com/Cillian-Collins/dirscraper",
       "name": "Dirscraper",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7414,6 +7523,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/distill.io",
       "name": "Distill.io",
       "category": "Archiving & Preservation",
+      "subcategory": "Change monitoring",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -7425,6 +7535,7 @@
       "url": "https://github.com/evilsocket/ditto",
       "name": "Ditto",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7436,6 +7547,7 @@
       "url": "https://completedns.com/dns-history/",
       "name": "DNS History",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7447,6 +7559,7 @@
       "url": "https://dnslytics.com/",
       "name": "DNSlytics",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7458,6 +7571,7 @@
       "url": "https://github.com/punk-security/dnsReaper",
       "name": "dnsReaper",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7469,6 +7583,7 @@
       "url": "https://github.com/elceef/dnstwist",
       "name": "Dnstwist",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7480,6 +7595,7 @@
       "url": "https://dnstwister.report/",
       "name": "Dnstwister",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7502,6 +7618,7 @@
       "url": "https://www.documentcloud.org/documents/",
       "name": "DocumentCloud",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7524,6 +7641,7 @@
       "url": "https://www.domain.com.au/?gclid=EAIaIQobChMIsJSo-fPagAMVdBZ7Bx3zLgrYEAAYASAAEgIhTPD_BwE",
       "name": "Domain - Real Estate",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -7535,6 +7653,7 @@
       "url": "http://cipher387.github.io/domain_investigation_toolbox/",
       "name": "Domain Investigation Toolbox",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7546,6 +7665,7 @@
       "url": "https://dnsdumpster.com/",
       "name": "Domain Search - DNS Dumpster",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -7557,6 +7677,7 @@
       "url": "https://www.robtex.com/",
       "name": "Domain Search - Robtex",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -7579,6 +7700,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/domaintools-whois-lookup",
       "name": "DomainTools Whois Lookup",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -7590,6 +7712,7 @@
       "url": "https://domaintracker.app/",
       "name": "Domaintracker",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7601,6 +7724,7 @@
       "url": "https://github.com/v4d1/Dome",
       "name": "DomE",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7623,6 +7747,7 @@
       "url": "https://github.com/dievus/msdorkdump",
       "name": "DORK DUMP",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7634,6 +7759,7 @@
       "url": "https://github.com/Balgogan/dorkscanner",
       "name": "Dork Scanner",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7810,6 +7936,7 @@
       "url": "https://github.com/indiancyberops/Drishti",
       "name": "Drishti",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7942,6 +8069,7 @@
       "url": "https://github.com/securing/DumpsterDiver",
       "name": "DumpsterDiver",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -8085,6 +8213,7 @@
       "url": "https://www.easycounter.com/",
       "name": "Easy Counter - Website Scan",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -8096,6 +8225,7 @@
       "url": "https://gaetanlhf.github.io/EasyCache/",
       "name": "EasyCache",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -8217,6 +8347,7 @@
       "url": "https://mailtester.com/en/",
       "name": "Email Checker | Hunter Email | Bounce Checker | Email Deliverability - MailTester",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -8228,6 +8359,7 @@
       "url": "https://github.com/Josue87/EmailFinder",
       "name": "Email Finder",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -8239,6 +8371,7 @@
       "url": "https://www.experte.com/email-finder",
       "name": "Email Finder",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -8250,6 +8383,7 @@
       "url": "https://mxtoolbox.com/EmailHeaders.aspx",
       "name": "Email Header Analyzer, RFC822 Parser - MxToolbox",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -8261,6 +8395,7 @@
       "url": "https://docs.google.com/spreadsheets/d/17URMtNmXfEZEW9oUL_taLpGaqTDcMkA79J8TRw4xnz8/edit#gid=0",
       "name": "Email Permutator",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -8272,6 +8407,7 @@
       "url": "https://polished.app/email-permutator/",
       "name": "Email Permutator - Effortless Email Discovery by Polished.app",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -8294,6 +8430,7 @@
       "url": "https://github.com/keraattin/EmailAnalyzer",
       "name": "EmailAnalyzer",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -8305,6 +8442,7 @@
       "url": "https://github.com/4383/EmailHarvester",
       "name": "EmailHarvester",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -8316,6 +8454,7 @@
       "url": "https://tools.emailhippo.com/email/",
       "name": "EmailHippo",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -8393,6 +8532,7 @@
       "url": "https://tools.epieos.com/google-account.php",
       "name": "Epieos Tools (Gmail Identifier)",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -8437,6 +8577,7 @@
       "url": "https://chrome.google.com/webstore/detail/analyzer/bmbhpmmhjkbmcachipmccnlcemaoiiji/related",
       "name": "Ericom Page Risk Analysis",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -8525,6 +8666,7 @@
       "url": "https://my.eurodns.com/das/search/",
       "name": "EuroDNS",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -8679,6 +8821,7 @@
       "url": "https://www.expireddomains.net/deleted-domains/",
       "name": "Expireddomains.net",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -8690,6 +8833,7 @@
       "url": "https://explainshell.com/",
       "name": "Explain Shell",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -8723,6 +8867,7 @@
       "url": "https://chrome.google.com/webstore/detail/export-historybookmarks-t/dcoegfodcnjofhjfbhegcgjgapeichlf",
       "name": "Export Chrome History",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -8745,6 +8890,7 @@
       "url": "https://chrome.google.com/webstore/detail/exporter-for-ig/nmnhoiehpdfllknopjkhjgoddkpnmfpa",
       "name": "Exporter for IG - Chrome Web Store",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -8756,6 +8902,7 @@
       "url": "https://exposed.lol",
       "name": "EXPOSED",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -8789,6 +8936,7 @@
       "url": "https://extract.pics/",
       "name": "Extract images",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -9086,6 +9234,7 @@
       "url": "https://factinsect.com/",
       "name": "FACTINSECT",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -9108,6 +9257,7 @@
       "url": "http://www.fakemailgenerator.com/#/gustr.com/Casly1981/",
       "name": "Fake Mail Generator - Free temporary email addresses",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -9229,6 +9379,7 @@
       "url": "https://github.com/IvanGlinkin/Fast-Google-Dorks-Scan",
       "name": "Fast Google Dorks Scan",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -9262,6 +9413,7 @@
       "url": "https://github.com/devanshbatham/FavFreak",
       "name": "FavFreak",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -9273,6 +9425,7 @@
       "url": "https://github.com/imtiazsec/favhash",
       "name": "Favhash",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -9284,6 +9437,7 @@
       "url": "https://faviconhasher.codejavu.tech/",
       "name": "Favicon Hasher",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -9449,6 +9603,7 @@
       "url": "https://cartographia.github.io/FilePhish/",
       "name": "FilePhish",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -9493,6 +9648,7 @@
       "url": "https://findfoodsupport.withgoogle.com/",
       "name": "Find Food Support",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -9537,6 +9693,7 @@
       "url": "https://chrome.google.com/webstore/detail/find%2B-regex-find-in-page/fddffkdncgkkdjobemgbpojjeffmmofb/related",
       "name": "find+",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -9548,6 +9705,7 @@
       "url": "https://github.com/h3x0crypt/HostSpider",
       "name": "FindMyAss (HostSpider)",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -9559,6 +9717,7 @@
       "url": "https://fingible.nftport.xyz/",
       "name": "Fingble Nftport",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -9581,6 +9740,7 @@
       "url": "https://github.com/Lexxrt/FireFly",
       "name": "FireFly",
       "category": "People & Identities",
+      "subcategory": "Phone",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -9809,28 +9969,6 @@
       "source_count": 1
     },
     {
-      "url": "https://uk.flightaware.com/",
-      "name": "FlightAware - Flight Tracker / Flight Status",
-      "category": "Transport & Logistics",
-      "payload_type": "link",
-      "source": "OSINT Combine",
-      "sources": [
-        "OSINT Combine"
-      ],
-      "source_count": 1
-    },
-    {
-      "url": "https://flightaware.com",
-      "name": "FlightAware - Flight Tracker / Flight Status",
-      "category": "Transport & Logistics",
-      "payload_type": "link",
-      "source": "OSINT Research",
-      "sources": [
-        "OSINT Research"
-      ],
-      "source_count": 1
-    },
-    {
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/flightradar24",
       "name": "Flightradar24",
       "category": "Transport & Logistics",
@@ -9911,6 +10049,7 @@
       "url": "https://app.diagrams.net/",
       "name": "Flowchart Maker & Online Diagram Software",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -9966,6 +10105,7 @@
       "url": "https://fofa.so/",
       "name": "fofa.so",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -10318,6 +10458,7 @@
       "url": "https://fullhunt.io/",
       "name": "FullHunt",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -10340,6 +10481,7 @@
       "url": "https://github.com/musana/fuzzuli",
       "name": "FUZZULI",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -10395,6 +10537,7 @@
       "url": "https://github.com/lc/gau",
       "name": "GAU",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -10461,6 +10604,7 @@
       "url": "https://github.com/dievus/geeMailUserFinder",
       "name": "geeMail User Finder",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -10692,6 +10836,7 @@
       "url": "https://www.getlinkinfo.com/",
       "name": "Get Link Info",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -10714,6 +10859,7 @@
       "url": "https://getemail.io",
       "name": "GetEmail.io – We use Big Data & AI to Find the Email of Anyone on Earth",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10747,6 +10893,7 @@
       "url": "https://ghostarchive.org/",
       "name": "Ghostarchive, a website archive",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -10769,6 +10916,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/ghunt",
       "name": "Ghunt",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -10824,6 +10972,7 @@
       "url": "https://github.com/mattnotmax/cyberchef-recipes",
       "name": "GitHub - CyberChef Recipes",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10835,6 +10984,7 @@
       "url": "https://github.com/Malfrats/xeuledoc",
       "name": "GitHub - Malfrats/xeuledoc: Fetch information about a public Google document.",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10846,6 +10996,7 @@
       "url": "https://github.com/osintambition/Social-Media-OSINT-Tools-Collection",
       "name": "GitHub - OSINT Tools Collection",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10857,6 +11008,7 @@
       "url": "https://github.com/paulpogoda/OSINT-Tools-Netherlands/tree/master",
       "name": "GitHub - paulpogoda/OSINT-Tools-Netherlands: List of Dutch OSINT Sources for profilers and fact-che...",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10868,6 +11020,7 @@
       "url": "https://github.com/phiresky/ripgrep-all",
       "name": "GitHub - phiresky/ripgrep-all: rga: ripgrep, but also search in PDFs, E-Books, Office documents, zi...",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10879,6 +11032,7 @@
       "url": "https://github.com/sherlock-project/sherlock",
       "name": "GitHub - sherlock-project/sherlock: 🔎 Hunt down social media accounts by username across social ne...",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10901,6 +11055,7 @@
       "url": "https://github.com/github/github-artifact-exporter",
       "name": "Github Artifact Exporter",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -10912,6 +11067,7 @@
       "url": "https://chrome.google.com/webstore/detail/github-hovercard/mmoahbbnojgkclgceahhakhnccimnplk/related",
       "name": "Github Hovercard",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -10923,6 +11079,7 @@
       "url": "https://aykutsarac.github.io/github-rater/",
       "name": "Github Rater",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -10934,6 +11091,7 @@
       "url": "https://tooomm.github.io/github-release-stats/",
       "name": "Github Release Stats",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -10945,6 +11103,7 @@
       "url": "https://chrome.google.com/webstore/detail/github-repository-size/apnjnioapinblneaedefcnopcjepgkci",
       "name": "GitHub Repository Size",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -10956,6 +11115,7 @@
       "url": "https://github.com/gwen001/github-search",
       "name": "Github Search",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -10967,6 +11127,7 @@
       "url": "https://github.com/willin/github-trending",
       "name": "Github Trending Archives",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -10978,6 +11139,7 @@
       "url": "https://chrome.google.com/webstore/detail/github-chart/apaldppjjcjgjddfobajdclccgkbkkje/related",
       "name": "GitHub-Chart",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -10989,6 +11151,7 @@
       "url": "https://www.githubcompare.com/",
       "name": "GithubCompare",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -11000,6 +11163,7 @@
       "url": "https://gitpod.io/workspaces",
       "name": "Gitpod.io",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -11220,6 +11384,7 @@
       "url": "https://github.com/Longwater1234/go-sherlock",
       "name": "Go Sherlock",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -11231,6 +11396,7 @@
       "url": "https://github.com/loseys/Goblyn",
       "name": "Goblyn",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -11242,6 +11408,7 @@
       "url": "https://gofindwhois.com/",
       "name": "GoFindWhois",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -11253,6 +11420,7 @@
       "url": "https://github.com/karust/gogetcrawl",
       "name": "GoGetCrawl",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -11396,6 +11564,7 @@
       "url": "https://books.google.com/ngrams/",
       "name": "Google Books Ngram Viewer",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -11418,6 +11587,7 @@
       "url": "https://chrome.google.com/webstore/detail/chrome-regex-search/bpelaihoicobbkgmhcbikncnpacdbknn",
       "name": "Google Chrome webpage Regexp search",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -11528,6 +11698,7 @@
       "url": "https://chrome.google.com/webstore/detail/google-email-extractor/aabpdmlmkpedpigeignclfmodjhplllj/related",
       "name": "Google Email Extractor",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -11814,6 +11985,7 @@
       "url": "https://chrome.google.com/webstore/detail/gotanda/jbmdcdfnnpenkgliplbglfpninigbiml",
       "name": "Gotanda",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -11869,6 +12041,7 @@
       "url": "https://github.com/ArchiveTeam/grab-site",
       "name": "GRAB SITE",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -11924,6 +12097,7 @@
       "url": "https://en.gravatar.com/site/check/",
       "name": "Gravatar check",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -11957,6 +12131,7 @@
       "url": "https://grep.app/",
       "name": "Grep.app",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -11968,6 +12143,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/grep.app",
       "name": "Grep.app",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -11979,6 +12155,7 @@
       "url": "https://www.greynoise.io/",
       "name": "Greynoise.io",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12045,6 +12222,7 @@
       "url": "https://github.com/the-h3x/H3X-CCTV",
       "name": "H3X-CCTV",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12056,6 +12234,7 @@
       "url": "https://github.com/khast3x/h8mail",
       "name": "H8mail",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12067,6 +12246,7 @@
       "url": "https://github.com/vstinner/hachoir",
       "name": "HACHOIR",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12133,6 +12313,7 @@
       "url": "https://github.com/pyhackertarget/hackertarget",
       "name": "Hackertarget",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12177,6 +12358,7 @@
       "url": "https://github.com/hakluke/haklistgen",
       "name": "HakListGen",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12188,6 +12370,7 @@
       "url": "https://github.com/hakluke/hakrawler",
       "name": "Hakrawler",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12199,6 +12382,7 @@
       "url": "https://github.com/webrecorder/har2warc",
       "name": "har2warc",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12287,6 +12471,7 @@
       "url": "https://haveibeensold.app/",
       "name": "Have I Been Sold?",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12298,6 +12483,7 @@
       "url": "https://headlines.sharethrough.com/",
       "name": "Headlines.Sharethrough.com",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12309,6 +12495,7 @@
       "url": "https://hexometer.com/stack-checker",
       "name": "Hexometer stack checker",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12452,6 +12639,7 @@
       "url": "https://github.com/SpiderLabs/HostHunter",
       "name": "HostHunter",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12463,6 +12651,7 @@
       "url": "https://hostingchecker.com/",
       "name": "Hosting Checker",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -12507,6 +12696,7 @@
       "url": "https://github.com/httpcats/http.cat",
       "name": "HTTP Cat",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12518,6 +12708,7 @@
       "url": "http://crt.sh/",
       "name": "http://crt.sh",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12529,6 +12720,7 @@
       "url": "http://github.com/jhy/jsoup",
       "name": "http://github.com/jhy/jsoup",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12540,6 +12732,7 @@
       "url": "http://hackertarget.com/",
       "name": "http://hackertarget.com",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12584,6 +12777,7 @@
       "url": "http://rdfa.info/",
       "name": "http://rdfa.info",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12595,6 +12789,7 @@
       "url": "http://wayback.archive.org/",
       "name": "http://wayback.archive.org",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12606,6 +12801,7 @@
       "url": "http://wow.com/",
       "name": "http://WoW.com",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12628,6 +12824,7 @@
       "url": "https://github.com/devXprite/httpfy/",
       "name": "HTTPFY",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12639,6 +12836,7 @@
       "url": "https://httpie.io/run",
       "name": "HTTPIE.IO",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12771,6 +12969,7 @@
       "url": "https://hunter.how/",
       "name": "Hunter",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12782,6 +12981,7 @@
       "url": "https://chrome.google.com/webstore/detail/hunter-email-finder-exten/hgmhmanijnjhaffoampdlllchpolkdnj",
       "name": "Hunter - Email Finder Extension - Chrome Web Store",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -12815,6 +13015,7 @@
       "url": "https://github.com/harshnandwana/hussh",
       "name": "Hussh",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12826,6 +13027,7 @@
       "url": "https://chrome.google.com/webstore/detail/hypestat-analyzer-plugin/fmebbkhpaallipfibkfnajnlimgaoefp/related",
       "name": "HypeStat Analyzer Plugin",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12892,6 +13094,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/icann-lookup",
       "name": "ICANN Lookup",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -12958,6 +13161,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/idn-checker",
       "name": "IDN Checker",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -13211,6 +13415,7 @@
       "url": "http://industrydocuments.ucsf.edu/",
       "name": "industrydocuments.ucsf.edu",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -13541,6 +13746,7 @@
       "url": "https://instantusername.com/#/",
       "name": "Instant Username Search",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -13552,6 +13758,7 @@
       "url": "https://instantdomainsearch.com/domain/sale",
       "name": "InstantDomainSearch",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -13618,6 +13825,7 @@
       "url": "https://github.com/intelowlproject/IntelOwl",
       "name": "intelowlproject/IntelOwl: Intel Owl: analyze files, domains, IPs in multiple ways from a single API...",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -13728,6 +13936,7 @@
       "url": "https://inteltechniques.com/tools/Domain.html",
       "name": "IntelTechniques Domains Tool",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "query-form",
       "source": "IntelTechniques",
       "sources": [
@@ -13739,6 +13948,7 @@
       "url": "https://inteltechniques.com/tools/Email.html",
       "name": "IntelTechniques Email Addresses Tool",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "query-form",
       "source": "IntelTechniques",
       "sources": [
@@ -13783,6 +13993,7 @@
       "url": "https://inteltechniques.com/tools/IP.html",
       "name": "IntelTechniques IP Addresses Tool",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "query-form",
       "source": "IntelTechniques",
       "sources": [
@@ -13871,6 +14082,7 @@
       "url": "https://inteltechniques.com/tools/Telephone.html",
       "name": "IntelTechniques Telephone Numbers Tool",
       "category": "People & Identities",
+      "subcategory": "Phone",
       "payload_type": "query-form",
       "source": "IntelTechniques",
       "sources": [
@@ -13882,6 +14094,7 @@
       "url": "https://inteltechniques.com/tools/Username.html",
       "name": "IntelTechniques Usernames Tool",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "query-form",
       "source": "IntelTechniques",
       "sources": [
@@ -13959,6 +14172,7 @@
       "url": "https://tools.digitalmethods.net/beta/internetArchiveWaybackMachineLinkRipper/#",
       "name": "Internet Archive Wayback Machine Link Ripper",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -13970,6 +14184,7 @@
       "url": "https://analyze.intezer.com/",
       "name": "Intezer Analyzer",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14003,6 +14218,7 @@
       "url": "https://github.com/tdh8316/Investigo",
       "name": "Investigo",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14036,6 +14252,7 @@
       "url": "https://browserleaks.com/ip",
       "name": "IP Address Search - BrowserLeaks.com",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -14047,6 +14264,7 @@
       "url": "https://iknowwhatyoudownload.com/en/peer/",
       "name": "IP Address Search - I Know What You Download",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -14069,6 +14287,7 @@
       "url": "https://www.ip-neighbors.com/host/",
       "name": "IP Neighbors",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14080,6 +14299,7 @@
       "url": "https://www.imeipro.info/check_imei_iphone.html",
       "name": "iPhone IMEI Checker",
       "category": "People & Identities",
+      "subcategory": "Phone",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14091,6 +14311,7 @@
       "url": "https://ipinfo.io/map",
       "name": "IPinfo map",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14146,6 +14367,7 @@
       "url": "https://iqwhois.com/advanced-search",
       "name": "IQWhois",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14179,6 +14401,7 @@
       "url": "http://ixss.warsong.pw/xssor/",
       "name": "ixss.warsong.pw",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14223,6 +14446,7 @@
       "url": "https://github.com/channyein1337/jsleak",
       "name": "JSLEAK",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14234,6 +14458,7 @@
       "url": "https://github.com/BishopFox/jsluice",
       "name": "JSLUICE",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14410,6 +14635,7 @@
       "url": "https://keys.openpgp.org",
       "name": "keys.openpgp.org",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -14432,6 +14658,7 @@
       "url": "https://keywordtool.io/search/keywords/",
       "name": "Keywordtool.io",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14454,6 +14681,7 @@
       "url": "https://kikusernames.com/search",
       "name": "Kikusernames.com",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14498,6 +14726,7 @@
       "url": "https://github.com/harleo/knockknock",
       "name": "KnockKnock",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14575,6 +14804,7 @@
       "url": "https://www.larger.io/",
       "name": "Larger.io",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14619,6 +14849,7 @@
       "url": "https://leakcop.info/",
       "name": "Leakcop",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14762,6 +14993,7 @@
       "url": "https://github.com/kostas-pa/LFITester",
       "name": "LFITester",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14773,6 +15005,7 @@
       "url": "https://libraries.io/",
       "name": "Libraries.io",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14905,6 +15138,7 @@
       "url": "https://github.com/GerbenJavado/LinkFinder",
       "name": "LinkFinder",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14916,6 +15150,7 @@
       "url": "https://chrome.google.com/webstore/detail/link-klipper-extract-all/fahollcgofmpnehocdgofnhkkchiekoo",
       "name": "linkKlipper",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14938,6 +15173,7 @@
       "url": "https://en.wikipedia.org/wiki/List_of_Unicode_characters",
       "name": "List of Unicode characters - Wikipedia",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -14960,6 +15196,7 @@
       "url": "https://chrome.google.com/webstore/detail/listly-free-data-scraper/ihljmnfgkkmoikgkdkjejbkpdpbmcgeh/related",
       "name": "Listly",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -15147,6 +15384,7 @@
       "url": "https://github.com/Mr-Robert0/Logsensor",
       "name": "LogSensor",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -15169,6 +15407,7 @@
       "url": "https://lookyloo.circl.lu/",
       "name": "Lookyloo",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -15312,6 +15551,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/maigret",
       "name": "Maigret",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -15323,6 +15563,7 @@
       "url": "https://mailboxlayer.com/",
       "name": "MailBoxLayer API",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -15334,6 +15575,7 @@
       "url": "https://github.com/sharsil/mailcat",
       "name": "Mailcat",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -15345,6 +15587,7 @@
       "url": "https://github.com/WildSiphon/Mailfoguess",
       "name": "Mailfoguess",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -15356,6 +15599,7 @@
       "url": "https://github.com/gr33nm0nk2802/mailMeta",
       "name": "mailMeta",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -15488,6 +15732,7 @@
       "url": "https://anvaka.github.io/map-of-github/",
       "name": "Map of Github",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -15840,6 +16085,7 @@
       "url": "https://github.com/dievus/msdnsscan",
       "name": "MayorSecDNSScan",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -15994,6 +16240,7 @@
       "url": "https://github.com/jvanasco/metadata_parser",
       "name": "Metadata Parser",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16005,6 +16252,7 @@
       "url": "https://github.com/franckferman/MetaDetective",
       "name": "MetaDetective",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16016,6 +16264,7 @@
       "url": "https://github.com/Josue87/MetaFinder",
       "name": "MetaFinder",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16027,6 +16276,7 @@
       "url": "https://github.com/laramies/metagoofil",
       "name": "Metagoofil",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16049,6 +16299,7 @@
       "url": "https://github.com/datacoon/metawarc",
       "name": "Metawarc",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16214,6 +16465,7 @@
       "url": "https://github.com/ninoseki/miteru",
       "name": "Miteru",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16225,6 +16477,7 @@
       "url": "https://github.com/trickest/mkpath",
       "name": "MKPATH",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16236,6 +16489,7 @@
       "url": "https://github.com/trickest/mksub",
       "name": "MKSUB",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16247,6 +16501,7 @@
       "url": "https://mmhdan.herokuapp.com/",
       "name": "MMHDAN",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16258,6 +16513,7 @@
       "url": "https://chrome.google.com/webstore/detail/moartls-analyzer/ldfbacdbackkjhclmhnjabngnppnkagh/related",
       "name": "moarTLS Analyzer",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16665,6 +16921,7 @@
       "url": "https://nameberry.com/search?q=john",
       "name": "Nameberry",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16676,6 +16933,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/namechk",
       "name": "Namechk",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -16687,6 +16945,7 @@
       "url": "https://seintpl.github.io/NAMINT/",
       "name": "NAMINT",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16753,6 +17012,7 @@
       "url": "https://www.ncbi.nlm.nih.gov/",
       "name": "National Center for Biotechnology",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16874,6 +17134,7 @@
       "url": "https://app.neilpatel.com/en/seo_analyzer/backlinks",
       "name": "Neilpatel backlinks analyzer",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16885,6 +17146,7 @@
       "url": "https://www.nerdydata.com/",
       "name": "NerdyData",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16896,6 +17158,7 @@
       "url": "https://netbootcamp.org/websitetool.html",
       "name": "netbootcamp.org/websitetool.html",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16907,6 +17170,7 @@
       "url": "https://sitereport.netcraft.com/",
       "name": "Netcraft Site Report",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16940,6 +17204,7 @@
       "url": "https://app.netlas.io/",
       "name": "Netlas.io",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16962,6 +17227,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/neutrosint",
       "name": "NeutrOSINT",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -17028,6 +17294,7 @@
       "url": "https://www.digitalocean.com/community/tools/nginx",
       "name": "NGINXconfig",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -17039,6 +17306,7 @@
       "url": "https://nibbler.insites.com/",
       "name": "Nibbler",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -17061,6 +17329,7 @@
       "url": "https://github.com/vdjagilev/nmap-formatter",
       "name": "Nmap Formatter",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -17226,6 +17495,7 @@
       "url": "https://www.planningportal.nsw.gov.au/spatialviewer/#/find-a-property/address",
       "name": "NSW Planning Portal Spatial Viewer",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -17270,6 +17540,7 @@
       "url": "https://numverify.com/",
       "name": "Numverify API",
       "category": "People & Identities",
+      "subcategory": "Phone",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -17468,6 +17739,7 @@
       "url": "http://www.oldphonebook.com/",
       "name": "Oldphonebook",
       "category": "People & Identities",
+      "subcategory": "Phone",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -17754,6 +18026,7 @@
       "url": "https://chrome.google.com/webstore/detail/openlink-structured-data/egdaiaihbdoiibopledjahjaihbmjhdj",
       "name": "Open Link Structured Data Sniffer",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -17798,6 +18071,7 @@
       "url": "https://www.scrapersnbots.com/webtools/open-multiple-links-one-click.php",
       "name": "Open Multiple Links ☷ One Click",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -17985,6 +18259,7 @@
       "url": "https://chrome.google.com/webstore/detail/openlink-structured-data/egdaiaihbdoiibopledjahjaihbmjhdj/related",
       "name": "OpenLink Structured Data Sniffer",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -17996,6 +18271,7 @@
       "url": "http://openlinkprofiler.org/",
       "name": "OpenLinkProfiles",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -18051,6 +18327,7 @@
       "url": "https://github.com/atenreiro/opensquat",
       "name": "OPENSQUAT",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -18139,6 +18416,7 @@
       "url": "https://github.com/r0075h3ll/Oralyzer",
       "name": "Oralyzer",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -18766,6 +19044,7 @@
       "url": "https://github.com/OWASP/Amass",
       "name": "OWASP Amass",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -18909,6 +19188,7 @@
       "url": "https://passivedns.mnemonic.no/",
       "name": "Passive DNS search",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19052,6 +19332,7 @@
       "url": "https://www.peeringdb.com/",
       "name": "PeeringDB",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19162,6 +19443,7 @@
       "url": "https://github.com/s41r4j/phomber",
       "name": "Phomber",
       "category": "People & Identities",
+      "subcategory": "Phone",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19173,6 +19455,7 @@
       "url": "https://cipher387.github.io/phonenumberqueryconstructor/",
       "name": "Phone Number Search Constructor",
       "category": "People & Identities",
+      "subcategory": "Phone",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19184,6 +19467,7 @@
       "url": "https://github.com/spider863644/PhoneNumber-OSINT",
       "name": "PhoneNumber OSINT",
       "category": "People & Identities",
+      "subcategory": "Phone",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19228,6 +19512,7 @@
       "url": "https://github.com/N0rz3/Phunter",
       "name": "Phunter",
       "category": "People & Identities",
+      "subcategory": "Phone",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19250,6 +19535,7 @@
       "url": "https://github.com/enemy-submarine/pidrila",
       "name": "Pidrila",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19294,6 +19580,7 @@
       "url": "https://trends.pinterest.com/",
       "name": "Pinterest Trends",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19470,6 +19757,7 @@
       "url": "https://pldb.com/",
       "name": "PLDB",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19657,6 +19945,7 @@
       "url": "https://castrickclues.com/pricing",
       "name": "Pricing | Castrick",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -19712,6 +20001,7 @@
       "url": "https://github.com/Rog3rSm1th/Profil3r",
       "name": "Profil3r",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19723,6 +20013,7 @@
       "url": "https://profile-summary-for-github.com/search",
       "name": "Profile Summary for Github",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19789,6 +20080,7 @@
       "url": "http://ptrarchive.com/",
       "name": "ptrarchive.com",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19800,6 +20092,7 @@
       "url": "https://publicwww.com/",
       "name": "PublicWWW",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19811,6 +20104,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/publicwww",
       "name": "PublicWWW",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -19833,6 +20127,7 @@
       "url": "https://pulsedive.com/",
       "name": "Pulsedive",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19866,6 +20161,7 @@
       "url": "https://github.com/d8rkmind/Pyosint",
       "name": "Pyosint",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19877,6 +20173,7 @@
       "url": "https://extendsclass.com/python-tester.html",
       "name": "Python Code Checker",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19910,6 +20207,7 @@
       "url": "https://github.com/GeneralMills/pytrends",
       "name": "PyTrends",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19998,6 +20296,7 @@
       "url": "https://quickcacheandarchivesearch.onrender.com/",
       "name": "Quick Cache and Archive search",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20009,6 +20308,7 @@
       "url": "https://cipher387.github.io/quickcacheandarchivesearch/",
       "name": "Quick Cache and Archive search",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20130,6 +20430,7 @@
       "url": "http://radb.net/query",
       "name": "RADB",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20218,6 +20519,7 @@
       "url": "https://www.ransomlook.io/",
       "name": "RansomLook",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20262,6 +20564,7 @@
       "url": "https://github.com/hamza07-w/raymond",
       "name": "Raymond",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20306,6 +20609,7 @@
       "url": "https://github.com/six2dez/reconftw",
       "name": "ReconFTW",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20460,6 +20764,7 @@
       "url": "https://redirectdetective.com/",
       "name": "Redirect Detective",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20504,6 +20809,7 @@
       "url": "https://chrome.google.com/webstore/detail/regex-checker/gkcnkoebkkppbapcjifgokmpcflfhbde",
       "name": "Regex Checker",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20515,6 +20821,7 @@
       "url": "https://regexper.com/",
       "name": "REGEXPER",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20537,6 +20844,7 @@
       "url": "https://xenon.stanford.edu/~xusch/regexp/",
       "name": "Regular Expression Analyzer",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20636,6 +20944,7 @@
       "url": "https://github.com/webrecorder/replayweb.page",
       "name": "Replayweb",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20647,6 +20956,7 @@
       "url": "https://github.com/Ademking/repolist",
       "name": "Repolist",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20735,6 +21045,7 @@
       "url": "https://chrome.google.com/webstore/detail/retirejs/moibopkbhjceeedibkbkbchbjnkadmom/related",
       "name": "Retire.js",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20779,6 +21090,7 @@
       "url": "https://viewdns.info/reverseip/",
       "name": "Reverse IP Search - ViewDNS.info",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -20823,6 +21135,7 @@
       "url": "https://github.com/iustin24/rextract",
       "name": "REXTRACT",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20900,6 +21213,7 @@
       "url": "https://github.com/p0dalirius/robotstester",
       "name": "RobotTester",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20922,6 +21236,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/rootabout",
       "name": "RootAbout",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -20933,6 +21248,7 @@
       "url": "https://rootssearch.io/search",
       "name": "RootsSearch",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20977,6 +21293,7 @@
       "url": "https://www.functions-online.com/",
       "name": "Run PHP functions online",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -21263,6 +21580,7 @@
       "url": "https://beta.sayhello.so/",
       "name": "SayHello",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -21307,6 +21625,7 @@
       "url": "https://github.com/hktalent/scan4all",
       "name": "Scan4all",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -21384,6 +21703,7 @@
       "url": "https://www.scraperapi.com/?utm_source=google&utm_medium=cpc&utm_campaign=s_proxies_for_scraping_europe&utm_term=scrape%20api&gclid=Cj0KCQjw1dGJBhD4ARIsANb6OdnurtUihUJqiJpUAtwoPqsJ1X8lSio9etK9Mgcg-fb7qp23xUF2ZscaAqcvEALw_wcB",
       "name": "Scrape API",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -21406,6 +21726,7 @@
       "url": "https://chrome.google.com/webstore/detail/scrappy/bcphfcbaecjifhiojhejdiogpanlmadm/related",
       "name": "Scrappy!",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -21725,6 +22046,7 @@
       "url": "https://seart-ghs.si.usi.ch/",
       "name": "SEART Github Search",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -21758,6 +22080,7 @@
       "url": "https://github.com/m4ll0k/SecretFinder",
       "name": "SecretFinder",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -21769,6 +22092,7 @@
       "url": "https://github.com/Krypteria/Seekolver",
       "name": "Seekolver",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -21879,6 +22203,7 @@
       "url": "https://www.link-assistant.com/seo-spyglass/free-backlink-checker-tool.html",
       "name": "SEO Spyglass Backlink checker",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22011,6 +22336,7 @@
       "url": "https://www.shellcheck.net/",
       "name": "shellcheck.net",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22022,6 +22348,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/sherlock",
       "name": "Sherlock",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -22066,6 +22393,7 @@
       "url": "https://chrome.google.com/webstore/detail/shodan/jjalcfnidlmpjhdfepjhjbhnhkbgleap",
       "name": "Shodan",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -22077,6 +22405,7 @@
       "url": "https://chromewebstore.google.com/detail/shodan/jjalcfnidlmpjhdfepjhjbhnhkbgleap?hl=en",
       "name": "Shodan",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -22088,6 +22417,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/shodan",
       "name": "Shodan",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -22121,6 +22451,7 @@
       "url": "https://github.com/JakeWnuk/SickNerd",
       "name": "SickNerd",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22165,6 +22496,7 @@
       "url": "https://www.similarweb.com/",
       "name": "SimilarWeb",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22209,6 +22541,7 @@
       "url": "https://github.com/gildas-lormeau/SingleFile",
       "name": "SIngle File",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22264,6 +22597,7 @@
       "url": "https://github.com/Anon-Exploiter/SiteBroker",
       "name": "SiteBroker",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22275,6 +22609,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/skopenow",
       "name": "Skopenow",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -22440,6 +22775,7 @@
       "url": "https://chrome.google.com/webstore/detail/smart-ruler/npgpdlfoflcfcohplcdclmocfemgpdga/related",
       "name": "Smart ruler",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22572,6 +22908,7 @@
       "url": "https://github.com/snooppr/snoop",
       "name": "Snoop",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22583,6 +22920,7 @@
       "url": "https://github.com/snooppr/snoop/blob/master/README.en.md",
       "name": "snoop/README.en.md at master · snooppr/snoop",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -22605,6 +22943,7 @@
       "url": "https://snov.io/email-finder",
       "name": "snov.io email finder",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22616,6 +22955,7 @@
       "url": "https://app.snov.io/techcheck/main",
       "name": "Snov.io technology checker",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22660,6 +23000,7 @@
       "url": "https://snyk.io/test/website-scanner/",
       "name": "Snyk.io",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22682,6 +23023,7 @@
       "url": "https://chrome.google.com/webstore/detail/soc-multi-tool/diagjgnagmnjdfnfcciocmjcllacgkab/",
       "name": "SOC Multi Tool",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22825,6 +23167,7 @@
       "url": "https://domaincodex.com/",
       "name": "Source code search engine (315 million domains indexed). Search by title, metadata, javascript files, server name, location and more.",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22836,6 +23179,7 @@
       "url": "https://about.sourcegraph.com/",
       "name": "SourceGraph",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22847,6 +23191,7 @@
       "url": "https://github.com/ksharinarayanan/SourceWolf",
       "name": "SourceWolf",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22891,6 +23236,7 @@
       "url": "https://github.com/soxoj/maigret",
       "name": "soxoj/maigret: 🕵️‍♂️ Collect a dossier on a person by username from thousands of sites",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -22946,6 +23292,7 @@
       "url": "https://www.digitalocean.com/community/tools/spf",
       "name": "SPF Explainer",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22957,6 +23304,7 @@
       "url": "https://sploitus.com/",
       "name": "Sploitus",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23001,6 +23349,7 @@
       "url": "https://chrome.google.com/webstore/detail/sputnik/manapjdamopgbpimgojkccikaabhmocd/related",
       "name": "Sputnik",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23012,6 +23361,7 @@
       "url": "https://github.com/CYB3R-G0D/SPY",
       "name": "Spy",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23023,6 +23373,7 @@
       "url": "https://spycloud.com/check-your-exposure/",
       "name": "Spycloud.com",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23045,6 +23396,7 @@
       "url": "https://www.spyfu.com/overview/domain",
       "name": "Spyfu",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23056,6 +23408,7 @@
       "url": "https://www.spyoffers.com/",
       "name": "Spyoffers.com",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23067,6 +23420,7 @@
       "url": "https://github.com/spyse-com/cli",
       "name": "Spyse CLI",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23078,6 +23432,7 @@
       "url": "https://spyse.com/",
       "name": "Spyse.com",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23254,6 +23609,7 @@
       "url": "https://github.com/s0md3v/Striker",
       "name": "Striker",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23276,6 +23632,7 @@
       "url": "http://stylifyme.com/",
       "name": "Stylifyme",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23287,6 +23644,7 @@
       "url": "https://github.com/lijiejie/subDomainsBrute",
       "name": "SubDomainsBrute",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23408,6 +23766,7 @@
       "url": "https://swap.stanford.edu/",
       "name": "Swap.stanford.edu",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23529,6 +23888,7 @@
       "url": "https://chrome.google.com/webstore/detail/talend-api-tester-free-ed/aejoelaoggembcahagimdiliamlcdmfm/related?hl=ru",
       "name": "Talend API Tester Free Edition",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23540,6 +23900,7 @@
       "url": "https://www.talkyou.me/en/index.html",
       "name": "TalkU - Free Phone Calls, Texts & Walkie Talkie, PTT",
       "category": "People & Identities",
+      "subcategory": "Phone",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -23573,6 +23934,7 @@
       "url": "https://talosintelligence.com/reputation_center/",
       "name": "Talos Intelligence Mail Server Reputation",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23749,6 +24111,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/telegram-phone-number-checker",
       "name": "Telegram Phone Number Checker",
       "category": "People & Identities",
+      "subcategory": "Phone",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -23870,6 +24233,7 @@
       "url": "https://www.crazymailing.com/",
       "name": "Temporary Disposable Email - 10 minute mail",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -23925,6 +24289,7 @@
       "url": "https://tosdr.org/",
       "name": "Terms of Service Didn’t Read",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24046,6 +24411,7 @@
       "url": "https://github.com/feross/thanks",
       "name": "Thanks",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24134,6 +24500,7 @@
       "url": "http://besticon.herokuapp.com/",
       "name": "The Favicon Finder",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24145,6 +24512,7 @@
       "url": "https://github.com/nvbn/thefuck",
       "name": "The Fuck",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24277,6 +24645,7 @@
       "url": "https://github.com/champmq/TheScrapper",
       "name": "The Scraper",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24321,6 +24690,7 @@
       "url": "https://github.com/anmolksachan/TheTimeMachine",
       "name": "The Time Machine",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24398,6 +24768,7 @@
       "url": "https://github.com/rlyonheart/thelordseye",
       "name": "TheLordEye",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24409,6 +24780,7 @@
       "url": "https://theoldnet.com/",
       "name": "TheOldNet.com",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24453,6 +24825,7 @@
       "url": "https://www.thingful.net/",
       "name": "Thingful.net",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24508,6 +24881,7 @@
       "url": "https://github.com/rlyonheart/thorndyke",
       "name": "Thorndyke",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24794,6 +25168,7 @@
       "url": "https://www.tiny-scan.com/",
       "name": "Tiny Scan",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24805,6 +25180,7 @@
       "url": "https://tio.run/",
       "name": "TIO RUN",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24816,6 +25192,7 @@
       "url": "https://github.com/tldr-pages/tldr",
       "name": "TLDR",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24882,6 +25259,7 @@
       "url": "https://drfone.wondershare.com/message/receive-message-online.html",
       "name": "Top 10 Free Sites to Receive SMS Online Without Real Phone Number- dr.fone",
       "category": "People & Identities",
+      "subcategory": "Phone",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -24893,6 +25271,7 @@
       "url": "https://torwhois.com/",
       "name": "Tor Whois",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24948,6 +25327,7 @@
       "url": "https://whatismyipaddress.com/trace-email",
       "name": "Trace Email Address Source",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -25058,6 +25438,7 @@
       "url": "https://translit.net/",
       "name": "Translit.net",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -25146,6 +25527,7 @@
       "url": "https://trends.google.com/trends/",
       "name": "Trends Google",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -25190,6 +25572,7 @@
       "url": "http://trove.nla.gov.au/search/category/websites",
       "name": "Trove",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -25201,6 +25584,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/truecaller",
       "name": "TrueCaller",
       "category": "People & Identities",
+      "subcategory": "Phone",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -25245,6 +25629,7 @@
       "url": "http://try.jsoup.org/",
       "name": "Try.jsoup.org",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -25333,6 +25718,7 @@
       "url": "https://github.com/alex14324/Turbolist3r",
       "name": "Turbolist3r",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -25872,6 +26258,7 @@
       "url": "https://github.com/dhn/udon",
       "name": "UDON",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -25905,6 +26292,7 @@
       "url": "https://nationalarchives.gov.uk/",
       "name": "UK National Archives",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -25960,6 +26348,7 @@
       "url": "https://www.webarchive.org.uk/",
       "name": "UKWA",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -25971,6 +26360,7 @@
       "url": "https://chrome.google.com/webstore/detail/umatrix/ogfcmafjalglgifnmanfmnieipoejdcf/related",
       "name": "uMatrix",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26004,6 +26394,7 @@
       "url": "https://unavatar.io/john",
       "name": "Unavatar",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26125,6 +26516,7 @@
       "url": "https://unshorten.me/",
       "name": "Unshorten.me",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26158,6 +26550,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/urlscan.io",
       "name": "Urlscan.io",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -26169,6 +26562,7 @@
       "url": "http://urlxray.com/",
       "name": "Urlxray",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26257,6 +26651,7 @@
       "url": "https://www.loc.gov/collections/united-states-telephone-directory-collection/",
       "name": "USA Telephone Directory Collection",
       "category": "People & Identities",
+      "subcategory": "Phone",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26279,6 +26674,7 @@
       "url": "https://github.com/z0m31en7/Uscrapper",
       "name": "USCRAPPER",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26290,6 +26686,7 @@
       "url": "https://developers.whatismybrowser.com/useragents/parse/",
       "name": "User Agent Parser",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26301,6 +26698,7 @@
       "url": "https://www.user-searcher.com/",
       "name": "User Searcher",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26345,6 +26743,7 @@
       "url": "https://github.com/mishakorzik/UserFinder",
       "name": "UserFinder",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26356,6 +26755,7 @@
       "url": "https://username-check.herokuapp.com/",
       "name": "Username Availability Checker",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26389,6 +26789,7 @@
       "url": "https://chrome.google.com/webstore/detail/vandal/knoccgahmcfhngbjhdbcodajdioedgdo/related",
       "name": "Vandal",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26400,6 +26801,7 @@
       "url": "https://vault.fbi.gov/search",
       "name": "Vault.fbi.gov",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26444,6 +26846,7 @@
       "url": "https://vefsafn.is/",
       "name": "Vefsafn.is",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26488,6 +26891,7 @@
       "url": "https://products.groupdocs.app/metadata/total",
       "name": "VERY QUICK and SIMPLE metadata online editor and remover",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26598,6 +27002,7 @@
       "url": "https://chrome.google.com/webstore/detail/view-rendered-source/ejgngohbdedoabanmclafpkoogegdpob",
       "name": "View Rendered Source",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26609,6 +27014,7 @@
       "url": "https://viewdns.info/reversewhois/",
       "name": "ViewDNS.info - Reverse Whois Email Lookup",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -26664,6 +27070,7 @@
       "url": "https://www.vialibri.net/",
       "name": "visLibri",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26675,6 +27082,7 @@
       "url": "https://visualsitemapper.com/",
       "name": "Visual Site Mapper",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26807,6 +27215,7 @@
       "url": "https://vstat.info/",
       "name": "vstat.info",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26829,6 +27238,7 @@
       "url": "http://w3snoop.com/",
       "name": "w3snoop",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26840,6 +27250,7 @@
       "url": "https://w3techs.com/sites",
       "name": "w3techs",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26917,6 +27328,7 @@
       "url": "https://www.wappalyzer.com/",
       "name": "Wappalyzer",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26939,6 +27351,7 @@
       "url": "https://github.com/chfoo/warcat",
       "name": "Warcat",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26983,6 +27396,7 @@
       "url": "https://github.com/bellingcat/wayback-google-analytics",
       "name": "WAYBACK GOOGLE ANALYTICS",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26994,6 +27408,7 @@
       "url": "https://github.com/lorenzoromani1983/wayback-keyword-search",
       "name": "Wayback Keywords Search",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27005,6 +27420,7 @@
       "url": "https://chrome.google.com/webstore/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak",
       "name": "Wayback Machine",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -27027,6 +27443,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/wayback-machine",
       "name": "Wayback Machine",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -27038,6 +27455,7 @@
       "url": "http://wayback.archive-it.org/",
       "name": "Wayback.archive-it.org",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27049,6 +27467,7 @@
       "url": "https://github.com/jsvine/waybackpack",
       "name": "Waybackpack",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27060,6 +27479,7 @@
       "url": "https://github.com/Haax9/WaybackPDF",
       "name": "WaybackPDF",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27071,6 +27491,7 @@
       "url": "https://github.com/akamhy/waybackpy",
       "name": "Waybackpy",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27082,6 +27503,7 @@
       "url": "https://github.com/xnl-h4ck3r/waymore",
       "name": "WayMore",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27115,6 +27537,7 @@
       "url": "https://github.com/husseinphp/web-archive",
       "name": "Web Archive Google Chrome Extension",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27126,6 +27549,7 @@
       "url": "https://chrome.google.com/webstore/detail/web-archives/hkligngkgcpcolhcnkgccglchdafcnao/related",
       "name": "Web Archives",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27137,6 +27561,7 @@
       "url": "https://chrome.google.com/webstore/detail/web-archives/hkligngkgcpcolhcnkgccglchdafcnao",
       "name": "Web Archives",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -27159,6 +27584,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/web-archives",
       "name": "Web Archives",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -27214,6 +27640,7 @@
       "url": "https://webtechsurvey.com/website/",
       "name": "Web Tech Survey",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27225,6 +27652,7 @@
       "url": "http://web.archive.bibalex.org/",
       "name": "web.archive.bibalex.org",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27236,6 +27664,7 @@
       "url": "http://webarchive.loc.gov/",
       "name": "Webarchive.loc.gov",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27291,6 +27720,7 @@
       "url": "https://github.com/h4r5h1t/webcopilot",
       "name": "WEBCOPILOT",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27313,6 +27743,7 @@
       "url": "https://www.webemailextractor.com/",
       "name": "Webemailextractor.com",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27324,6 +27755,7 @@
       "url": "https://github.com/mathis2001/WebHackUrls",
       "name": "WebHackUrls",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27346,6 +27778,7 @@
       "url": "https://webmeup.com/",
       "name": "Webmeup",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27368,6 +27801,7 @@
       "url": "https://github.com/C3n7ral051nt4g3ncy/webosint",
       "name": "WEBOSINT",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27379,6 +27813,7 @@
       "url": "https://archive.is/",
       "name": "Webpage archive",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -27390,6 +27825,7 @@
       "url": "https://github.com/Malwarize/webpalm",
       "name": "WEBPALM",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27401,6 +27837,7 @@
       "url": "https://webrecorder.net/tools",
       "name": "Webrecorder tools",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27423,6 +27860,7 @@
       "url": "https://urlscan.io/",
       "name": "Website Scan - URLscan",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -27500,6 +27938,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/what-cms",
       "name": "What CMS",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -27511,6 +27950,7 @@
       "url": "https://webkay.robinlinus.com/",
       "name": "What every Browser knows about you",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27533,6 +27973,7 @@
       "url": "https://github.com/z0m31en7/WhatMail",
       "name": "What Mail?",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27588,6 +28029,7 @@
       "url": "https://chrome.google.com/webstore/detail/whatruns/cmkdbmfndkfgebldhnkbfhlneefdaaip/related",
       "name": "WhatRuns",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27610,6 +28052,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/whatsmyname",
       "name": "WhatsMyName",
       "category": "People & Identities",
+      "subcategory": "Username",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -27709,6 +28152,7 @@
       "url": "https://whois.marcaria.com/en",
       "name": "Whois Domain Search Tool",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27720,6 +28164,7 @@
       "url": "http://whois.domaintools.com/",
       "name": "Whois Lookup & IP Search - DomainTools",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -27731,6 +28176,7 @@
       "url": "https://who.is/",
       "name": "Whois Lookup & IP Search - Who.is",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -27742,6 +28188,7 @@
       "url": "https://whois.auda.org.au/",
       "name": "Whois Lookup - Australian Domains",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -27753,6 +28200,7 @@
       "url": "https://centralops.net/co/",
       "name": "Whois Lookup - Central Ops",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -27764,6 +28212,7 @@
       "url": "https://viewdns.info/whois/",
       "name": "Whois Lookup - ViewDNS.info",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -27775,6 +28224,7 @@
       "url": "https://www.whoisxmlapi.com/",
       "name": "Whois Lookup - Who Is XML API (Requires sign up)",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -27786,6 +28236,7 @@
       "url": "https://www.whois.com/whois/",
       "name": "Whois Lookup - Whois",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -27797,6 +28248,7 @@
       "url": "https://www.whoxy.com/example.com",
       "name": "Whois Lookup - Whoxy",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -27808,6 +28260,7 @@
       "url": "https://whois.whoisxmlapi.com/database/pricing",
       "name": "Whois XML API Whois history database",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27819,6 +28272,7 @@
       "url": "http://whoisds.com/newly-registered-domains",
       "name": "WhoisDS.com",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27841,6 +28295,7 @@
       "url": "https://www.whoxy.com/",
       "name": "Whoxy",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -27852,6 +28307,7 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/whoxy",
       "name": "Whoxy",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -28160,6 +28616,7 @@
       "url": "https://wordtune.com/read",
       "name": "Wordtune.com",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -28215,6 +28672,7 @@
       "url": "https://worldcat.org/",
       "name": "World Cat",
       "category": "Archiving & Preservation",
+      "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -28424,6 +28882,7 @@
       "url": "https://github.com/xnl-h4ck3r/xnLinkFinder",
       "name": "xnLinkFinder",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -28446,6 +28905,7 @@
       "url": "https://github.com/hueristiq/xurlfind3r",
       "name": "XURLFIND3R",
       "category": "Websites, Domains & IPs",
+      "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -28545,6 +29005,7 @@
       "url": "https://www.yworks.com/yed-live/",
       "name": "yEd Live - Online Diagram Tool",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -28589,6 +29050,7 @@
       "url": "https://you.com/code",
       "name": "YouCode",
       "category": "Websites, Domains & IPs",
+      "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -28941,6 +29403,7 @@
       "url": "https://github.com/N0rz3/Zehef",
       "name": "ZEHEF",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -29062,6 +29525,7 @@
       "url": "http://www.guerrillamail.com/",
       "name": "✉ Guerrilla Mail - Disposable Temporary E-Mail Address",
       "category": "People & Identities",
+      "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
