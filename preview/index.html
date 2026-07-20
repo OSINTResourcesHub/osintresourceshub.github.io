@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B13 — three-question hero (What · Who · Why)</title>
+<style>
+  :root{--bg:#0b0e14;--panel:#141a22;--panel2:#1a212b;--line:#28323f;--ink:#e8eef6;--dim:#8b98a5;
+    --accent:#4ec9b0;--accent2:#6ea8fe;--warn:#e3b341;--active:#f07178;--chip:#22303f;
+    --alive:#4ec9b0;--blocked:#e3b341;--dead:#f07178;--susp:#e39b41;--login:#6ea8fe;--unver:#8b98a5;}
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1200px 600px at 78% -10%,rgba(78,201,176,.06),transparent),var(--bg);color:var(--ink);font:16px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;min-height:100vh}
+  .fresh{display:flex;gap:15px;align-items:center;padding:8px 22px;border-bottom:1px solid var(--line);font-size:12px;color:var(--dim);flex-wrap:wrap}
+  .fresh .brand{font-weight:800;color:var(--ink)}.fresh b{color:var(--ink)}.fresh .a{color:var(--alive)}.fresh .bl{color:var(--warn)}.fresh .de{color:var(--active)}.fresh .last{margin-left:auto}
+  .subline{padding:5px 22px;border-bottom:1px solid var(--line);font-size:11px;color:var(--dim)}
+  .subline a{color:var(--accent);text-decoration:none}.subline a:hover{text-decoration:underline}
+  .hero{max-width:900px;margin:0 auto;padding:7vh 26px 40px}
+  .kick{display:flex;gap:10px;align-items:center;color:var(--accent);font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:18px}
+  .eyewrap{width:30px;height:30px;border-radius:50%;background:#f4efe6;display:inline-grid;place-items:center;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+  .eyewrap img{width:27px;height:27px;object-fit:contain}
+  .sentence{font-size:32px;line-height:1.5;font-weight:600;letter-spacing:-.01em}
+  @media(max-width:600px){.sentence{font-size:25px}}
+  .tok{color:var(--ink)}
+  .slot{border-bottom:2px dashed rgba(139,152,165,.5);cursor:pointer;padding:0 2px;white-space:nowrap;color:var(--dim)}
+  .slot:hover{background:rgba(255,255,255,.05)}
+  .slot.what{color:var(--accent2);border-bottom-color:rgba(110,168,254,.5)}
+  .slot.who{color:var(--warn);border-bottom-color:rgba(227,179,65,.5)}
+  .slot.why{color:#b98bff;border-bottom-color:rgba(185,139,255,.5)}
+  .slot.filled{border-bottom-style:solid}
+  .slot.have{color:var(--accent);border-bottom-color:rgba(78,201,176,.5)}
+  .add{color:var(--dim);cursor:pointer;font-weight:700;padding:0 5px;border:1px solid var(--line);border-radius:7px;font-size:18px;display:inline-block;vertical-align:middle}
+  .add:hover{color:var(--accent);border-color:var(--accent)}
+  .picker{margin-top:22px;min-height:40px}
+  .picker .pl{color:var(--dim);font-size:13px;margin-bottom:8px}
+  .opts{display:flex;flex-wrap:wrap;gap:8px}
+  .opt{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 13px;font-size:15px;cursor:pointer;transition:.13s;display:flex;gap:8px;align-items:center}
+  .opt:hover{border-color:var(--accent2);transform:translateY(-1px)}
+  .opt.skip{color:var(--dim);border-style:dashed}
+  /* summary card */
+  .summary{margin-top:26px;border:1px solid var(--accent);background:rgba(78,201,176,.06);border-radius:13px;padding:15px 17px;display:none}
+  .summary.show{display:block}
+  .summary .rd{font-size:16px;line-height:1.5}
+  .summary .rd b{color:var(--ink)}
+  .summary .ask{color:var(--dim);font-size:13px;margin-top:8px}
+  .sugg{margin-top:10px;display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+  .sugg .lab{color:var(--dim);font-size:13px}
+  .schip{background:var(--chip);border:1px solid var(--line);border-radius:16px;padding:5px 11px;font-size:13px;cursor:pointer}
+  .schip:hover{border-color:var(--accent)}
+  .go{margin-top:12px;background:var(--accent);border:none;color:#062720;border-radius:9px;padding:9px 15px;font-weight:700;cursor:pointer;font-size:14px}
+  /* continuation */
+  .cont{margin-top:26px;border-left:2px solid var(--accent);padding:2px 0 2px 16px;display:none}
+  .cont.show{display:block}
+  .reading{display:inline-flex;gap:8px;align-items:center;font-size:12px;color:var(--dim);background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:4px 11px;margin-bottom:14px}
+  .reading b{color:var(--ink)}
+  .grp{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--accent2);margin:16px 0 7px}.grp.cross{color:var(--warn)}
+  .mv{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:9px 12px;margin-bottom:8px}
+  .mv .t{font-size:14px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;gap:8px}
+  .mv .t .cta{color:var(--accent2);font-size:12px}
+  .mv.miss{border-color:var(--warn)}.mv.miss .t .lbl::before{content:"★ ";color:var(--warn)}
+  .b{font-size:10px;padding:1px 6px;border-radius:8px;font-weight:700;margin-right:6px}
+  .b.passive{background:rgba(78,201,176,.15);color:var(--accent)}.b.active{background:rgba(240,113,120,.15);color:var(--active)}.b.mixed{background:rgba(227,179,65,.15);color:var(--warn)}
+  .tools{margin-top:9px;display:none;flex-direction:column;gap:6px}.tools.show{display:flex}
+  .tl{display:flex;justify-content:space-between;gap:10px;align-items:center;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:7px 10px}
+  .tl .nm{font-size:13px}.tl .meta{color:var(--dim);font-size:11px}
+  .hc{font-size:10px;padding:1px 6px;border-radius:7px;font-weight:700;margin-left:6px}
+  .mini{background:var(--chip);border:1px solid var(--line);color:var(--ink);border-radius:7px;padding:4px 9px;font-size:12px;text-decoration:none}
+  .reset{margin-top:24px;color:var(--dim);font-size:12px;cursor:pointer;display:none}
+  .foot{max-width:900px;margin:0 auto;padding:0 26px 40px;color:var(--dim);font-size:11px}
+  .empty{color:var(--dim);font-size:13px}
+  .help{position:fixed;right:22px;bottom:22px;z-index:70}
+  .help .anchor{width:92px;height:92px;border-radius:50%;cursor:pointer;position:relative;background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.5);overflow:hidden;display:grid;place-items:center}
+  .help .anchor::after{content:"";position:absolute;inset:-3px;border-radius:50%;border:2px solid var(--accent);opacity:.5;animation:ping 2.8s ease-out infinite;pointer-events:none}
+  @keyframes ping{0%{transform:scale(.92);opacity:.5}70%{transform:scale(1.28);opacity:0}100%{opacity:0}}
+  .help .anchor img{width:82px;height:82px;object-fit:contain;transition:transform .18s}
+  .help .anchor:hover img{transform:translateY(-2px) scale(1.04)}
+  .help .panel{position:absolute;right:0;bottom:104px;width:330px;max-width:86vw;background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 55px rgba(0,0,0,.55);overflow:hidden;transform-origin:bottom right;transform:scale(.15);opacity:0;pointer-events:none;transition:.2s cubic-bezier(.2,1,.3,1)}
+  .help.open .panel{transform:scale(1);opacity:1;pointer-events:auto}
+  .help .phead{display:flex;gap:10px;align-items:center;padding:11px 13px;border-bottom:1px solid var(--line);background:#11151c}
+  .help .phead img{width:32px;height:32px;border-radius:50%;background:#f4efe6;padding:2px}
+  .help .phead .t{font-weight:700;font-size:13px}.help .phead .s{color:var(--dim);font-size:11px}.help .phead .x{margin-left:auto;cursor:pointer;color:var(--dim)}
+  .help .body{padding:12px;max-height:44vh;overflow:auto}
+  .msg{border-radius:11px;padding:8px 11px;font-size:13px;margin-bottom:8px;max-width:90%;line-height:1.45}
+  .msg.aa{background:var(--panel2);border:1px solid var(--line)}.msg.uu{background:var(--accent2);color:#0b1220;margin-left:auto}
+  .qchips{display:flex;flex-wrap:wrap;gap:6px}.qchip{background:var(--chip);border:1px solid var(--line);border-radius:16px;padding:5px 10px;font-size:12px;cursor:pointer}
+  .help .foot2{display:flex;gap:6px;padding:10px;border-top:1px solid var(--line)}
+  .help .foot2 input{flex:1;background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:8px 10px;color:var(--ink);font-size:13px}
+  .help .foot2 button{background:var(--accent);border:none;color:#062720;border-radius:9px;padding:0 13px;font-weight:800;cursor:pointer}
+  .help .hbadge{position:absolute;top:-2px;right:-2px;z-index:3;background:var(--accent);color:#062720;font-size:12px;font-weight:800;border-radius:10px;min-width:19px;height:19px;place-items:center;padding:0 5px;box-shadow:0 2px 6px rgba(0,0,0,.4)}
+  .msg.recap{border-color:var(--accent);background:rgba(78,201,176,.09)}
+  .help .body .go{background:var(--accent);border:none;color:#062720;border-radius:9px;padding:9px;font-weight:700;cursor:pointer;font-size:14px}
+  section.blk{max-width:1040px;margin:34px auto 0;padding:0 26px}
+  section.blk h2{font-size:15px;margin:0 0 4px}section.blk .sh{color:var(--dim);font-size:13px;margin:0 0 12px}
+  .acc{cursor:pointer;user-select:none}.acc:hover{color:var(--accent)}
+  .lanes{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  @media(max-width:900px){.lanes{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.lanes{grid-template-columns:1fr}}
+  .lane{border:1px solid var(--line);background:var(--panel);border-radius:11px;padding:12px;cursor:pointer;transition:.14s}
+  .lane:hover{border-color:var(--accent2);transform:translateY(-1px)}
+  .lane .ln{font-weight:700;font-size:14px}.lane .jd{color:var(--accent);font-size:12px;margin-top:2px}
+  .cats{display:flex;flex-wrap:wrap;gap:8px}
+  .catc{border:1px solid var(--line);background:var(--panel);border-radius:9px;padding:8px 12px;font-size:13px;cursor:pointer;display:flex;gap:8px;align-items:center}
+  .catc:hover{border-color:var(--accent2)}.catc .cn{color:var(--dim);font-size:12px}
+  #results{max-width:1040px;margin:14px auto 0;padding:0 26px}
+  .tl2{display:flex;justify-content:space-between;gap:10px;align-items:center;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:7px 10px;margin-bottom:7px}
+  .kitbtn{background:var(--chip);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer;font-size:12px}.kitbtn b{color:var(--accent)}
+  .drawer{position:fixed;top:0;right:0;height:100%;width:340px;background:var(--panel);border-left:1px solid var(--line);transform:translateX(100%);transition:.2s;z-index:80;padding:16px;overflow:auto}
+  .drawer.open{transform:none}.drawer .x{float:right;cursor:pointer;color:var(--dim)}
+  .ki{border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin-bottom:7px;font-size:13px;display:flex;justify-content:space-between;gap:8px}.ki .rm{color:var(--active);cursor:pointer}
+  .persw{font-size:12px;color:var(--dim);margin:8px 0}
+  .tg{background:var(--chip);border:1px solid var(--line);border-radius:20px;padding:3px 9px;cursor:pointer;font-size:11px;color:var(--dim)}.tg.on{background:rgba(78,201,176,.16);border-color:var(--accent);color:var(--accent)}
+  .exp{width:100%;margin-top:10px;background:var(--accent);border:none;color:#062720;border-radius:8px;padding:9px;font-weight:700;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="fresh"><span class="brand">OSINT Resources Hub</span><span>·</span>
+  <span><b id="fCat">2,657</b> tools</span><span class="a">● <span id="fAlive"></span> alive</span>
+  <span class="bl">● <span id="fBlock"></span> blocked?</span><span class="de">● <span id="fDead"></span> dead/dying</span>
+  <span class="last">last 24h: <b>412</b> re-checked → <span class="a">6 changed</span></span>
+  <span class="kitbtn" onclick="openKit()">🧰 Kit <b id="kitn">0</b></span></div>
+<div class="subline">a project by <a href="https://osint-research.com" target="_blank" rel="noopener">OSINT-Research · osint-research.com</a></div>
+
+<div class="hero">
+  <div class="kick"><span class="eyewrap"><img src="assets/osint-research-lens-1024.png" alt=""></span> Here to help</div>
+  <div class="sentence" id="sentence"></div>
+  <div class="picker" id="picker"></div>
+  <div class="summary" id="summary"></div>
+  <div class="cont" id="cont"></div>
+  <div class="reset" id="reset" onclick="resetAll()">↺ start over</div>
+</div>
+<section class="blk">
+  <h2 class="acc" id="accGuide" onclick="acc('guide')">▾ Guide me — by field <span style="color:#b98bff;font-weight:400">(this is your “why”)</span></h2>
+  <div id="guideBody"><p class="sh">Eight lanes in your own vocabulary. Each maps to a Role × Domain underneath.</p><div class="lanes" id="lanes"></div></div>
+  <h2 class="acc" id="accBrowse" onclick="acc('browse')" style="margin-top:22px">▸ Browse the backbone — by category</h2>
+  <div id="browseBody" style="display:none"><p class="sh">All tools filed once, into 16 categories. Counts &amp; health are live.</p><div class="cats" id="cats"></div></div>
+</section>
+<div id="results"></div>
+
+<div class="drawer" id="drawer"><span class="x" onclick="openKit()">✕</span><h3>Investigation kit</h3>
+  <div class="persw">Persistence: <span class="tg" id="persSession" onclick="setPersist('session')">This session</span> <span class="tg on" id="persLocal" onclick="setPersist('local')">Keep on device</span></div>
+  <div id="kititems"></div><button class="exp" onclick="exportKit()">Copy kit as Markdown</button>
+  <p class="persw">Session = gone at tab close (opsec). Device = survives restarts. Local either way — GDPR-clean.</p></div>
+
+<div class="foot" id="foot"></div>
+
+<div class="help" id="help">
+  <div class="panel">
+    <div class="phead"><img src="assets/osint-research-lens-1024.png" alt="OSINT-Research"><div><div class="t">Here to help</div><div class="s">by OSINT-Research · using the Hub</div></div><span class="x" onclick="toggleHelp()">✕</span></div>
+    <div class="body" id="helpbody"></div>
+    <div class="foot2"><input id="helpin" placeholder="Ask about using the Hub…" onkeydown="if(event.key==='Enter')helpSend()"><button onclick="helpSend()">↑</button></div>
+  </div>
+  <div class="anchor" onclick="toggleHelp()" title="Need help?"><span class="hbadge" id="helpBadge" style="display:none">1</span><img src="assets/osint-research-detective-badge.png" alt="Help"></div>
+</div>
+
+<script>
+let DATA={"categories":[],"catalog_total":0,"generated_from":0,"status_generated_at":"","by_state":{"unverified":0,"dead":0,"alive":0,"blocked_unknown":0,"suspected_dead":0,"login_walled":0},"tools":[]};
+const H={alive:["alive","var(--alive)","rgba(78,201,176,.15)"],login_walled:["login","var(--login)","rgba(110,168,254,.15)"],blocked_unknown:["blocked?","var(--blocked)","rgba(227,179,65,.15)"],unverified:["unverified","var(--unver)","rgba(139,152,165,.15)"],suspected_dead:["dying","var(--susp)","rgba(227,155,65,.15)"],dead:["dead","var(--dead)","rgba(240,113,120,.15)"]};
+function hchip(st){const h=H[st]||H.unverified;return `<span class="hc" style="background:${h[2]};color:${h[1]}">${h[0]}</span>`}
+function toolsFor(cats,n){return DATA.tools.filter(t=>cats.includes(t.c)).filter(t=>t.st!=='dead'&&t.st!=='suspected_dead').sort((a,b)=>(a.st==='alive'?0:1)-(b.st==='alive'?0:1)||b.sc-a.sc).slice(0,n||4);}
+
+// ---- vocab ----
+const TASKS=[{id:"verify",l:"verify",role:"fact-checker"},{id:"investigate",l:"investigate",role:"investigator / journalist"},{id:"analyse",l:"analyse",role:"analyst"},{id:"screen",l:"screen / vet",role:"KYC / HR"},{id:"trace",l:"trace money / assets",role:"financial-crime analyst"},{id:"monitor",l:"monitor",role:"SOC / protective intel"},{id:"secure",l:"secure",role:"security operations"},{id:"prepare",l:"prepare for",role:"security ops / protective"}];
+const WHY=[{id:"fin",l:"I suspect financial crime"},{id:"disinfo",l:"it may be disinformation"},{id:"env",l:"it's environmental harm"},{id:"corruption",l:"I suspect corruption"},{id:"cyber",l:"it's a cyber threat"},{id:"hiring",l:"it's an integrity / hiring check"},{id:"threat",l:"it's a threat to someone"},{id:"general",l:"general research"}];
+const ENTITIES=[
+ {id:"company",l:"a company",e:"🏢",subject:1,held:"company"},
+ {id:"person",l:"a person",e:"🧑",subject:1,held:"person"},
+ {id:"time",l:"a time / date",e:"📅",subject:1,held:"time"},
+ {id:"place",l:"a place",e:"📍",subject:1,held:"place"},
+ {id:"online",l:"an online thing",e:"🌐",subject:1,held:"online"},
+ {id:"media",l:"a piece of media",e:"🖼",subject:1,held:"media"},
+ {id:"connection",l:"a connection (maybe social-only)",e:"🔗",held:"person",close:"loose"},
+ {id:"family",l:"a friend or family member",e:"👪",held:"person",close:"close"},
+ {id:"asset",l:"an asset (vessel/vehicle/aircraft)",e:"🚢",held:"asset"},
+ {id:"infra",l:"a piece of infrastructure",e:"🖥",held:"online"}];
+const ENT=ENTITIES.filter(e=>e.subject);   // primary "who do you research"
+const ALSOENT=ENTITIES;                      // "…from a —" : full source vocabulary
+function heldKey(type){return (ENTITIES.find(e=>e.id===type)||{}).held||type}
+const HELD={
+ company:[{id:"name",l:"a name"},{id:"country",l:"country"},{id:"city",l:"city"},{id:"industry",l:"industry"},{id:"officer",l:"an officer's name"},{id:"domain",l:"a domain"},{id:"reg",l:"a registration no."}],
+ person:[{id:"name",l:"a name"},{id:"email",l:"an email"},{id:"username",l:"a username"},{id:"social",l:"a social account"},{id:"phone",l:"a phone"}],
+ time:[{id:"date",l:"a date / timeframe"},{id:"evloc",l:"a location"},{id:"actors",l:"people / orgs involved"},{id:"evmedia",l:"media of it"},{id:"claim",l:"a claim about it"}],
+ asset:[{id:"assetid",l:"an ID (IMO / tail / plate)"},{id:"assetname",l:"a name"},{id:"owner",l:"an owner"}],
+ place:[{id:"address",l:"an address"},{id:"coords",l:"coordinates"}],
+ online:[{id:"domain",l:"a domain"},{id:"ip",l:"an IP"},{id:"url",l:"a URL"}],
+ media:[{id:"photo",l:"a photo"},{id:"video",l:"a video"}]};
+const TIMES=[{id:"happened",l:"happened"},{id:"ongoing",l:"is ongoing"},{id:"upcoming",l:"is upcoming"}];
+const NAMEATTRS=["full name","city","country","nationality"];
+const PLATFORMS=["Bluesky","X/Twitter","Instagram","Facebook","TikTok","LinkedIn","Telegram","Reddit","YouTube","VK","Mastodon","Snapchat","other"];
+const TLDS=["com","net","org","gov","edu","de","uk","ru","eu","io","ai","other ccTLD"];
+function detailFor(entType,heldId){
+  if(entType==='person'&&heldId==='name')return{label:"what do you also have? (tick — no names typed)",options:NAMEATTRS};
+  if(heldId==='social')return{label:"which platform(s)?",options:PLATFORMS};
+  if(heldId==='domain')return{label:"TLD — quick feel",options:TLDS};
+  return null;}
+const HMOVES={
+ name:[["directorships & companies","passive",0,["Companies, Finance & Government"]],["screen sanctions / PEP","passive",1,["Companies, Finance & Government"]]],
+ country:[["jurisdiction-specific registries","passive",0,["Companies, Finance & Government"]]],
+ city:[["local registries / news","passive",0,["Companies, Finance & Government","Search & Dorking"]]],
+ industry:[["sector databases / regulators","passive",0,["Companies, Finance & Government"]]],
+ officer:[["the officer as a person → other directorships","passive",1,["Companies, Finance & Government","People & Identities"]]],
+ domain:[["passive DNS / resolve","passive",0,["Websites, Domains & IPs"]],["sibling domains via shared analytics","passive",1,["Websites, Domains & IPs"]]],
+ reg:[["official filings","passive",0,["Companies, Finance & Government"]]],
+ email:[["Gravatar → username","passive",1,["People & Identities"]],["breach records → identity","passive",0,["Breaches, Leaks & Dark Web"]]],
+ username:[["enumerate accounts","passive",0,["People & Identities","Social Media & Messengers"]]],
+ social:[["mine profile / followers","mixed",0,["Social Media & Messengers","People & Identities"]],["same handle on other platforms","passive",0,["People & Identities"]]],
+ phone:[["reverse / caller-ID","mixed",0,["People & Identities"]]],
+ assetid:[["live / historic position","passive",0,["Transport & Logistics"]],["flag / registry lookup","passive",0,["Transport & Logistics"]]],
+ assetname:[["identify the asset","passive",0,["Transport & Logistics"]]],
+ owner:[["owner → company / person","passive",1,["Companies, Finance & Government","People & Identities"]]],
+ wallet:[["trace flows / cluster addresses","passive",0,["Crypto & Money Flows"]],["attribution via exchange leaks","passive",1,["Crypto & Money Flows"]]],
+ location:[["ground-truth imagery","passive",0,["Maps, Geolocation & Satellites"]],["who's registered here","passive",1,["Companies, Finance & Government"]]],
+ document:[["authors / named parties","passive",0,["Analysis, Collaboration & Reporting"]],["archive it before it changes","passive",1,["Archiving & Preservation"]]],
+ date:[["build a timeline of the event","passive",0,["Analysis, Collaboration & Reporting","Search & Dorking"]]],
+ evloc:[["ground-truth imagery at that time","passive",0,["Maps, Geolocation & Satellites"]]],
+ actors:[["research the people / orgs involved","passive",0,["People & Identities","Companies, Finance & Government"]]],
+ evmedia:[["verify & ARCHIVE the media","passive",1,["Images, Video & Media Verification","Archiving & Preservation"]]],
+ claim:[["find the earliest source of the claim","passive",1,["Search & Dorking","Images, Video & Media Verification"]]],
+ address:[["who's registered here","passive",1,["Companies, Finance & Government"]]],
+ coords:[["ground-truth imagery","passive",0,["Maps, Geolocation & Satellites"]]],
+ ip:[["reverse IP / co-hosted","passive",0,["Websites, Domains & IPs"]]],
+ url:[["ARCHIVE before it changes","passive",1,["Archiving & Preservation"]],["extract the domain","passive",0,["Websites, Domains & IPs"]]],
+ photo:[["geolocate the scene","passive",0,["Maps, Geolocation & Satellites"]],["earliest appearance","passive",1,["Images, Video & Media Verification"]]],
+ video:[["keyframes → reverse search","passive",0,["Images, Video & Media Verification"]],["archive before deleted","passive",1,["Archiving & Preservation"]]]};
+const CROSS={"company|person":[["Is this person an officer / UBO of it?","passive",0,["Companies, Finance & Government"]]],
+ "company|company":[["Shared officers / addresses — secretly linked?","passive",1,["Companies, Finance & Government"]]],
+ "person|person":[["Shared companies / addresses / associates","passive",1,["Companies, Finance & Government"]]],
+ "person|time":[["Was this person at / behind it?","passive",1,["People & Identities","Maps, Geolocation & Satellites"]]],
+ "company|time":[["Is this company involved in it?","passive",0,["Companies, Finance & Government"]]]};
+
+// ---- state ----
+let task=null, why=null, letter={};
+const cse={ents:[]}; let active={t:'task'}; let confirmed=false;
+function autoName(type){letter[type]=(letter[type]||0)+1;const L=String.fromCharCode(64+letter[type]);
+  const base=({company:"Company",person:"Person",time:"Event",place:"Place",online:"Site",media:"Media",connection:"Connection",family:"contact",asset:"Asset",infra:"Infra"}[type])||"Item";
+  return base+" "+(base===base.toLowerCase()?L.toLowerCase():L);}
+function eObj(id){return ENTITIES.find(e=>e.id===id)}
+
+// ---- sentence ----
+function renderSentence(){
+  const s=document.getElementById('sentence');let h='<span class="tok">I want to </span>';
+  h+= task?`<span class="slot what filled" onclick="setA('task')">${task.l}</span>`:`<span class="slot what" onclick="setA('task')">do something</span>`;
+  h+='<span class="tok"> </span>';
+  if(!cse.ents.length){h+=`<span class="slot who" onclick="setA('primEnt')">someone, something, someplace or a time</span>`;}
+  else{const p=cse.ents[0];h+=whoSpan(p,0);}
+  h+='<span class="tok">, because </span>';
+  h+= why?`<span class="slot why filled" onclick="setA('why')">${why.l}</span>`:`<span class="slot why" onclick="setA('why')">…of some reason</span>`;
+  h+='<span class="tok">.</span>';
+  h+=renderHoldings();
+  s.innerHTML=h;
+  document.getElementById('reset').style.display=(task||why||cse.ents.length)?'block':'none';
+}
+function whoSpan(e,idx){const o=eObj(e.type);let t=`${o.e} ${idx===0?o.l:e.name}`;
+  if(e.type==='time'){const tm=e.time?TIMES.find(x=>x.id===e.time).l:'…';t=`${o.e} something that <span class="slot who" onclick="event.stopPropagation();setA('eventTime:${idx}')">${tm}</span>`;}
+  return `<span class="slot who filled" onclick="setA('primEnt')">${t}</span>`;}
+let draft={held:[]};
+const HELDLIB=[
+ {id:"name",l:"a name"},{id:"username",l:"a username"},{id:"social",l:"a social account"},{id:"email",l:"an email"},{id:"phone",l:"a phone"},{id:"wallet",l:"a wallet"},
+ {id:"domain",l:"a domain"},{id:"ip",l:"an IP"},{id:"url",l:"a URL"},
+ {id:"photo",l:"a photo"},{id:"video",l:"a video"},{id:"location",l:"a location"},{id:"document",l:"a document"},{id:"reg",l:"a registration no."}];
+function detailForHeld(id){if(id==='name')return{label:"what do you also have? (tick — no names typed)",options:NAMEATTRS};
+  if(id==='social')return{label:"which platform(s)?",options:PLATFORMS};
+  if(id==='domain')return{label:"TLD — quick feel",options:TLDS};return null;}
+function renderHoldings(){
+  if(!cse.ents.length)return '';
+  const wh=cse.ents.map((e,i)=>({e,i})).filter(o=>o.e.held.length);
+  if(wh.length){return '<span class="tok"><br>I already have </span>'+wh.map(o=>heldList(o.e,o.i)+'<span class="tok"> from </span>'+entRef(o.e,o.i)).join('<span class="tok">;  </span>')+'<span class="tok">.</span> <span class="add" onclick="startBundle()" title="add more">＋ I also have…</span>';}
+  return '<span class="tok"><br></span><span class="slot have" onclick="startBundle()">I already have something…</span>';}
+function heldList(e,idx){return e.held.map((hh,j)=>{const lbl=(HELDLIB.find(x=>x.id===hh.id)||{l:hh.id}).l;const d=hh.detail&&hh.detail.length?` (${hh.detail.join(', ')})`:'';return `<span class="slot have filled" onclick="rmHeld(${idx},${j})" title="remove">${lbl}${d}</span>`;}).join('<span class="tok"> and </span>');}
+function entRef(e,i){const o=eObj(e.type);const label=i===0?o.l:e.name;return `<span class="slot who filled" style="color:var(--warn);border-bottom-color:rgba(227,179,65,.5)" onclick="${i===0?"setA('primEnt')":''}">${o.e} ${label}</span>`;}
+
+function setA(t){active={t};renderPicker();}
+function renderPicker(){const p=document.getElementById('picker');const t=active.t;
+  if(t==='task'){p.innerHTML=pl("what do you want to do?")+opts(TASKS.map(x=>`<span class="opt" onclick="pickTask('${x.id}')">${x.l}</span>`).join('')+`<span class="opt skip" onclick="skipTask()">skip — just help me look</span>`);return;}
+  if(t==='why'){p.innerHTML=pl("why? (this is your field — it tailors everything)")+opts(WHY.map(x=>`<span class="opt" onclick="pickWhy('${x.id}')">${x.l}</span>`).join(''));return;}
+  if(t==='primEnt'){p.innerHTML=pl("who, what or where do you want to research?")+opts(ENT.map(e=>`<span class="opt" onclick="pickEnt('${e.id}')">${e.e} ${e.l}</span>`).join(''));return;}
+  if(t&&t.indexOf('eventTime')===0){const i=+t.split(':')[1];p.innerHTML=pl("it…")+opts(TIMES.map(x=>`<span class="opt" onclick="pickTime(${i},'${x.id}')">${x.l}</span>`).join(''));return;}
+  if(t==='bundle'){
+    const heldChips=HELDLIB.map(hh=>{const on=draft.held.some(x=>x.id===hh.id);return `<span class="opt" style="${on?'border-color:var(--accent);color:var(--accent)':''}" onclick="toggleDraftHeld('${hh.id}')">${hh.l}</span>`;}).join('');
+    let detailRows='';draft.held.forEach(hh=>{const det=detailForHeld(hh.id);if(det){const nm=(HELDLIB.find(x=>x.id===hh.id)||{l:hh.id}).l;detailRows+=`<div class="pl" style="margin-top:10px">${det.label} <span style="opacity:.7">for ${nm}</span></div>`+opts(det.options.map(o=>`<span class="opt" style="${hh.detail.includes(o)?'border-color:var(--accent);color:var(--accent)':''}" onclick="toggleDraftDetail('${hh.id}',&quot;${o}&quot;)">${o}</span>`).join(''));}});
+    const fromChips=fromList().map(e=>`<span class="opt" onclick="finishBundle('${e.id}')">${e.e} ${e.l}</span>`).join('');
+    p.innerHTML=pl("I have one or more:")+opts(heldChips)+detailRows+`<div class="pl" style="margin-top:14px">…from a —${draft.held.length?'':' <span style="opacity:.6">(pick what you have first)</span>'}</div>`+opts(fromChips);return;}
+}
+function pl(x){return `<div class="pl">${x}</div>`}function opts(x){return `<div class="opts">${x}</div>`}
+function pickTask(id){task=TASKS.find(x=>x.id===id);active={t:cse.ents.length?'why':'primEnt'};render();}
+function skipTask(){task=null;active={t:cse.ents.length?'why':'primEnt'};render();}
+function pickWhy(id){why=WHY.find(x=>x.id===id);active={t:null};render();}
+function pickEnt(id){const cl=(eObj(id)||{}).close||null;
+  if(!cse.ents.length){cse.ents.push({id:'e1',type:id,name:autoName(id),held:[],time:null,close:cl});}
+  else{cse.ents[0].type=id;cse.ents[0].close=cl;}
+  active={t:id==='time'?'eventTime:0':(why?null:'why')};render();}
+function pickTime(i,val){cse.ents[i].time=val;active={t:why?null:'why'};render();}
+function startBundle(){draft={held:[]};active={t:'bundle'};renderPicker();}
+function toggleDraftHeld(id){const i=draft.held.findIndex(x=>x.id===id);if(i>=0)draft.held.splice(i,1);else draft.held.push({id,detail:[]});renderPicker();}
+function toggleDraftDetail(id,val){const hh=draft.held.find(x=>x.id===id);if(!hh)return;const k=hh.detail.indexOf(val);if(k>=0)hh.detail.splice(k,1);else hh.detail.push(val);renderPicker();}
+function fromList(){const a=[];if(cse.ents.length)a.push({id:'__subject__',e:'📌',l:"the one I'm researching"});
+  ['person','connection','family','company','place','asset','infra','media'].forEach(id=>{const o=eObj(id);if(o)a.push(o);});return a;}
+function finishBundle(fromId){if(!draft.held.length)return;let target;
+  if(fromId==='__subject__'&&cse.ents.length){target=cse.ents[0];}
+  else{const cl=(eObj(fromId)||{}).close||null;target={id:'e'+(cse.ents.length+1),type:fromId,name:autoName(fromId),held:[],time:null,close:cl};cse.ents.push(target);}
+  draft.held.forEach(hh=>{if(!target.held.some(x=>x.id===hh.id))target.held.push({id:hh.id,detail:hh.detail.slice()});});
+  draft={held:[]};active={t:null};document.getElementById('picker').innerHTML='';render();}
+function rmHeld(idx,j){cse.ents[idx].held.splice(j,1);if(idx>0&&!cse.ents[idx].held.length)cse.ents.splice(idx,1);render();}
+function quickAdd(id){if(!cse.ents.length)return;const t=cse.ents[0];if(!t.held.some(x=>x.id===id))t.held.push({id,detail:[]});render();}
+function resetAll(){task=null;why=null;letter={};cse.ents=[];draft={held:[]};active={t:'task'};confirmed=false;
+  document.getElementById('summary').classList.remove('show');document.getElementById('cont').classList.remove('show');render();}
+
+// ---- summarize & check ----
+function render(){renderSentence();renderPicker();agentSync();if(confirmed)renderCont();}
+function renderSummary(){const box=document.getElementById('summary');
+  const p=cse.ents[0];
+  const all=[];cse.ents.forEach((e,i)=>e.held.forEach(h=>all.push({h,ei:i})));
+  if(!p||!all.length){box.classList.remove('show');return;}
+  box.classList.add('show');
+  const whoTxt=p.type==='time'?`something that ${p.time?TIMES.find(x=>x.id===p.time).l:'happened'}`:eObj(p.type).l;
+  const heldTxt=all.map(o=>{const l=(HELDLIB.find(x=>x.id===o.h.id)||{l:o.h.id}).l;const d=o.h.detail&&o.h.detail.length?` (${o.h.detail.join(', ')})`:'';const from=o.ei===0?'':` <span style="color:var(--dim)">from ${cse.ents[o.ei].name}</span>`;return l+d+from;}).join(', ');
+  const sugg=HELDLIB.filter(h=>!p.held.some(x=>x.id===h.id)).slice(0,3);
+  box.innerHTML=`<div class="rd">So — you want to <b>${task?task.l:'look into'}</b> <b>${whoTxt}</b>, because <b>${why?why.l.replace(/^I |^it |^…of /,''):'you\'re researching'}</b>, and you already have <b>${heldTxt}</b>.</div>
+    <div class="ask">Did I get that right? Correct anything above by clicking it.</div>
+    ${sugg.length?`<div class="sugg"><span class="lab">You could also easily add (on the subject):</span>${sugg.map(s=>`<span class="schip" onclick="quickAdd('${s.id}')">＋ ${s.l}</span>`).join('')}</div>`:''}
+    <button class="go" onclick="confirmCase()">Looks right → show my moves</button>`;
+}
+function confirmCase(){confirmed=true;renderCont();renderAgentBody();document.getElementById('cont').scrollIntoView({behavior:'smooth',block:'nearest'});}
+
+// ---- continuation ----
+function moveRow(label,fp,miss,cats,ctx){const id='t'+Math.random().toString(36).slice(2,8);const tools=toolsFor(cats,4);
+  return `<div class="mv ${miss?'miss':''}"><div class="t" onclick="document.getElementById('${id}').classList.toggle('show')">
+    <span class="lbl"><span class="b ${fp}">${fp}</span>${label} <span style="color:var(--dim);font-weight:400">· ${ctx}</span></span><span class="cta">${tools.length} tools ▾</span></div>
+    <div class="tools" id="${id}">${tools.map(t=>`<div class="tl"><div><span class="nm">${t.n}</span>${hchip(t.st)}<div class="meta">${t.c}</div></div><div style="display:flex;gap:6px"><a class="mini" href="${t.u}" target="_blank" rel="noopener">Open ↗</a><span class="mini" onclick='addKit(${JSON.stringify(t).replace(/'/g,"&#39;")})'>+ Kit</span></div></div>`).join('')||'<div class="empty">No sample tools here.</div>'}</div></div>`;}
+function renderCont(){const c=document.getElementById('cont');c.classList.add('show');let html='';
+  const role=task?task.role:'—', dom=why?why.l.replace(/^I |^it |^…of /,''):'general research';
+  html+=`<span class="reading">reading you as: <b>${role}</b> · <b>${dom}</b></span>`;
+  if(cse.ents.some(e=>e.close==='close'))html+=`<div style="border-left:3px solid var(--warn);background:rgba(227,179,65,.07);border-radius:0 9px 9px 0;padding:9px 12px;margin:10px 0;font-size:13px"><b style="color:var(--warn)">Friend / family opens strong pivots</b> — shared address, family registries, mutual connections. Mind collateral intrusion: they aren't your subject.</div>`;
+  cse.ents.forEach((ent,idx)=>{let rows='';ent.held.forEach(h=>{(HMOVES[h.id]||[]).forEach(m=>rows+=moveRow(m[0],m[1],m[2],m[3],`from ${idx===0?'them':ent.name}`));});
+    if(rows)html+=`<div class="grp">${idx===0?'Your subject':ent.name}</div>`+rows;});
+  if(cse.ents.length>=2){let cross='';for(let i=0;i<cse.ents.length;i++)for(let j=i+1;j<cse.ents.length;j++){
+    const k=[cse.ents[i].type,cse.ents[j].type].sort().join('|');(CROSS[k]||[]).forEach(m=>cross+=moveRow(m[0],m[1],m[2],m[3],`${cse.ents[i].name} ↔ ${cse.ents[j].name}`));}
+    if(cross)html+=`<div class="grp cross">Cross-entity — the forgotten moves</div>`+cross;}
+  c.innerHTML=html;}
+
+// ---- lanes / browse / kit ----
+const LANES=[
+ {ln:"Cyber Intel",jd:"Track cyber threats",cats:["Websites, Domains & IPs","Breaches, Leaks & Dark Web","OPSEC & Tradecraft"]},
+ {ln:"Corporate Intel",jd:"Investigate companies",cats:["Companies, Finance & Government","Search & Dorking","People & Identities"]},
+ {ln:"Fraud & Compliance",jd:"Fight financial crime",cats:["Companies, Finance & Government","Crypto & Money Flows","Breaches, Leaks & Dark Web"]},
+ {ln:"Geopolitics",jd:"Read the world",cats:["Maps, Geolocation & Satellites","Conflict & Environment","Transport & Logistics"]},
+ {ln:"Defence & Gov",jd:"Serve government & defence",cats:["OPSEC & Tradecraft","Archiving & Preservation","People & Identities"]},
+ {ln:"Security Ops",jd:"Protect people & assets",cats:["Social Media & Messengers","Websites, Domains & IPs","OPSEC & Tradecraft"]},
+ {ln:"Public Interest",jd:"Hold power to account",cats:["Images, Video & Media Verification","Maps, Geolocation & Satellites","Archiving & Preservation"]},
+ {ln:"Trust & Safety",jd:"Keep platforms safe",cats:["Social Media & Messengers","People & Identities","Breaches, Leaks & Dark Web"]}];
+const catCount={};
+function fillCat(){for(const k in catCount)delete catCount[k];DATA.tools.forEach(t=>catCount[t.c]=(catCount[t.c]||0)+1);}
+fillCat();
+async function loadFullCatalog(){try{
+  const [tj,sj]=await Promise.all([fetch('../data/tools.json').then(r=>r.json()),fetch('../data/status.json').then(r=>r.json())]);
+  const links=sj.links||{};
+  DATA={categories:tj.categories,catalog_total:sj.catalog_total||tj.count,by_state:sj.by_state,status_generated_at:sj.generated_at,generated_from:tj.count,
+    tools:tj.tools.map(t=>({n:t.name,u:t.url,c:t.category,p:t.payload_type||'link',sc:t.source_count||1,st:(links[t.url]||{}).state||(links[t.url]||{}).final_status||'unverified'}))};
+  fillCat();initFresh();renderLanes();renderCats();
+}catch(e){/* offline: keep the embedded full catalog */}}
+function renderLanes(){document.getElementById('lanes').innerHTML=LANES.map(L=>`<div class="lane" onclick="showCats(${JSON.stringify(L.cats).replace(/"/g,'&quot;')},'${L.ln} — ${L.jd}')"><div class="ln">${L.ln}</div><div class="jd">${L.jd}</div></div>`).join('');}
+function renderCats(){document.getElementById('cats').innerHTML=DATA.categories.map(c=>`<div class="catc" onclick="showCats(['${c.replace(/'/g,"\\'")}'],'${c.replace(/'/g,"\\'")}')"><span>${c}</span><span class="cn">${catCount[c]||0}</span></div>`).join('');}
+function acc(name){const g=document.getElementById('guideBody'),b=document.getElementById('browseBody'),ag=document.getElementById('accGuide'),ab=document.getElementById('accBrowse');
+  const gl='Guide me — by field <span style="color:#b98bff;font-weight:400">(this is your “why”)</span>';
+  if(name==='guide'){const open=g.style.display!=='none';g.style.display=open?'none':'block';b.style.display='none';ag.innerHTML=(open?'▸ ':'▾ ')+gl;ab.textContent='▸ Browse the backbone — by category';}
+  else{const open=b.style.display!=='none';b.style.display=open?'none':'block';g.style.display='none';ab.textContent=(open?'▸ ':'▾ ')+'Browse the backbone — by category';ag.innerHTML='▸ '+gl;}}
+function showCats(cats,title){const list=toolsFor(cats,30);
+  document.getElementById('results').innerHTML=`<div class="grp">${title} · ${list.length} shown</div>`+list.map(t=>`<div class="tl2"><div><span class="nm">${t.n}</span>${hchip(t.st)}<div class="meta">${t.c}${t.p!=='link'?' · '+t.p:''}</div></div><div style="display:flex;gap:6px"><a class="mini" href="${t.u}" target="_blank" rel="noopener">Open ↗</a><span class="mini" onclick='addKit(${JSON.stringify(t).replace(/'/g,"&#39;")})'>+ Kit</span></div></div>`).join('');
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});}
+let kit=[],persist=localStorage.getItem('orh_persist')||'local';
+function loadKit(){try{return JSON.parse((persist==='local'?localStorage:sessionStorage).getItem('orh_kit'))||[]}catch(e){return[]}}
+function saveKit(){(persist==='local'?localStorage:sessionStorage).setItem('orh_kit',JSON.stringify(kit))}
+function addKit(t){if(!kit.find(k=>k.u===t.u)){kit.push(t);saveKit();renderKit();}}
+function rmKit(u){kit=kit.filter(k=>k.u!==u);saveKit();renderKit();}
+function renderKit(){document.getElementById('kitn').textContent=kit.length;document.getElementById('kititems').innerHTML=kit.length?kit.map(k=>`<div class="ki"><span>${k.n}</span><span class="rm" onclick="rmKit('${k.u.replace(/'/g,"")}')">✕</span></div>`).join(''):'<p class="persw">Empty. Add tools with “+ Kit”.</p>';}
+function openKit(){document.getElementById('drawer').classList.toggle('open');}
+function setPersist(p){persist=p;localStorage.setItem('orh_persist',p);document.getElementById('persLocal').classList.toggle('on',p==='local');document.getElementById('persSession').classList.toggle('on',p==='session');saveKit();}
+function exportKit(){const md='# OSINT kit\n\n'+kit.map(k=>`- [${k.n}](${k.u}) — ${k.c} · ${k.st}`).join('\n')+'\n';navigator.clipboard&&navigator.clipboard.writeText(md);const b=document.querySelector('.exp');b.textContent='Copied ✓';setTimeout(()=>b.textContent='Copy kit as Markdown',1400);}
+
+// ---- init ----
+function initFresh(){const b=DATA.by_state||{};document.getElementById('fCat').textContent=(DATA.catalog_total||2657).toLocaleString();
+  document.getElementById('fAlive').textContent=b.alive||0;document.getElementById('fBlock').textContent=b.blocked_unknown||0;document.getElementById('fDead').textContent=(b.dead||0)+(b.suspected_dead||0);}
+document.getElementById('foot').innerHTML="B5 v4 — three-question hero (What·Who·Why + “I have one or more … from a —”). The <b>detective helper</b> presents the summarise-&-check (auto-opens when your case is ready, live-updates, ＋ suggests inputs) and “Looks right → show my moves” reveals moves with real catalog tools &amp; live health. Guide lanes ⇄ browse · kit. Full <b>2,657-tool</b> catalog, loaded live from <code>./data/tools.json</code> + <code>status.json</code> when served. Read-only. No trackers.";
+kit=loadKit();
+initFresh();render();renderLanes();renderCats();renderKit();loadFullCatalog();
+document.getElementById('persLocal').classList.toggle('on',persist==='local');document.getElementById('persSession').classList.toggle('on',persist==='session');
+
+// ---- helper agent ----
+const QA={"How do I start?":"Complete the sentence up top — what you want to do, who/what you're researching, and why. I'll suggest the moves and the vetted tools.",
+ "Is my data private?":"Yes. Nothing leaves your browser — no account, no tracking. What you add is a category (a checkbox), never the actual value.",
+ "What do the colours mean?":"Green = the tool's link is alive, amber = blocked/uncertain, red = dead. We re-check every link daily.",
+ "How do playbooks work?":"After a few moves I can save them as a reusable playbook — shareable anonymously, with no case data in it."};
+let helpStarted=false, agentAutoOpened=false;
+function caseReady(){return cse.ents.some(e=>e.held.length)}
+function toggleHelp(){const h=document.getElementById('help');const opening=!h.classList.contains('open');h.classList.toggle('open');
+  if(opening){renderAgentBody();document.getElementById('helpBadge').style.display='none';}}
+function agentSync(){const h=document.getElementById('help');const ready=caseReady();
+  if(ready&&!agentAutoOpened){agentAutoOpened=true;h.classList.add('open');}
+  if(h.classList.contains('open')){renderAgentBody();document.getElementById('helpBadge').style.display='none';}
+  else{document.getElementById('helpBadge').style.display=(ready&&!confirmed)?'grid':'none';}}
+function greetHTML(){return `<div class="msg aa">👋 I'm your OSINT-Research helper. Start the sentence above and I'll keep track — or ask me about <i>using</i> the Hub.</div><div class="qchips">${Object.keys(QA).map(q=>`<span class="qchip" onclick="helpAsk(this.textContent)">${q}</span>`).join('')}</div>`;}
+function recapHTML(){const p=cse.ents[0];const all=[];cse.ents.forEach((e,i)=>e.held.forEach(h=>all.push({h,ei:i})));
+  const whoTxt=p.type==='time'?`something that ${p.time?TIMES.find(x=>x.id===p.time).l:'happened'}`:eObj(p.type).l;
+  const heldTxt=all.map(o=>{const l=(HELDLIB.find(x=>x.id===o.h.id)||{l:o.h.id}).l;const d=o.h.detail&&o.h.detail.length?` (${o.h.detail.join(', ')})`:'';const from=o.ei===0?'':` from ${cse.ents[o.ei].name}`;return l+d+from;}).join(', ');
+  const sugg=HELDLIB.filter(h=>!p.held.some(x=>x.id===h.id)).slice(0,3);
+  return `<div class="msg aa recap">So — you want to <b>${task?task.l:'look into'}</b> <b>${whoTxt}</b>, because <b>${why?why.l.replace(/^I |^it |^…of /,''):'you\'re researching'}</b>, and you already have <b>${heldTxt}</b>.<br><span style="color:var(--dim)">Did I get that right? Just correct the sentence above.</span></div>
+   ${sugg.length?`<div class="qchips"><span style="color:var(--dim);font-size:12px;align-self:center">also easily add:</span>${sugg.map(s=>`<span class="qchip" onclick="quickAdd('${s.id}')">＋ ${s.l}</span>`).join('')}</div>`:''}
+   <button class="go" style="margin-top:12px;width:100%" onclick="confirmCase()">Looks right → show my moves</button>`;}
+function renderAgentBody(){const b=document.getElementById('helpbody');
+  if(caseReady()&&!confirmed){b.innerHTML=recapHTML();return;}
+  if(confirmed){b.innerHTML=`<div class="msg aa">Your moves are below ↓ Want help using any of the tools?</div><div class="qchips">${Object.keys(QA).map(q=>`<span class="qchip" onclick="helpAsk(this.textContent)">${q}</span>`).join('')}</div>`;return;}
+  b.innerHTML=greetHTML();}
+function addMsg(t,w){const b=document.getElementById('helpbody');const d=document.createElement('div');d.className='msg '+w;d.innerHTML=t;b.appendChild(d);b.scrollTop=b.scrollHeight;}
+function helpAsk(q){addMsg(q,'uu');setTimeout(()=>addMsg(QA[q]||"…",'aa'),240);}
+function helpSend(){const i=document.getElementById('helpin');const v=i.value.trim();if(!v)return;addMsg(v,'uu');i.value='';
+  const pii=[/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}/i,/\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/];
+  if(pii.some(re=>re.test(v))){setTimeout(()=>addMsg("That looks like a real selector — no need to share it with me. I only help with <i>using</i> the site.",'aa'),240);return;}
+  setTimeout(()=>addMsg("In the real build I answer from the Hub's own docs (EU-hosted, zero-log). For now, try a topic above.",'aa'),240);}
+</script>
+</body>
+</html>
