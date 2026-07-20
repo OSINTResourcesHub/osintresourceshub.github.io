@@ -114,6 +114,13 @@
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
 .kitline{padding:10px 22px 0}
 .kitbtn.big{font-size:14px;padding:8px 14px}
+.cathead{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px;border-bottom:1px solid var(--line);padding-bottom:9px;margin:18px 0 12px}
+.cathead .h{font-size:19px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+.cathead .hsub{font-size:12px;color:var(--dim)}
+.tl2 .nm{font-size:14px;color:var(--ink)}
+.tl2 .meta{color:var(--dim);font-size:11px;margin-top:2px}
+.tl2 .hc{margin-left:6px}
+.subtag{border:1px solid var(--accent2);color:var(--accent2);font-size:11px;padding:1px 7px;border-radius:20px;margin-left:6px;opacity:.9}
 </style>
 </head>
 <body>
@@ -361,7 +368,7 @@ async function loadFullCatalog(){try{
   const [tj,sj]=await Promise.all([fetch('../data/tools.json').then(r=>r.json()),fetch('../data/status.json').then(r=>r.json())]);
   const links=sj.links||{};
   DATA={categories:tj.categories,catalog_total:sj.catalog_total||tj.count,by_state:sj.by_state,status_generated_at:sj.generated_at,generated_from:tj.count,
-    tools:tj.tools.map(t=>({n:t.name,u:t.url,c:t.category,p:t.payload_type||'link',sc:t.source_count||1,st:(links[t.url]||{}).state||(links[t.url]||{}).final_status||'unverified'}))};
+    tools:tj.tools.map(t=>({n:t.name,u:t.url,c:t.category,p:t.payload_type||'link',sc:t.source_count||1,st:(links[t.url]||{}).state||(links[t.url]||{}).final_status||'unverified',sub:t.subcategory||t.sub||''}))};
   fillCat();initFresh();renderLanes();renderCats();
 }catch(e){/* offline: keep the embedded full catalog */}}
 function renderLanes(){document.getElementById('lanes').innerHTML=LANES.map(L=>`<div class="lane" onclick="showCats(${JSON.stringify(L.cats).replace(/"/g,'&quot;')},'${L.ln} — ${L.jd}')"><div class="ln">${L.ln}</div><div class="jd">${L.jd}</div></div>`).join('');}
@@ -370,9 +377,7 @@ function acc(name){const g=document.getElementById('guideBody'),b=document.getEl
   const gl='Guide me — by field <span style="color:#b98bff;font-weight:400">(this is your “why”)</span>';
   if(name==='guide'){const open=g.style.display!=='none';g.style.display=open?'none':'block';b.style.display='none';ag.innerHTML=(open?'▸ ':'▾ ')+gl;ab.textContent='▸ Browse the backbone — by category';}
   else{const open=b.style.display!=='none';b.style.display=open?'none':'block';g.style.display='none';ab.textContent=(open?'▸ ':'▾ ')+'Browse the backbone — by category';ag.innerHTML='▸ '+gl;}}
-function showCats(cats,title){const list=toolsFor(cats,30);
-  document.getElementById('results').innerHTML=`<div class="grp">${title} · ${list.length} shown</div>`+list.map(t=>`<div class="tl2"><div><span class="nm">${t.n}</span>${hchip(t.st)}<div class="meta">${t.c}${t.p!=='link'?' · '+t.p:''}</div></div><div style="display:flex;gap:6px"><a class="mini" href="${t.u}" target="_blank" rel="noopener">Open ↗</a><span class="mini" onclick='addKit(${JSON.stringify(t).replace(/'/g,"&#39;")})'>+ Kit</span></div></div>`).join('');
-  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});}
+function showCats(cats,title){const list=toolsFor(cats,30);const inCat=DATA.tools.filter(t=>cats.includes(t.c));const ck=inCat.filter(t=>t.st!=='unverified');const pct=ck.length?Math.round(100*ck.filter(t=>t.st==='alive').length/ck.length):0;const head=`<div class="cathead"><span class="h">${title}</span><span class="hsub">${inCat.length} tools${ck.length?' \u00b7 '+pct+'% alive':''} \u00b7 ${list.length} shown</span></div>`;const rows=list.map(t=>{const meta=[t.sc>1?t.sc+' sources':'',t.p!=='link'?t.p:''].filter(Boolean).join(' \u00b7 ');return `<div class="tl2"><div class="tinfo"><span class="nm">${t.n}</span>${t.sub?`<span class="subtag">${t.sub}</span>`:''}${hchip(t.st)}${meta?`<div class="meta">${meta}</div>`:''}</div><div style="display:flex;gap:6px"><a class="mini" href="${t.u}" target="_blank" rel="noopener">Open \u2197</a><span class="mini" onclick='addKit(${JSON.stringify(t).replace(/'/g,"&#39;")})'>+ Kit</span></div></div>`;}).join('');document.getElementById('results').innerHTML=head+rows;document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});}
 let kit=[],persist=localStorage.getItem('orh_persist')||'local';
 function loadKit(){try{return JSON.parse((persist==='local'?localStorage:sessionStorage).getItem('orh_kit'))||[]}catch(e){return[]}}
 function saveKit(){(persist==='local'?localStorage:sessionStorage).setItem('orh_kit',JSON.stringify(kit))}
