@@ -162,7 +162,7 @@
     <div class="body" id="helpbody"></div>
     <div class="foot2"><input id="helpin" placeholder="Ask about using the Hub…" onkeydown="if(event.key==='Enter')helpSend()"><button onclick="helpSend()">↑</button></div>
   </div>
-  <div class="anchor" onclick="toggleHelp()" title="Need help?"><span class="hbadge" id="helpBadge" style="display:none">1</span><img src="assets/osint-research-detective-badge.png" alt="Help"></div>
+  <div class="anchor" onclick="toggleHelp()" title="Need help?"><span class="hbadge" id="helpBadge" style="display:none">1</span><img src="assets/osint-research-detective-badge.png" alt="Help" id="helpImg"></div>
 </div>
 
 <script>
@@ -395,6 +395,7 @@ document.getElementById('foot').innerHTML="B5 v4 — three-question hero (What·
 kit=loadKit();
 initFresh();render();renderLanes();renderCats();renderKit();loadFullCatalog();
 setTimeout(()=>{if(!active.t&&!cse.ents.length&&!why){const b=document.getElementById('startBalloon');if(b)b.classList.add('show');}},1200);
+(function(){var HImg=document.getElementById('helpImg');if(!HImg)return;HImg.dataset.static=HImg.getAttribute('src');if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;var GIF='assets/osint-research-detective-badge.gif';function rest(){HImg.src=HImg.dataset.static;}function pulse(){var hp=document.getElementById('help');if(hp&&hp.classList.contains('open'))return;HImg.onerror=function(){HImg.onerror=null;rest();};HImg.src=GIF+'?'+Date.now();setTimeout(rest,5200);}setTimeout(pulse,4000);setInterval(pulse,45000);})();
 document.getElementById('persLocal').classList.toggle('on',persist==='local');document.getElementById('persSession').classList.toggle('on',persist==='session');
 
 // ---- helper agent ----
