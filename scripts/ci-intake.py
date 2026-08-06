@@ -80,8 +80,11 @@ def main() -> int:
 
     raw = (f.get("url") or "").strip()
     url = raw.split()[0] if raw else ""
-    name = re.sub(r"\s+", " ", f.get("name", "")).strip()
+    # tool name = the issue title (minus any legacy "[tool] " prefix); fall back to the old Name field
+    title = re.sub(r"^\[tool\]\s*", "", os.environ.get("ISSUE_TITLE", ""), flags=re.I)
+    name = re.sub(r"\s+", " ", f.get("name", "")).strip() or re.sub(r"\s+", " ", title).strip()
     what = re.sub(r"\s+", " ", f.get("what it does", "")).strip()
+    lic = re.sub(r"\s+", " ", f.get("access", "")).strip()   # cost/access model → stored as `cost`
 
     if not url.lower().startswith("http"):
         COMMENT.write_text("Couldn't find a valid **URL** in the submission — please edit the "
@@ -105,6 +108,7 @@ def main() -> int:
 
     row = {
         "url": url, "name": name or url, "category": cat, "payload_type": "link",
+        **({"cost": lic} if lic and lic != "Unknown" else {}),
         "source": f"community:@{user}", "sources": [f"community:@{user}"], "source_count": 1,
         "submitted_by": f"@{user}",
         "submitted_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),

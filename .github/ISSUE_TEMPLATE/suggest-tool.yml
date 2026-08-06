@@ -1,27 +1,20 @@
 name: Suggest a tool
 description: Suggest an OSINT tool for the Hub catalog
-title: "[tool] "
 labels: ["suggest-tool"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for suggesting a tool. We keep the **URL** (a fact) and add our own category and
-        health-check — we don't republish any source's structure, and we don't collect personal data.
-        Please only suggest legitimate OSINT / research tools (no malware, no doxxing/harassment tooling).
+        Thanks for suggesting a tool. **Use the tool's name as the issue title.**
+        We keep the **URL** (a fact) and add our own category and health-check — we don't republish
+        any source's structure, and we don't collect personal data. Please only suggest legitimate
+        OSINT / research tools (no malware, no doxxing/harassment tooling).
   - type: input
     id: url
     attributes:
       label: URL
       description: The tool's homepage or repo.
       placeholder: https://example.com
-    validations:
-      required: true
-  - type: input
-    id: name
-    attributes:
-      label: Name
-      placeholder: Tool name
     validations:
       required: true
   - type: textarea
@@ -31,11 +24,13 @@ body:
       description: One or two lines — what it does and who it's for. Helps us categorize it.
       placeholder: Passive DNS lookups and sibling-domain discovery, for CTI analysts.
   - type: dropdown
-    id: cost
+    id: access
     attributes:
-      label: Cost
+      label: Access
+      description: Cost / access model — how much it costs to use.
       options:
         - Free
-        - Freemium
-        - Commercial
+        - Partially free
+        - Paid with trial
+        - Paid
         - Unknown
