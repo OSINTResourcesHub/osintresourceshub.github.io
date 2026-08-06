@@ -25,7 +25,7 @@ body:
     validations:
       required: true
   - type: textarea
-    id: what it does
+    id: what
     attributes:
       label: What it does
       description: One or two lines — what it does and who it's for. Helps us categorize it.
