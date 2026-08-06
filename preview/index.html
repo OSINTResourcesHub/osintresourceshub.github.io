@@ -365,10 +365,17 @@ const catCount={};
 function fillCat(){for(const k in catCount)delete catCount[k];DATA.tools.forEach(t=>catCount[t.c]=(catCount[t.c]||0)+1);}
 fillCat();
 async function loadFullCatalog(){try{
-  const [tj,sj]=await Promise.all([fetch('../data/tools.json').then(r=>r.json()),fetch('../data/status.json').then(r=>r.json())]);
+  const [tj,sj,at]=await Promise.all([
+    fetch('../data/tools.json').then(r=>r.json()),
+    fetch('../data/status.json').then(r=>r.json()),
+    fetch('../data/additions.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')]);
   const links=sj.links||{};
-  DATA={categories:tj.categories,catalog_total:sj.catalog_total||tj.count,by_state:sj.by_state,status_generated_at:sj.generated_at,generated_from:tj.count,
-    tools:tj.tools.map(t=>({n:t.name,u:t.url,c:t.category,p:t.payload_type||'link',sc:t.source_count||1,st:(links[t.url]||{}).state||(links[t.url]||{}).final_status||'unverified',sub:t.subcategory||t.sub||''}))};
+  const adds=at.trim()?at.trim().split('\n').map(l=>{try{return JSON.parse(l)}catch(e){return null}}).filter(Boolean):[];
+  const seen=new Set(tj.tools.map(t=>t.url));
+  const merged=tj.tools.concat(adds.filter(a=>a&&a.url&&!seen.has(a.url)));   // hybrid: base + additions (decision D17-C)
+  const cats=[...new Set(merged.map(t=>t.category||'Unsorted'))].sort();
+  DATA={categories:cats,catalog_total:merged.length,by_state:sj.by_state,status_generated_at:sj.generated_at,generated_from:merged.length,
+    tools:merged.map(t=>({n:t.name,u:t.url,c:t.category,p:t.payload_type||'link',sc:t.source_count||1,st:(links[t.url]||{}).state||(links[t.url]||{}).final_status||'unverified',sub:t.subcategory||t.sub||''}))};
   fillCat();initFresh();renderLanes();renderCats();
 }catch(e){/* offline: keep the embedded full catalog */}}
 function renderLanes(){document.getElementById('lanes').innerHTML=LANES.map(L=>`<div class="lane" onclick="showCats(${JSON.stringify(L.cats).replace(/"/g,'&quot;')},'${L.ln} — ${L.jd}')"><div class="ln">${L.ln}</div><div class="jd">${L.jd}</div></div>`).join('');}

@@ -36,3 +36,12 @@ Per-URL health, overwritten by the freshness workflow (`.github/workflows/freshn
 
 The committed copy is an initial snapshot from the last local run so the site shows health
 on day one; the workflow keeps it current after launch.
+
+## `additions.jsonl` — the CI/curator additions layer (D17-C)
+
+Public, append-only layer of tools added by curators / the intake Action, **without** regenerating
+`tools.json` from the private corpus. One JSON object per line, same shape as a `tools.json` tool
+(plus `submitted_by` / `submitted_at`). The site and tools read `tools.json ∪ additions.jsonl`, so
+additions appear immediately; new entries show as `unverified` until the next freshness run checks them.
+Periodically folded back into the corpus (`tools/fold-additions.py`), after which this file resets to empty.
+Rationale + model: `DECISION-catalog-source-of-truth.md`.
