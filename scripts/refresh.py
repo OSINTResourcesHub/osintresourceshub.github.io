@@ -36,6 +36,7 @@ DATA = ROOT / "data"
 WORK = Path(__file__).resolve().parent / "out"
 
 TOOLS_JSON = DATA / "tools.json"
+ADDITIONS = DATA / "additions.jsonl"        # CI/curator layer (D17-C) — health-checked too
 STATUS_JSON = DATA / "status.json"
 CORPUS = WORK / "corpus.jsonl"
 
@@ -44,8 +45,25 @@ RATE = "5"
 
 
 def build_corpus() -> int:
-    """tools.json -> corpus.jsonl in the shape rotbaseline.adapters.load_corpus expects."""
+    """(tools.json ∪ additions.jsonl) -> corpus.jsonl in the shape rotbaseline expects.
+
+    We health-check the UNION so tools added via the additions layer (D17-C) get a real
+    state instead of sitting `unverified` until the next fold-in.
+    """
     tools = json.loads(TOOLS_JSON.read_text(encoding="utf-8")).get("tools", [])
+    seen = {(t.get("url") or "").strip() for t in tools}
+    if ADDITIONS.exists():
+        for line in ADDITIONS.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            try:
+                a = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            url = (a.get("url") or "").strip()
+            if url and url not in seen:
+                tools.append(a)
+                seen.add(url)
     WORK.mkdir(parents=True, exist_ok=True)
     n = 0
     with CORPUS.open("w", encoding="utf-8") as f:

@@ -1,0 +1,66 @@
+name: Tool intake
+
+# A `suggest-tool` issue (from the issue form) → run the Hub's logic → open a review PR
+# that appends the tool to data/additions.jsonl (Community tier). A curator merges to publish.
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: intake-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  intake:
+    if: github.event.label.name == 'suggest-tool'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install the engine (2-level taxonomy)
+        run: pip install "rotbaseline @ git+https://github.com/OSINTResourcesHub/engine.git@v0.2.0"
+
+      - name: Run intake logic
+        id: intake
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_USER: ${{ github.event.issue.user.login }}
+        run: python scripts/ci-intake.py
+
+      - name: Open review PR (new tool)
+        if: steps.intake.outputs.result == 'new'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ steps.intake.outputs.branch }}
+          TITLE: ${{ steps.intake.outputs.title }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          git config user.name  "osint-resources-hub-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add data/additions.jsonl
+          git commit -m "intake: $TITLE (#$ISSUE)"
+          git push -u origin "$BRANCH"
+          gh pr create --base main --head "$BRANCH" --title "$TITLE" \
+            --body "Auto-added from #$ISSUE (Community tier). A curator reviews and merges to publish. Closes #$ISSUE."
+
+      - name: Comment result on the issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          if [ -f intake-comment.md ]; then
+            gh issue comment "$ISSUE" --body-file intake-comment.md
+          fi
