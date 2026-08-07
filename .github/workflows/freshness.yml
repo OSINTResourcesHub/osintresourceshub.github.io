@@ -8,9 +8,10 @@ on:
     - cron: "0 6 * * *"        # 06:00 UTC daily
   workflow_dispatch: {}         # manual "Run workflow" button
 
-# Least-privilege: only allow committing back to this repo.
+# Least-privilege: commit status.json + open an issue when a URL turns malicious.
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: freshness
@@ -48,8 +49,25 @@ jobs:
           restore-keys: |
             rotbaseline-state-
 
-      - name: Run link-health refresh
+      - name: Run link-health + safety refresh
+        env:
+          URLHAUS_KEY: ${{ secrets.URLHAUS_KEY }}
+          SAFEBROWSING_KEY: ${{ secrets.SAFEBROWSING_KEY }}
         run: python scripts/refresh.py
+
+      - name: File an issue for newly-flagged URLs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -s scripts/out/newly_flagged.txt ]; then
+            n=$(wc -l < scripts/out/newly_flagged.txt)
+            { echo "A reputation check flagged $n catalog URL(s) as malicious/phishing in today's run."; \
+              echo "They were skipped for health-checking. Review and remove or label:"; echo; \
+              sed 's/^/- /' scripts/out/newly_flagged.txt; } > /tmp/flagged-body.md
+            gh issue create --title "Safety: $n newly-flagged URL(s)" --body-file /tmp/flagged-body.md || echo "issue create failed"
+          else
+            echo "no newly-flagged URLs"
+          fi
 
       - name: Commit status.json (only if changed)
         run: |

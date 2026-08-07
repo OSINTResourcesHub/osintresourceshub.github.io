@@ -112,6 +112,68 @@ def check_url(url: str) -> dict:
     }
 
 
+def safebrowsing_batch(urls: list[str], key: str | None) -> set:
+    """Return the set of URLs Safe Browsing flags. Batches of 500 (its API limit). Fail-open."""
+    flagged: set = set()
+    if not key or not urls:
+        return flagged
+    for i in range(0, len(urls), 500):
+        chunk = urls[i:i + 500]
+        try:
+            body = {
+                "client": {"clientId": "osintresourceshub", "clientVersion": "0.1"},
+                "threatInfo": {
+                    "threatTypes": ["MALWARE", "SOCIAL_ENGINEERING", "UNWANTED_SOFTWARE",
+                                    "POTENTIALLY_HARMFUL_APPLICATION"],
+                    "platformTypes": ["ANY_PLATFORM"], "threatEntryTypes": ["URL"],
+                    "threatEntries": [{"url": u} for u in chunk],
+                },
+            }
+            req = urllib.request.Request(
+                f"https://safebrowsing.googleapis.com/v4/threatMatches:find?key={key}",
+                data=json.dumps(body).encode(), headers={"Content-Type": "application/json"})
+            with urllib.request.urlopen(req, timeout=30) as r:
+                j = json.loads(r.read().decode())
+            for m in j.get("matches", []):
+                u = (m.get("threat") or {}).get("url")
+                if u:
+                    flagged.add(u)
+        except Exception:
+            pass  # fail-open: a batch error doesn't flag anyone
+    return flagged
+
+
+def check_catalog(urls: list[str], rate: float = 2.0) -> dict:
+    """Recurring whole-catalog check (specs/safety-vetting.md): URLhaus per-URL (data-minimal — no
+    bulk feed held) + Safe Browsing batched. No Spamhaus (DNS rate-limited for bulk). Two providers
+    → the ≥2-clean bar means both keys are needed for a `clean` verdict. Fail-open throughout."""
+    import time
+    uh_key = os.environ.get("URLHAUS_KEY")
+    sb_key = os.environ.get("SAFEBROWSING_KEY")
+    sb_flagged = safebrowsing_batch(urls, sb_key)
+    interval = 1.0 / rate if rate > 0 else 0.0
+    out = {}
+    for u in urls:
+        res = []
+        r = urlhaus(u, uh_key)
+        if r:
+            res.append(r)
+        if sb_key:
+            res.append(("safebrowsing", "listed" if u in sb_flagged else "clean"))
+        verdicts = [v for _, v in res]
+        if "listed" in verdicts:
+            status = "flagged"
+        elif verdicts.count("clean") >= 2:
+            status = "clean"
+        else:
+            status = "unknown"
+        out[u] = {"status": status, "sources": [s for s, _ in res],
+                  "flagged_by": [s for s, v in res if v == "listed"]}
+        if uh_key and interval:
+            time.sleep(interval)          # be polite to URLhaus
+    return out
+
+
 if __name__ == "__main__":
     import sys
     print(json.dumps(check_url(sys.argv[1] if len(sys.argv) > 1 else "https://example.com"), indent=2))
