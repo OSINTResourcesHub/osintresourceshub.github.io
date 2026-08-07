@@ -139,6 +139,16 @@
 .subchip:hover{color:var(--ink);border-color:var(--accent2)}
 .subchip.on{color:var(--ink);border-color:var(--accent2);background:rgba(110,168,254,.14)}
 .subchip b{color:var(--ink);font-weight:700;margin-left:2px}
+.pager{display:flex;gap:5px;justify-content:center;align-items:center;margin:14px 0 4px;flex-wrap:wrap}
+.pg{font-size:13px;color:var(--dim);padding:3px 9px;border-radius:8px;border:1px solid var(--line);cursor:pointer;user-select:none}
+.pg:hover{color:var(--ink);border-color:var(--accent2)}
+.pg.on{color:var(--ink);border-color:var(--accent2);background:rgba(110,168,254,.14)}
+.pg.dots{border:none;cursor:default}
+.pg.nav.off{opacity:.35;pointer-events:none}
+.catsearch{margin:2px 0 12px}
+.gsearch{margin:0 0 12px}
+.catsearch input,.gsearch input{width:100%;box-sizing:border-box;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 11px;color:var(--ink);font-size:13px;outline:none}
+.catsearch input:focus,.gsearch input:focus{border-color:var(--accent2)}
 </style>
 </head>
 <body>
@@ -163,7 +173,7 @@
   <h2 class="acc" id="accGuide" onclick="acc('guide')">▾ Guide me — by field <span style="color:#b98bff;font-weight:400">(this is your “why”)</span></h2>
   <div id="guideBody"><p class="sh">Eight lanes in your own vocabulary. Each maps to a Role × Domain underneath.</p><div class="lanes" id="lanes"></div></div>
   <h2 class="acc" id="accBrowse" onclick="acc('browse')" style="margin-top:22px">▸ Browse the backbone — by category</h2>
-  <div id="browseBody" style="display:none"><p class="sh">All tools filed once, into 16 categories. Counts &amp; health are live.</p><div class="cats" id="cats"></div></div>
+  <div id="browseBody" style="display:none"><p class="sh">All tools filed once, into 16 categories. Counts &amp; health are live.</p><div class="gsearch"><input id="gq" type="text" placeholder="Search all tools by name…" oninput="globalSearch(this.value)"></div><div class="cats" id="cats"></div></div>
 </section>
 <div id="results"></div>
 
@@ -432,25 +442,38 @@ function acc(name){const g=document.getElementById('guideBody'),b=document.getEl
   const gl='Guide me — by field <span style="color:#b98bff;font-weight:400">(this is your “why”)</span>';
   if(name==='guide'){const open=g.style.display!=='none';g.style.display=open?'none':'block';b.style.display='none';ag.innerHTML=(open?'▸ ':'▾ ')+gl;ab.textContent='▸ Browse the backbone — by category';}
   else{const open=b.style.display!=='none';b.style.display=open?'none':'block';g.style.display='none';ab.textContent=(open?'▸ ':'▾ ')+'Browse the backbone — by category';ag.innerHTML='▸ '+gl;}}
-let _cc=null,_ct='',_cs=null;
+let _cc=null,_ct='',_cs=null,_cp=1,_cq='';const PAGE=20;
 function subCounts(cats){const m={};DATA.tools.forEach(function(t){if(cats.indexOf(t.c)>=0&&t.sub)m[t.sub]=(m[t.sub]||0)+1;});return m;}
-function filterSub(s){showCats(_cc,_ct,_cs===s?null:s);}
-function showCats(cats,title,sub){_cc=cats;_ct=title;_cs=sub||null;
-const inCat=DATA.tools.filter(function(t){return cats.indexOf(t.c)>=0;});
-let pool=inCat.filter(function(t){return t.st!=='dead'&&t.st!=='suspected_dead';});
-if(sub)pool=pool.filter(function(t){return t.sub===sub;});
-pool.sort(function(a,b){return (a.st==='alive'?0:1)-(b.st==='alive'?0:1)||b.sc-a.sc;});
-const list=pool.slice(0,30);
-const ck=inCat.filter(function(t){return t.st!=='unverified';});
-const pct=ck.length?Math.round(100*ck.filter(function(t){return t.st==='alive';}).length/ck.length):0;
-const sc=subCounts(cats);const subs=Object.keys(sc).sort(function(a,b){return sc[b]-sc[a];});
-let subbar='';
-if(subs.length){subbar='<div class="subbar"><span class="subchip'+(sub?'':' on')+'" onclick="filterSub(null)">All <b>'+inCat.length+'</b></span>';
-subs.forEach(function(x){subbar+='<span class="subchip'+(sub===x?' on':'')+'" onclick="filterSub(\''+x.replace(/'/g,"\\'")+'\')">'+x+' <b>'+sc[x]+'</b></span>';});
-subbar+='</div>';}
-const head='<div class="cathead"><span class="h">'+title+'</span><span class="hsub">'+inCat.length+' tools'+(ck.length?' \u00b7 '+pct+'% alive':'')+(sub?' \u00b7 '+sub:'')+' \u00b7 '+list.length+' shown</span></div>'+subbar+'<div class="legend">'+LEGEND_HTML+'</div>';
-const rows=list.map(function(t){const meta=[t.sc>1?t.sc+' sources':'',t.p!=='link'?t.p:''].filter(Boolean).join(' \u00b7 ');return `<div class="tl2"><div class="tinfo"><span class="nm">${t.n}</span>${t.sub?`<span class="subtag">${t.sub}</span>`:''}${badges(t)}${meta?`<div class="meta">${meta}</div>`:''}</div><div style="display:flex;gap:6px"><a class="mini" href="${t.u}" target="_blank" rel="noopener" title="Open in new tab" aria-label="Open in new tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a><span class="mini" onclick='addKit(${JSON.stringify(t).replace(/'/g,"&#39;")})' title="Add to Investigation Kit">+ 🧰</span></div></div>`;}).join('');
-document.getElementById('results').innerHTML=head+rows;document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});}
+function rowHTML(t,showCat){var meta=[showCat?t.c:'',t.sc>1?t.sc+' sources':'',t.p!=='link'?t.p:''].filter(Boolean).join(' \u00b7 ');return `<div class="tl2"><div class="tinfo"><span class="nm">${t.n}</span>${t.sub?`<span class="subtag">${t.sub}</span>`:''}${badges(t)}${meta?`<div class="meta">${meta}</div>`:''}</div><div style="display:flex;gap:6px"><a class="mini" href="${t.u}" target="_blank" rel="noopener" title="Open in new tab" aria-label="Open in new tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a><span class="mini" onclick='addKit(${JSON.stringify(t).replace(/'/g,"&#39;")})' title="Add to Investigation Kit">+ 🧰</span></div></div>`;}
+function catPool(){var pool=DATA.tools.filter(function(t){return _cc.indexOf(t.c)>=0&&t.st!=='dead'&&t.st!=='suspected_dead';});
+ if(_cs)pool=pool.filter(function(t){return t.sub===_cs;});
+ if(_cq){var q=_cq.toLowerCase();pool=pool.filter(function(t){return (t.n||'').toLowerCase().indexOf(q)>=0;});}
+ pool.sort(function(a,b){return (a.st==='alive'?0:1)-(b.st==='alive'?0:1)||b.sc-a.sc;});return pool;}
+function pager(total){var pages=Math.ceil(total/PAGE);if(pages<=1)return '';var out='<div class="pager">';out+='<span class="pg nav'+(_cp<=1?' off':'')+'" onclick="gotoPage('+(_cp-1)+')">\u2039</span>';
+ var nums=[];for(var p=1;p<=pages;p++){if(p===1||p===pages||Math.abs(p-_cp)<=1)nums.push(p);else if(nums[nums.length-1]!=='\u2026')nums.push('\u2026');}
+ nums.forEach(function(p){out+=p==='\u2026'?'<span class="pg dots">\u2026</span>':'<span class="pg'+(p===_cp?' on':'')+'" onclick="gotoPage('+p+')">'+p+'</span>';});
+ out+='<span class="pg nav'+(_cp>=pages?' off':'')+'" onclick="gotoPage('+(_cp+1)+')">\u203a</span></div>';return out;}
+function gotoPage(n){var pages=Math.max(1,Math.ceil(catPool().length/PAGE));_cp=Math.min(Math.max(1,n),pages);renderCat();document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});}
+function filterSub(x){_cs=(_cs===x?null:x);_cp=1;renderCat();}
+function catSearch(q){_cq=q;_cp=1;renderCat();}
+function showCats(cats,title){_cc=cats;_ct=title;_cs=null;_cp=1;_cq='';renderCat();document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});}
+function renderCat(){var inCat=DATA.tools.filter(function(t){return _cc.indexOf(t.c)>=0;});
+ var ck=inCat.filter(function(t){return t.st!=='unverified';});var pct=ck.length?Math.round(100*ck.filter(function(t){return t.st==='alive';}).length/ck.length):0;
+ var pool=catPool();var pages=Math.max(1,Math.ceil(pool.length/PAGE));if(_cp>pages)_cp=pages;var list=pool.slice((_cp-1)*PAGE,_cp*PAGE);
+ var sc=subCounts(_cc);var subs=Object.keys(sc).sort(function(a,b){return sc[b]-sc[a];});
+ var subbar='';if(subs.length){subbar='<div class="subbar"><span class="subchip'+(_cs?'':' on')+'" onclick="filterSub(null)">All <b>'+inCat.length+'</b></span>';subs.forEach(function(x){subbar+='<span class="subchip'+(_cs===x?' on':'')+'" onclick="filterSub(\''+x.replace(/'/g,"\\'")+'\')">'+x+' <b>'+sc[x]+'</b></span>';});subbar+='</div>';}
+ var searchbox='<div class="catsearch"><input id="catq" type="text" placeholder="Filter these by name\u2026" value="'+_cq.replace(/"/g,'&quot;')+'" oninput="catSearch(this.value)"></div>';
+ var shown=pool.length?((_cp-1)*PAGE+1)+'\u2013'+Math.min(_cp*PAGE,pool.length)+' of '+pool.length:'0';
+ var head='<div class="cathead"><span class="h">'+_ct+'</span><span class="hsub">'+inCat.length+' tools'+(ck.length?' \u00b7 '+pct+'% alive':'')+(_cs?' \u00b7 '+_cs:'')+(_cq?' \u00b7 \u201c'+_cq+'\u201d':'')+' \u00b7 showing '+shown+'</span></div>'+subbar+'<div class="legend">'+LEGEND_HTML+'</div>'+searchbox;
+ var rows=list.length?list.map(function(t){return rowHTML(t,false);}).join(''):'<div class="empty">No tools match.</div>';
+ document.getElementById('results').innerHTML=head+rows+pager(pool.length);
+ if(_cq){var el=document.getElementById('catq');if(el){el.focus();el.setSelectionRange(el.value.length,el.value.length);}}}
+function globalSearch(q){var box=document.getElementById('results');if(!q||q.trim().length<2){box.innerHTML='';return;}
+ var qq=q.toLowerCase();var pool=DATA.tools.filter(function(t){return (t.n||'').toLowerCase().indexOf(qq)>=0&&t.st!=='dead'&&t.st!=='suspected_dead';});
+ pool.sort(function(a,b){return (a.st==='alive'?0:1)-(b.st==='alive'?0:1)||b.sc-a.sc;});
+ var list=pool.slice(0,60);
+ var head='<div class="cathead"><span class="h">Search</span><span class="hsub">'+pool.length+(pool.length===1?' match':' matches')+' for \u201c'+q+'\u201d'+(pool.length>60?' \u00b7 showing 60':'')+'</span></div><div class="legend">'+LEGEND_HTML+'</div>';
+ box.innerHTML=head+list.map(function(t){return rowHTML(t,true);}).join('');box.scrollIntoView({behavior:'smooth',block:'nearest'});}
 let kit=[],persist=localStorage.getItem('orh_persist')||'local';
 function loadKit(){try{return JSON.parse((persist==='local'?localStorage:sessionStorage).getItem('orh_kit'))||[]}catch(e){return[]}}
 function saveKit(){(persist==='local'?localStorage:sessionStorage).setItem('orh_kit',JSON.stringify(kit))}
