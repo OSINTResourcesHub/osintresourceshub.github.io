@@ -28,7 +28,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install the engine (2-level taxonomy)
-        run: pip install "rotbaseline @ git+https://github.com/OSINTResourcesHub/engine.git@v0.2.0"
+        run: pip install "rotbaseline @ git+https://github.com/OSINTResourcesHub/engine.git@v0.2.1"
 
       - name: Run intake logic
         id: intake

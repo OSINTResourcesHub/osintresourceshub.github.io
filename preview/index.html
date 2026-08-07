@@ -134,6 +134,11 @@
 .fresh .fg{width:12px;height:12px;vertical-align:-2px}
 .kithint{font-size:12.5px;color:var(--dim);line-height:1.5;margin:2px 0 12px}
 .mini svg{width:13px;height:13px;vertical-align:-2px}
+.subbar{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 10px}
+.subchip{font-size:12px;color:var(--dim);background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:3px 10px;cursor:pointer;white-space:nowrap;transition:all .12s}
+.subchip:hover{color:var(--ink);border-color:var(--accent2)}
+.subchip.on{color:var(--ink);border-color:var(--accent2);background:rgba(110,168,254,.14)}
+.subchip b{color:var(--ink);font-weight:700;margin-left:2px}
 </style>
 </head>
 <body>
@@ -427,7 +432,25 @@ function acc(name){const g=document.getElementById('guideBody'),b=document.getEl
   const gl='Guide me — by field <span style="color:#b98bff;font-weight:400">(this is your “why”)</span>';
   if(name==='guide'){const open=g.style.display!=='none';g.style.display=open?'none':'block';b.style.display='none';ag.innerHTML=(open?'▸ ':'▾ ')+gl;ab.textContent='▸ Browse the backbone — by category';}
   else{const open=b.style.display!=='none';b.style.display=open?'none':'block';g.style.display='none';ab.textContent=(open?'▸ ':'▾ ')+'Browse the backbone — by category';ag.innerHTML='▸ '+gl;}}
-function showCats(cats,title){const list=toolsFor(cats,30);const inCat=DATA.tools.filter(t=>cats.includes(t.c));const ck=inCat.filter(t=>t.st!=='unverified');const pct=ck.length?Math.round(100*ck.filter(t=>t.st==='alive').length/ck.length):0;const head=`<div class="cathead"><span class="h">${title}</span><span class="hsub">${inCat.length} tools${ck.length?' \u00b7 '+pct+'% alive':''} \u00b7 ${list.length} shown</span></div><div class="legend">${LEGEND_HTML}</div>`;const rows=list.map(t=>{const meta=[t.sc>1?t.sc+' sources':'',t.p!=='link'?t.p:''].filter(Boolean).join(' \u00b7 ');return `<div class="tl2"><div class="tinfo"><span class="nm">${t.n}</span>${t.sub?`<span class="subtag">${t.sub}</span>`:''}${badges(t)}${meta?`<div class="meta">${meta}</div>`:''}</div><div style="display:flex;gap:6px"><a class="mini" href="${t.u}" target="_blank" rel="noopener" title="Open in new tab" aria-label="Open in new tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a><span class="mini" onclick='addKit(${JSON.stringify(t).replace(/'/g,"&#39;")})' title="Add to Investigation Kit">+ 🧰</span></div></div>`;}).join('');document.getElementById('results').innerHTML=head+rows;document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});}
+let _cc=null,_ct='',_cs=null;
+function subCounts(cats){const m={};DATA.tools.forEach(function(t){if(cats.indexOf(t.c)>=0&&t.sub)m[t.sub]=(m[t.sub]||0)+1;});return m;}
+function filterSub(s){showCats(_cc,_ct,_cs===s?null:s);}
+function showCats(cats,title,sub){_cc=cats;_ct=title;_cs=sub||null;
+const inCat=DATA.tools.filter(function(t){return cats.indexOf(t.c)>=0;});
+let pool=inCat.filter(function(t){return t.st!=='dead'&&t.st!=='suspected_dead';});
+if(sub)pool=pool.filter(function(t){return t.sub===sub;});
+pool.sort(function(a,b){return (a.st==='alive'?0:1)-(b.st==='alive'?0:1)||b.sc-a.sc;});
+const list=pool.slice(0,30);
+const ck=inCat.filter(function(t){return t.st!=='unverified';});
+const pct=ck.length?Math.round(100*ck.filter(function(t){return t.st==='alive';}).length/ck.length):0;
+const sc=subCounts(cats);const subs=Object.keys(sc).sort(function(a,b){return sc[b]-sc[a];});
+let subbar='';
+if(subs.length){subbar='<div class="subbar"><span class="subchip'+(sub?'':' on')+'" onclick="filterSub(null)">All <b>'+inCat.length+'</b></span>';
+subs.forEach(function(x){subbar+='<span class="subchip'+(sub===x?' on':'')+'" onclick="filterSub(\''+x.replace(/'/g,"\\'")+'\')">'+x+' <b>'+sc[x]+'</b></span>';});
+subbar+='</div>';}
+const head='<div class="cathead"><span class="h">'+title+'</span><span class="hsub">'+inCat.length+' tools'+(ck.length?' \u00b7 '+pct+'% alive':'')+(sub?' \u00b7 '+sub:'')+' \u00b7 '+list.length+' shown</span></div>'+subbar+'<div class="legend">'+LEGEND_HTML+'</div>';
+const rows=list.map(function(t){const meta=[t.sc>1?t.sc+' sources':'',t.p!=='link'?t.p:''].filter(Boolean).join(' \u00b7 ');return `<div class="tl2"><div class="tinfo"><span class="nm">${t.n}</span>${t.sub?`<span class="subtag">${t.sub}</span>`:''}${badges(t)}${meta?`<div class="meta">${meta}</div>`:''}</div><div style="display:flex;gap:6px"><a class="mini" href="${t.u}" target="_blank" rel="noopener" title="Open in new tab" aria-label="Open in new tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a><span class="mini" onclick='addKit(${JSON.stringify(t).replace(/'/g,"&#39;")})' title="Add to Investigation Kit">+ \U0001F9F0</span></div></div>`;}).join('');
+document.getElementById('results').innerHTML=head+rows;document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});}
 let kit=[],persist=localStorage.getItem('orh_persist')||'local';
 function loadKit(){try{return JSON.parse((persist==='local'?localStorage:sessionStorage).getItem('orh_kit'))||[]}catch(e){return[]}}
 function saveKit(){(persist==='local'?localStorage:sessionStorage).setItem('orh_kit',JSON.stringify(kit))}
