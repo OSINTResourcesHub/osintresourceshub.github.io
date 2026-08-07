@@ -7,7 +7,7 @@
 <style>
   :root{--bg:#0b0e14;--panel:#141a22;--panel2:#1a212b;--line:#28323f;--ink:#e8eef6;--dim:#8b98a5;
     --accent:#4ec9b0;--accent2:#6ea8fe;--warn:#e3b341;--active:#f07178;--chip:#22303f;
-    --alive:#4ec9b0;--blocked:#e3b341;--dead:#f07178;--susp:#e39b41;--login:#6ea8fe;--unver:#8b98a5;}
+    --alive:#4ec9b0;--blocked:#e3b341;--dead:#f07178;--susp:#e39b41;--login:#6ea8fe;--unver:#8b98a5;--curator:#c69a6a;}
   *{box-sizing:border-box}
   body{margin:0;background:radial-gradient(1200px 600px at 78% -10%,rgba(78,201,176,.06),transparent),var(--bg);color:var(--ink);font:16px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;min-height:100vh}
   .fresh{display:flex;gap:15px;align-items:center;padding:8px 22px;border-bottom:1px solid var(--line);font-size:12px;color:var(--dim);flex-wrap:wrap}
@@ -121,6 +121,12 @@
 .tl2 .meta{color:var(--dim);font-size:11px;margin-top:2px}
 .tl2 .hc{margin-left:6px}
 .subtag{border:1px solid var(--accent2);color:var(--accent2);font-size:11px;padding:1px 7px;border-radius:20px;margin-left:6px;opacity:.9}
+.bdg{white-space:nowrap}
+.bdg .ib{display:inline-block;margin-left:5px;cursor:help}
+.bdg .ib svg{width:15px;height:15px;vertical-align:-3px}
+.bdg .ib.euro{font-size:14px;font-weight:700;vertical-align:-1px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:11.5px;color:var(--dim);margin:-4px 0 12px}
+.legend .ib{cursor:default}
 </style>
 </head>
 <body>
@@ -169,6 +175,34 @@
 let DATA={"categories":[],"catalog_total":0,"generated_from":0,"status_generated_at":"","by_state":{"unverified":0,"dead":0,"alive":0,"blocked_unknown":0,"suspected_dead":0,"login_walled":0},"tools":[]};
 const H={alive:["alive","var(--alive)","rgba(78,201,176,.15)"],login_walled:["login","var(--login)","rgba(110,168,254,.15)"],blocked_unknown:["blocked?","var(--blocked)","rgba(227,179,65,.15)"],unverified:["unverified","var(--unver)","rgba(139,152,165,.15)"],suspected_dead:["dying","var(--susp)","rgba(227,155,65,.15)"],dead:["dead","var(--dead)","rgba(240,113,120,.15)"]};
 function hchip(st){const h=H[st]||H.unverified;return `<span class="hc" style="background:${h[2]};color:${h[1]}">${h[0]}</span>`}
+const ICO={
+ check:'<circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16.2 9"/>',
+ ban:'<circle cx="12" cy="12" r="9"/><path d="M6 6l12 12"/>',
+ alert:'<path d="M12 3.2L2.4 20h19.2z"/><path d="M12 10v4.2"/><path d="M12 17.6v.01"/>',
+ x:'<circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/>',
+ lock:'<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/>',
+ dash:'<path d="M6 12h12"/>',
+ shieldcheck:'<path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4.4"/>',
+ shieldx:'<path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"/><path d="M9.6 9.6l4.8 4.8M14.4 9.6l-4.8 4.8"/>',
+ user:'<circle cx="12" cy="8" r="3.4"/><path d="M5.5 20c0-3.5 2.9-6 6.5-6s6.5 2.5 6.5 6"/>',
+ users:'<circle cx="9" cy="8" r="3.2"/><path d="M3.6 20c0-3 2.6-5 5.4-5s5.4 2 5.4 5"/><path d="M16 5.6a3.2 3.2 0 010 5.6"/><path d="M17 14.6c2.3.3 4.4 2.1 4.4 4.4"/>',
+ award:'<circle cx="12" cy="9" r="5"/><path d="M9 13.6L7.6 21l4.4-2.6L16.4 21 15 13.6"/>'};
+function ic(name,color,title){return '<span class="ib" style="color:'+color+'" title="'+title+'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+ICO[name]+'</svg></span>';}
+function badges(t){var b='';var st=t.st;
+ if(st==='alive')b+=ic('check','var(--alive)','alive \u2014 reachable, serving content');
+ else if(st==='blocked_unknown')b+=ic('ban','var(--warn)','blocked \u2014 a bot-wall answered; health unknown');
+ else if(st==='suspected_dead')b+=ic('alert','var(--warn)','dying \u2014 one dead signal, not yet confirmed');
+ else if(st==='dead')b+=ic('x','var(--dead)','dead \u2014 confirmed gone');
+ else if(st==='login_walled')b+=ic('lock','var(--dim)','login required');
+ else b+=ic('dash','var(--dim)','not HTTP-checked yet');
+ if(t.safety==='clean')b+=ic('shieldcheck','var(--alive)','safety-checked (URLhaus + Safe Browsing): clean');
+ else if(t.safety==='flagged')b+=ic('shieldx','var(--dead)','flagged as malicious \u2014 under review');
+ if(t.usub)b+=ic('user','var(--accent2)','user-submitted \u2014 added via the community form');
+ if((t.sc||1)>=2)b+=ic('users','var(--accent2)','community-vetted \u2014 listed in '+t.sc+' independent collections');
+ if(t.review==='reviewed'||t.review==='partner')b+=ic('award','var(--curator)',t.review==='partner'?'partner-reviewed':'curator-vetted');
+ if(t.cost&&/paid/i.test(t.cost))b+='<span class="ib euro" style="color:var(--dim)" title="access: '+t.cost+'">\\u20ac</span>';
+ return '<span class="bdg">'+b+'</span>';}
+const LEGEND_HTML=[['check','var(--alive)','alive'],['ban','var(--warn)','blocked'],['x','var(--dead)','dead'],['shieldcheck','var(--alive)','safety-checked'],['users','var(--accent2)','community-vetted'],['award','var(--curator)','curator-vetted']].map(function(a){return '<span>'+ic(a[0],a[1],'')+a[2]+'</span>';}).join('');
 function toolsFor(cats,n){return DATA.tools.filter(t=>cats.includes(t.c)).filter(t=>t.st!=='dead'&&t.st!=='suspected_dead').sort((a,b)=>(a.st==='alive'?0:1)-(b.st==='alive'?0:1)||b.sc-a.sc).slice(0,n||4);}
 
 // ---- vocab ----
@@ -339,7 +373,7 @@ function confirmCase(){confirmed=true;renderCont();renderAgentBody();document.ge
 function moveRow(label,fp,miss,cats,ctx){const id='t'+Math.random().toString(36).slice(2,8);const tools=toolsFor(cats,4);
   return `<div class="mv ${miss?'miss':''}"><div class="t" onclick="document.getElementById('${id}').classList.toggle('show')">
     <span class="lbl"><span class="b ${fp}">${fp}</span>${label} <span style="color:var(--dim);font-weight:400">· ${ctx}</span></span><span class="cta">${tools.length} tools ▾</span></div>
-    <div class="tools" id="${id}">${tools.map(t=>`<div class="tl"><div><span class="nm">${t.n}</span>${hchip(t.st)}<div class="meta">${t.c}</div></div><div style="display:flex;gap:6px"><a class="mini" href="${t.u}" target="_blank" rel="noopener">Open ↗</a><span class="mini" onclick='addKit(${JSON.stringify(t).replace(/'/g,"&#39;")})'>+ Kit</span></div></div>`).join('')||'<div class="empty">No sample tools here.</div>'}</div></div>`;}
+    <div class="tools" id="${id}">${tools.map(t=>`<div class="tl"><div><span class="nm">${t.n}</span>${badges(t)}<div class="meta">${t.c}</div></div><div style="display:flex;gap:6px"><a class="mini" href="${t.u}" target="_blank" rel="noopener">Open ↗</a><span class="mini" onclick='addKit(${JSON.stringify(t).replace(/'/g,"&#39;")})'>+ Kit</span></div></div>`).join('')||'<div class="empty">No sample tools here.</div>'}</div></div>`;}
 function renderCont(){const c=document.getElementById('cont');c.classList.add('show');let html='';
   const role=task?task.role:'—', dom=why?why.l.replace(/^I |^it |^…of /,''):'general research';
   html+=`<span class="reading">reading you as: <b>${role}</b> · <b>${dom}</b></span>`;
@@ -375,7 +409,7 @@ async function loadFullCatalog(){try{
   const merged=tj.tools.concat(adds.filter(a=>a&&a.url&&!seen.has(a.url)));   // hybrid: base + additions (decision D17-C)
   const cats=[...new Set(merged.map(t=>t.category||'Unsorted'))].sort();
   DATA={categories:cats,catalog_total:merged.length,by_state:sj.by_state,status_generated_at:sj.generated_at,generated_from:merged.length,
-    tools:merged.map(t=>({n:t.name,u:t.url,c:t.category,p:t.payload_type||'link',sc:t.source_count||1,st:(links[t.url]||{}).state||(links[t.url]||{}).final_status||'unverified',sub:t.subcategory||t.sub||''}))};
+    tools:merged.map(t=>({n:t.name,u:t.url,c:t.category,p:t.payload_type||'link',sc:t.source_count||1,st:(links[t.url]||{}).state||(links[t.url]||{}).final_status||'unverified',sub:t.subcategory||t.sub||'',safety:(links[t.url]||{}).safety||t.safety||'',review:t.review||'',cost:t.cost||'',usub:((t.source||'').indexOf('community:')===0||!!t.submitted_by)}))};
   fillCat();initFresh();renderLanes();renderCats();
 }catch(e){/* offline: keep the embedded full catalog */}}
 function renderLanes(){document.getElementById('lanes').innerHTML=LANES.map(L=>`<div class="lane" onclick="showCats(${JSON.stringify(L.cats).replace(/"/g,'&quot;')},'${L.ln} — ${L.jd}')"><div class="ln">${L.ln}</div><div class="jd">${L.jd}</div></div>`).join('');}
@@ -384,7 +418,7 @@ function acc(name){const g=document.getElementById('guideBody'),b=document.getEl
   const gl='Guide me — by field <span style="color:#b98bff;font-weight:400">(this is your “why”)</span>';
   if(name==='guide'){const open=g.style.display!=='none';g.style.display=open?'none':'block';b.style.display='none';ag.innerHTML=(open?'▸ ':'▾ ')+gl;ab.textContent='▸ Browse the backbone — by category';}
   else{const open=b.style.display!=='none';b.style.display=open?'none':'block';g.style.display='none';ab.textContent=(open?'▸ ':'▾ ')+'Browse the backbone — by category';ag.innerHTML='▸ '+gl;}}
-function showCats(cats,title){const list=toolsFor(cats,30);const inCat=DATA.tools.filter(t=>cats.includes(t.c));const ck=inCat.filter(t=>t.st!=='unverified');const pct=ck.length?Math.round(100*ck.filter(t=>t.st==='alive').length/ck.length):0;const head=`<div class="cathead"><span class="h">${title}</span><span class="hsub">${inCat.length} tools${ck.length?' \u00b7 '+pct+'% alive':''} \u00b7 ${list.length} shown</span></div>`;const rows=list.map(t=>{const meta=[t.sc>1?t.sc+' sources':'',t.p!=='link'?t.p:''].filter(Boolean).join(' \u00b7 ');return `<div class="tl2"><div class="tinfo"><span class="nm">${t.n}</span>${t.sub?`<span class="subtag">${t.sub}</span>`:''}${hchip(t.st)}${meta?`<div class="meta">${meta}</div>`:''}</div><div style="display:flex;gap:6px"><a class="mini" href="${t.u}" target="_blank" rel="noopener">Open \u2197</a><span class="mini" onclick='addKit(${JSON.stringify(t).replace(/'/g,"&#39;")})'>+ Kit</span></div></div>`;}).join('');document.getElementById('results').innerHTML=head+rows;document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});}
+function showCats(cats,title){const list=toolsFor(cats,30);const inCat=DATA.tools.filter(t=>cats.includes(t.c));const ck=inCat.filter(t=>t.st!=='unverified');const pct=ck.length?Math.round(100*ck.filter(t=>t.st==='alive').length/ck.length):0;const head=`<div class="cathead"><span class="h">${title}</span><span class="hsub">${inCat.length} tools${ck.length?' \u00b7 '+pct+'% alive':''} \u00b7 ${list.length} shown</span></div><div class="legend">${LEGEND_HTML}</div>`;const rows=list.map(t=>{const meta=[t.sc>1?t.sc+' sources':'',t.p!=='link'?t.p:''].filter(Boolean).join(' \u00b7 ');return `<div class="tl2"><div class="tinfo"><span class="nm">${t.n}</span>${t.sub?`<span class="subtag">${t.sub}</span>`:''}${badges(t)}${meta?`<div class="meta">${meta}</div>`:''}</div><div style="display:flex;gap:6px"><a class="mini" href="${t.u}" target="_blank" rel="noopener">Open \u2197</a><span class="mini" onclick='addKit(${JSON.stringify(t).replace(/'/g,"&#39;")})'>+ Kit</span></div></div>`;}).join('');document.getElementById('results').innerHTML=head+rows;document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});}
 let kit=[],persist=localStorage.getItem('orh_persist')||'local';
 function loadKit(){try{return JSON.parse((persist==='local'?localStorage:sessionStorage).getItem('orh_kit'))||[]}catch(e){return[]}}
 function saveKit(){(persist==='local'?localStorage:sessionStorage).setItem('orh_kit',JSON.stringify(kit))}
