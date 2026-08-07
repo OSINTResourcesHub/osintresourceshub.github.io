@@ -37,6 +37,8 @@ jobs:
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           ISSUE_USER: ${{ github.event.issue.user.login }}
+          URLHAUS_KEY: ${{ secrets.URLHAUS_KEY }}          # free abuse.ch key; empty = provider skipped
+          SAFEBROWSING_KEY: ${{ secrets.SAFEBROWSING_KEY }} # free Google Safe Browsing key
         run: python scripts/ci-intake.py
 
       - name: Open review PR (new tool)

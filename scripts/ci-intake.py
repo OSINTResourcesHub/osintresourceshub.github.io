@@ -19,6 +19,7 @@ from pathlib import Path
 
 from rotbaseline import adapters
 from rotbaseline.taxonomy import classify as categorize
+from safety_check import check_url          # URL-reputation vetting (specs/safety-vetting.md)
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -101,6 +102,18 @@ def main() -> int:
         out(result="known")
         return 0
 
+    # Safety check BEFORE anything else touches the URL — protects the curator who will click it.
+    safety = check_url(url)
+    if safety["status"] == "flagged":
+        COMMENT.write_text(
+            f"⚠️ **Not added — flagged by a URL-reputation check** ({', '.join(safety['flagged_by'])}). "
+            "This URL is on a threat-intel blocklist (malware/phishing). If you believe this is a false "
+            "positive, say so here and a maintainer will review.", encoding="utf-8")
+        out(result="flagged")
+        return 0
+    safe_line = ("✓ safety-checked, clean" if safety["status"] == "clean"
+                 else "safety: not fully checked (reputation providers unconfigured or unavailable)")
+
     cat = categorize(f"{name} {what}") or "Unsorted"
     status = probe(url)
     health = (f"reachable (HTTP {status})" if status and status < 400
@@ -109,6 +122,8 @@ def main() -> int:
     row = {
         "url": url, "name": name or url, "category": cat, "payload_type": "link",
         **({"cost": lic} if lic and lic != "Unknown" else {}),
+        "safety": safety["status"],
+        **({"safety_sources": safety["sources"]} if safety["sources"] else {}),
         "source": f"community:@{user}", "sources": [f"community:@{user}"], "source_count": 1,
         "submitted_by": f"@{user}",
         "submitted_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -118,7 +133,7 @@ def main() -> int:
         fh.write(json.dumps(row, ensure_ascii=False) + "\n")
 
     COMMENT.write_text(
-        f"Queued **{name or url}** → suggested category **{cat}** · preliminary check: {health}.\n\n"
+        f"Queued **{name or url}** → suggested category **{cat}** · {safe_line} · reachability: {health}.\n\n"
         "A pull request was opened to add it (Community tier); a curator reviews and merges to "
         "publish. Authoritative health appears after the next daily check.", encoding="utf-8")
     title = re.sub(r"\s+", " ", f"Add tool: {name or url}")[:80]
