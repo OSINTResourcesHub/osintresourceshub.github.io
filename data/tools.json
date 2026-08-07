@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T22:08:58+00:00",
+  "generated_at": "2026-08-07T22:59:48+00:00",
   "count": 2655,
   "categories": [
     "Analysis, Collaboration & Reporting",
@@ -87,6 +87,9 @@
       "url": "https://liveuamap.com/",
       "name": "Ukraine Interactive map - Ukraine Latest news on live map - liveuamap.com",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Basemaps",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -399,6 +402,10 @@
       "url": "https://exportcomments.com/",
       "name": "Export Facebook, Instagram, Twitter, YouTube, VK, TikTok, Vimeo Comments to CSV / Excel - EXPORTCOMMENTS.COM",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Websites, Domains & IPs",
+        "Learning & Resources"
+      ],
       "subcategory": "Facebook",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -451,6 +458,9 @@
       "url": "https://planefinder.net/",
       "name": "Flight Tracker - Live Flight Tracking - Plane Finder",
       "category": "Transport & Logistics",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Aviation",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -515,6 +525,9 @@
       "url": "https://labs.tib.eu/geoestimation/",
       "name": "Geolocation Estimation (Images) - Geo location of images",
       "category": "Images, Video & Media Verification",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -691,6 +704,9 @@
       "url": "http://offshoreleaks.icij.org/",
       "name": "ICIJ Offshore Leaks Database - Panama Papers, the Offshore Leaks, the Bahamas Leaks and the Paradise Papers.",
       "category": "Breaches, Leaks & Dark Web",
+      "categories": [
+        "Companies, Finance & Government"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -1028,6 +1044,9 @@
       "url": "https://www.sentinel-hub.com/",
       "name": "Sentinel Hub - Satellite Imagery",
       "category": "Images, Video & Media Verification",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -1078,6 +1097,9 @@
       "url": "https://www.submarinecablemap.com/",
       "name": "Submarinecablemap.com",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -1091,6 +1113,9 @@
       "url": "https://www.suncalc.org/#/40.1789,-3.5156,3/2023.05.22/20:37/1/3",
       "name": "SunCalc - sunrise, sunset, shadow length, solar eclipse, sun position, sun phase, sun height, sun calculator, sun movement, map, sunlight phases, elevation, Photovoltaic system, Photovoltaic",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Images, Video & Media Verification"
+      ],
       "subcategory": "Basemaps",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -1215,6 +1240,9 @@
       "url": "http://livingatlas.arcgis.com/wayback/",
       "name": "Wayback Imagery - Historic Satellite Imagery",
       "category": "Images, Video & Media Verification",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -1398,6 +1426,9 @@
       "url": "https://github.com/rlyonheart/0xdork",
       "name": "0xdork",
       "category": "Search & Dorking",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Dorking",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -1410,6 +1441,10 @@
       "url": "https://10minutemail.com/",
       "name": "10 Minute Mail - Free Anonymous Temporary email - 10 Minute Mail - Free Anonymous Temporary email",
       "category": "People & Identities",
+      "categories": [
+        "OPSEC & Tradecraft",
+        "Learning & Resources"
+      ],
       "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -1569,6 +1604,9 @@
       "url": "https://gisgeography.com/satellite-maps/",
       "name": "25 Satellite Maps To See Earth in New Ways [2020] - GIS Geography - Pool of satellite imagery",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Images, Video & Media Verification"
+      ],
       "subcategory": "Satellite & aerial",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -1639,6 +1677,9 @@
       "url": "http://4wbwa6vcpvcr3vvf4qkhppgy56urmjcj2vagu2iqgp3z656xcmfdbiqd.onion.pet/",
       "name": "435,627,630 indexed items from that Facebook dump of recent - ready to be searched upon.",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Facebook",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -1929,6 +1970,9 @@
       "url": "https://acleddata.com/dashboard/#/dashboard",
       "name": "Acled data crisis map",
       "category": "Conflict & Environment",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2135,6 +2179,9 @@
       "url": "https://www.radarbox.com",
       "name": "AirNav RadarBox - Global Flight Tracking Intelligence | Live Flight Tracker and Airport Status",
       "category": "Transport & Logistics",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Aviation",
       "payload_type": "link",
       "source": "OSINT Research",
@@ -2147,6 +2194,9 @@
       "url": "https://www.radarbox24.com/@2.41699,27.25463,z3",
       "name": "AirNav RadarBox - Live Flight Tracker and Airport Status",
       "category": "Websites, Domains & IPs",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -2335,6 +2385,9 @@
       "url": "https://juckins.net/amtrak_status/archive/html/history.php",
       "name": "Amtrak Status Maps Archive Database",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -2601,6 +2654,9 @@
       "url": "https://imagehunter.apollomapping.com/",
       "name": "ApolloMapping Image Hunter",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Images, Video & Media Verification"
+      ],
       "subcategory": "Satellite & aerial",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -2648,6 +2704,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/apple-maps",
       "name": "Apple Maps",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Images, Video & Media Verification"
+      ],
       "subcategory": "Satellite & aerial",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -2660,6 +2719,9 @@
       "url": "https://app.skylens.io/",
       "name": "Apps.skylens.io",
       "category": "Images, Video & Media Verification",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "subcategory": "Metadata & forensics",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -2684,6 +2746,9 @@
       "url": "https://aqicn.org/map/world/",
       "name": "Aqicn",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -2764,6 +2829,10 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/archive.today",
       "name": "Archive.today",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Archiving & Preservation",
+        "Learning & Resources"
+      ],
       "subcategory": "Facebook",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -2835,6 +2904,9 @@
       "url": "https://solutions.arcgis.com/defense/help/military-overlay/",
       "name": "ArgGis Military Overlay",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -2905,6 +2977,9 @@
       "url": "http://www.fepg.net/asia.HTML",
       "name": "Asia-East Free Email Providers",
       "category": "People & Identities",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -3112,6 +3187,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/auto-archiver",
       "name": "Auto Archiver",
       "category": "Images, Video & Media Verification",
+      "categories": [
+        "Archiving & Preservation"
+      ],
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -3168,6 +3246,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/auto-tab-discard/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=featured",
       "name": "Auto Tab Discard - Firefox Extension",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -3179,6 +3260,9 @@
       "url": "https://github.com/SirCryptic/autoexif",
       "name": "AutoExif",
       "category": "Websites, Domains & IPs",
+      "categories": [
+        "Images, Video & Media Verification"
+      ],
       "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -3226,6 +3310,9 @@
       "url": "https://eea.government.bg/eea/main-site/bg/output/daily/bulletin-en.html",
       "name": "Average Gamma Dose Rate Map",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -3479,6 +3566,10 @@
       "url": "https://ollielballinger.users.earthengine.app/view/bellingcat-radar-interference-tracker#lon=49.9507;lat=26.6056;zoom=4;",
       "name": "BellingCat Radar Interfence Tracker",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs",
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -3884,6 +3975,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/blackbird",
       "name": "Blackbird",
       "category": "People & Identities",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Username",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -4039,6 +4133,9 @@
       "url": "javascript:(async function(){try{let response=await fetch(location.href);let html=await response.text();var idRegex=/did:plc:([a-zA-Z0-9]+)/g;var idMatch=idRegex.exec(html);var displayNameRegex=/bsky_display_name.&gt;([^&lt;]+)&lt;\\/p&gt;/;var handleRegex=/bsky_handle.&gt;([^&lt;]+)&lt;\\/p&gt;/;var displayNameMatch=html.match(displayNameRegex);var handleMatch=html.match(handleRegex);var userId=idMatch&amp;&amp;idMatch[1]?idMatch[1]:&#39;Not Found&#39;;var displayName=displayNameMatch&amp;&amp;di",
       "name": "Bluesky ID Revealer Bookmarklet",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "payload_type": "bookmarklet",
       "source": "MyOSINT.training",
       "sources": [
@@ -4050,6 +4147,9 @@
       "url": "javascript:(function(){try{var userId=prompt(&#39;Enter the Bsky User ID:&#39;);if(userId&amp;&amp;userId.trim()!==&#39;&#39;){var url=&#39;https://bsky.app/profile/did:plc:&#39;+userId.trim();window.open(url,&#39;_blank&#39;);}else{alert(&#39;No User ID provided!&#39;);}}catch(e){alert(&#39;Error processing request: &#39;+e.message);}})();",
       "name": "Bluesky ID to Profile Bookmarklet",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "payload_type": "bookmarklet",
       "source": "MyOSINT.training",
       "sources": [
@@ -4094,6 +4194,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/bookmarker-by-start-me",
       "name": "Bookmarker by start.me - Firefox Extension",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Telegram",
       "payload_type": "link",
       "source": "OSINT Research",
@@ -4347,6 +4450,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/bulk-media-downloader/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search",
       "name": "Bulk Media Downloader - Firefox Extension",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -4862,6 +4968,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/chatgpt-for-google",
       "name": "ChatGPT for Google - Firefox Extension",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5633,6 +5742,9 @@
       "url": "https://chronotrains-eu.vercel.app/",
       "name": "Chronotrains",
       "category": "Transport & Logistics",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "subcategory": "Rail & road",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -5645,6 +5757,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/chronotrains",
       "name": "Chronotrains",
       "category": "Transport & Logistics",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Rail & road",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -5691,6 +5806,9 @@
       "url": "https://citizen.com/explore",
       "name": "Citizen.com",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -5749,6 +5867,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/clearurls",
       "name": "ClearURLs - Firefox Extension",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5920,6 +6041,9 @@
       "url": "https://www.cma-cgm.com/ebusiness/schedules/voyage",
       "name": "CMA Voyage Finder",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -6001,6 +6125,9 @@
       "url": "https://btcmap.org/map#4/33.53691/28.82813",
       "name": "Coin Map - Searching for businesses who take crypto",
       "category": "Companies, Finance & Government",
+      "categories": [
+        "Crypto & Money Flows"
+      ],
       "subcategory": "Company registries",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -6047,6 +6174,10 @@
       "url": "https://cipher387.github.io/public_transport_maps/",
       "name": "Collection of public transport maps",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics",
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -6210,6 +6341,9 @@
       "url": "http://container-tracking.org/",
       "name": "Container Tracking",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -6305,6 +6439,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/cookie-quick-manager",
       "name": "Cookie Quick Manager - Firefox Extension",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -6350,6 +6487,9 @@
       "url": "https://copernix.io/",
       "name": "COPERNIX",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -6384,6 +6524,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/copy-selected-links",
       "name": "Copy Selected Links - Firefox Extension",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -6566,6 +6709,9 @@
       "url": "https://www.crimemapping.com/",
       "name": "Crimemapping.com",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -6601,6 +6747,9 @@
       "url": "https://www.crisisgroup.org/crisiswatch",
       "name": "Crisisgroup",
       "category": "Conflict & Environment",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -6714,6 +6863,9 @@
       "url": "https://csilinux.com/product-category/csilinuxcertificationcourses/",
       "name": "CSI Linux Certification Courses – CSI Linux",
       "category": "Learning & Resources",
+      "categories": [
+        "Social Media & Messengers"
+      ],
       "payload_type": "link",
       "source": "Ultimate OSINT Collection",
       "sources": [
@@ -6965,6 +7117,9 @@
       "url": "https://iaca-darkweb-tools.com/dictionary/",
       "name": "DARK WEB DICTIONARY – IACA Dark Web Investigation Support",
       "category": "Learning & Resources",
+      "categories": [
+        "Breaches, Leaks & Dark Web"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -7044,6 +7199,9 @@
       "url": "https://github.com/datadesk/overpass-turbo-tutorial",
       "name": "datadesk/overpass-turbo-tutorial: Code examples and tutorial on getting data out of OpenStreetMap",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Basemaps",
       "payload_type": "link",
       "source": "OSINT Research",
@@ -7318,6 +7476,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/dehashed",
       "name": "DeHashed",
       "category": "Websites, Domains & IPs",
+      "categories": [
+        "Breaches, Leaks & Dark Web"
+      ],
       "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -7444,6 +7605,9 @@
       "url": "https://desuarchive.org/",
       "name": "Desuarchive (4Chan archive)",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Archiving & Preservation"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -7603,6 +7767,9 @@
       "url": "https://direkt.bahn.guru/",
       "name": "Direkht Ban Guru",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -7698,6 +7865,10 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/discordleaks",
       "name": "DiscordLeaks",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Breaches, Leaks & Dark Web",
+        "Conflict & Environment"
+      ],
       "subcategory": "Discord",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -7946,6 +8117,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/dont-track-me-google1",
       "name": "Don't Track Me Google - Firefox Extension",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -7969,6 +8143,9 @@
       "url": "https://github.com/Balgogan/dorkscanner",
       "name": "Dork Scanner",
       "category": "Websites, Domains & IPs",
+      "categories": [
+        "Search & Dorking"
+      ],
       "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -7981,6 +8158,9 @@
       "url": "https://dorkgenius.com/",
       "name": "DorkGenius",
       "category": "Search & Dorking",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Dorking",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -7993,6 +8173,9 @@
       "url": "https://www.dorkgpt.com/",
       "name": "DorkGPT",
       "category": "Search & Dorking",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Dorking",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -8017,6 +8200,9 @@
       "url": "https://github.com/six2dez/dorks_hunter",
       "name": "Dorks Hunter",
       "category": "Search & Dorking",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Dorking",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -8029,6 +8215,9 @@
       "url": "https://dorks.faisalahmed.me/",
       "name": "dorks.faisalahmed.me",
       "category": "Search & Dorking",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Dorking",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -8131,6 +8320,9 @@
       "url": "https://addons.mozilla.org/en-GB/firefox/addon/downthemall",
       "name": "DownThemAll! - Firefox Extension",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -8383,6 +8575,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/earth-online",
       "name": "Earth Online",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Satellite & aerial",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -8407,6 +8602,9 @@
       "url": "https://www.earthcam.com/network/map.php",
       "name": "EarthCam - Live Network of Webcams and Streaming Video Cameras",
       "category": "Images, Video & Media Verification",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "subcategory": "Video verification",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -8700,6 +8898,9 @@
       "url": "https://emmeline.carto.com/me",
       "name": "emmeline.carto.com",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -8712,6 +8913,9 @@
       "url": "https://www.emporis.com/buildings/map",
       "name": "Emporis Buildings Map",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -8747,6 +8951,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/environmental-justice-atlas",
       "name": "Environmental Justice Atlas",
       "category": "Conflict & Environment",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -8919,6 +9126,9 @@
       "url": "https://www.nsinternational.com/en/stations/station-maps-floor-plan",
       "name": "Europe station maps floor plan",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -8979,6 +9189,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/exif-viewer",
       "name": "Exif Viewer - Firefox Extension",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -9284,6 +9497,9 @@
       "url": "https://haveibeenzuckered.com/",
       "name": "Facebook Data Breach Checker | HaveIBeenZuckered.com",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Facebook",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -9296,6 +9512,9 @@
       "url": "https://www.facebook.com/events/%3CeventID%3E/?active_tab=discussion",
       "name": "Facebook Event (Will require an event ID - Modify <eventID in URL)",
       "category": "Learning & Resources",
+      "categories": [
+        "Social Media & Messengers"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -9307,6 +9526,9 @@
       "url": "http://graph.tips/beta/",
       "name": "Facebook Filter Search",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Facebook",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -9319,6 +9541,9 @@
       "url": "https://github.com/narkopolo/fb_friend_list_scraper",
       "name": "Facebook Friend List Scraper",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Facebook",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -9331,6 +9556,9 @@
       "url": "https://www.osintcanada.com/desktop-tools/social-media/facebook",
       "name": "Facebook Google Searching",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Facebook",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -9343,6 +9571,9 @@
       "url": "https://console.apify.com/actors/w8bYllu7Jq18uWz99",
       "name": "Facebook Latest Comments Scraper",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Facebook",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -9355,6 +9586,9 @@
       "url": "https://console.apify.com/actors/EtZ9lsiipPgKrQIi6",
       "name": "Facebook Latest Posts Scraper",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Facebook",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -9367,6 +9601,9 @@
       "url": "https://www.facebook.com/search/videos/?q=Sydney&epa=FILTERS&filters=eyJ2aWRlb3Nfc291cmNlIjoie1wibmFtZVwiOlwidmlkZW9zX2xpdmVcIixcImFyZ3NcIjpcIlwifSJ9",
       "name": "Facebook Live Video Search (Modify search location)",
       "category": "Learning & Resources",
+      "categories": [
+        "Social Media & Messengers"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -9378,6 +9615,9 @@
       "url": "javascript:(function(){try{const findProfilePicLargeUri=obj=&gt;{if(obj&amp;&amp;typeof obj===&#39;object&#39;){for(const key in obj){if(key===&#39;profilePicLarge&#39;&amp;&amp;obj[key].uri){return obj[key].uri}const result=findProfilePicLargeUri(obj[key]);if(result)return result}}return null};const scripts=document.querySelectorAll(&#39;script&#39;);let profilePicUrl=null;scripts.forEach(script=&gt;{const content=script.textContent;try{const jsonStart=content.indexOf(&#39;{&#39;);const jsonEnd",
       "name": "Facebook Locked Profile Image Bookmarklet",
       "category": "Learning & Resources",
+      "categories": [
+        "Social Media & Messengers"
+      ],
       "payload_type": "bookmarklet",
       "source": "MyOSINT.training",
       "sources": [
@@ -9389,6 +9629,9 @@
       "url": "javascript:(function(){const findUserId=()=&gt;{const urlMatch=window.location.pathname.match(/\\/marketplace\\/profile\\/(\\d+)/);if(urlMatch)return urlMatch[1];const match1=document.documentElement.outerHTML.match(/&quot;userID&quot;:&quot;(\\d+)&quot;/);if(match1)return match1[1];const match2=document.documentElement.outerHTML.match(/&quot;user&quot;:\\{&quot;id&quot;:&quot;(\\d+)&quot;/);if(match2)return match2[1];return null};const userId=findUserId();if(!userId){alert(&#39;Could not find user ID ",
       "name": "Facebook Marketplace Profile Bookmarklet",
       "category": "Learning & Resources",
+      "categories": [
+        "Social Media & Messengers"
+      ],
       "payload_type": "bookmarklet",
       "source": "MyOSINT.training",
       "sources": [
@@ -9400,6 +9643,9 @@
       "url": "https://www.facebook.com/directory/people/",
       "name": "Facebook People Directory",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Facebook",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -9412,6 +9658,9 @@
       "url": "javascript:(function(){try{function findUserId(){var userIdRegex=/&quot;userID&quot;:&quot;(\\d+)&quot;/;var userIdMatch=document.documentElement.outerHTML.match(userIdRegex);return userIdMatch?userIdMatch[1]:null}function findUserName(){var nameRegex=/&quot;name&quot;:&quot;([^&quot;]+)&quot;,&quot;__isEntity&quot;:&quot;User&quot;/;var nameMatch=document.documentElement.outerHTML.match(nameRegex);return nameMatch?nameMatch[1]:null}var userId=findUserId();var userName=findUserName();if(userId&am",
       "name": "Facebook Public Content Search",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Facebook",
       "payload_type": "bookmarklet",
       "source": "MyOSINT.training",
@@ -9424,6 +9673,9 @@
       "url": "javascript:(function(){const findProfileInfo=()=&gt;{const e=document.documentElement.outerHTML.match(/&quot;userID&quot;:&quot;(\\d+)&quot;/),o=e?e[1]:&quot;Not present in page&quot;,t=document.documentElement.innerHTML.match(/__isProfile&quot;:&quot;User&quot;,&quot;name&quot;:&quot;([^&quot;]+)&quot;/);return{profileId:o,displayName:t?t[1]:&quot;Not present in page&quot;}},profileInfo=findProfileInfo();if(profileInfo){const modal=document.createElement(&#39;div&#39;);Object.assign(modal.style,",
       "name": "Facebook User ID Bookmarklet",
       "category": "Learning & Resources",
+      "categories": [
+        "Social Media & Messengers"
+      ],
       "payload_type": "bookmarklet",
       "source": "MyOSINT.training",
       "sources": [
@@ -9526,6 +9778,9 @@
       "url": "http://www.fakemailgenerator.com/#/gustr.com/Casly1981/",
       "name": "Fake Mail Generator - Free temporary email addresses",
       "category": "People & Identities",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -9538,6 +9793,10 @@
       "url": "https://www.fakepersongenerator.com/Index/generate",
       "name": "Fake Person Generator | User Identity, Account and Profile Generator",
       "category": "Learning & Resources",
+      "categories": [
+        "People & Identities",
+        "Breaches, Leaks & Dark Web"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -9649,6 +9908,9 @@
       "url": "https://github.com/IvanGlinkin/Fast-Google-Dorks-Scan",
       "name": "Fast Google Dorks Scan",
       "category": "Websites, Domains & IPs",
+      "categories": [
+        "Search & Dorking"
+      ],
       "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -9765,6 +10027,9 @@
       "url": "https://fdown.net/index.php",
       "name": "FDown - Facebook video downloader",
       "category": "Learning & Resources",
+      "categories": [
+        "Social Media & Messengers"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -9926,6 +10191,9 @@
       "url": "https://findfoodsupport.withgoogle.com/",
       "name": "Find Food Support",
       "category": "Websites, Domains & IPs",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "subcategory": "Hosting & infrastructure",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -10034,6 +10302,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/fireshot",
       "name": "Firefox - FireShot",
       "category": "Conflict & Environment",
+      "categories": [
+        "Social Media & Messengers"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10045,6 +10316,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/ghunt-companion",
       "name": "Firefox - GHunt Companion",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10056,6 +10330,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/highlightthis",
       "name": "Firefox - Highlight This",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10067,6 +10344,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/image-search-options",
       "name": "Firefox - Image Search Options",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10078,6 +10358,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/imagus",
       "name": "Firefox - Imagus",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10089,6 +10372,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/link-gopher/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=featured",
       "name": "Firefox - Link Gopher",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10100,6 +10386,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/link-redirect-trace-addon/?utm_content=install-cta-button&track=website-landingpage-link-redirect-trace-install-cta-button",
       "name": "Firefox - Link Redirect Trace",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10111,6 +10400,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers",
       "name": "Firefox - Multi-Account Containers",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10122,6 +10414,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/firefox-translations",
       "name": "Firefox - Translations",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10223,6 +10518,9 @@
       "url": "https://www.flightconnections.com/",
       "name": "Flight Connections",
       "category": "Transport & Logistics",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "subcategory": "Aviation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -10235,6 +10533,9 @@
       "url": "https://flight-status.info/",
       "name": "Flight Status Info",
       "category": "Transport & Logistics",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "subcategory": "Aviation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -10247,6 +10548,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/flightaware",
       "name": "FlightAware",
       "category": "Transport & Logistics",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Aviation",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -10259,6 +10563,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/flightradar24",
       "name": "Flightradar24",
       "category": "Transport & Logistics",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Aviation",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -10374,6 +10681,9 @@
       "url": "https://fluxaiimagegenerator.com/",
       "name": "Flux AI Image Generator Free Online | Flux AI",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Images, Video & Media Verification"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -10607,6 +10917,9 @@
       "url": "https://www.vesselfinder.com",
       "name": "Free AIS Ship Tracker - VesselFinder",
       "category": "Transport & Logistics",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Maritime",
       "payload_type": "link",
       "source": "OSINT Research",
@@ -10619,6 +10932,9 @@
       "url": "https://www.mytrashmobile.com/numbers",
       "name": "FREE mobile numbers to receive text messages online | mytrashmobile.com",
       "category": "Learning & Resources",
+      "categories": [
+        "People & Identities"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -10676,6 +10992,9 @@
       "url": "http://freedomhouse.org/explore-the-map",
       "name": "Freedomhouse.org",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -10734,6 +11053,9 @@
       "url": "https://frontex.europa.eu/we-know/migratory-map/",
       "name": "Frontex Migratory Map",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -10972,6 +11294,9 @@
       "url": "https://www.fakenamegenerator.com/",
       "name": "Generate a Random Name - Fake Name Generator",
       "category": "People & Identities",
+      "categories": [
+        "Learning & Resources"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -11097,6 +11422,9 @@
       "url": "https://github.com/GONZOsint/geowifi",
       "name": "GeoWiFi",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -11131,6 +11459,9 @@
       "url": "https://github.com/gerryguy311/CyberProfDevelopmentCovidResources/blob/master/README.md",
       "name": "gerryguy311 List Conf/Training/Webinars",
       "category": "Learning & Resources",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "payload_type": "link",
       "source": "Ultimate OSINT Collection",
       "sources": [
@@ -11214,6 +11545,9 @@
       "url": "https://ghostarchive.org/",
       "name": "Ghostarchive, a website archive",
       "category": "Archiving & Preservation",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Web archiving",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -11553,6 +11887,10 @@
       "url": "https://www.cfr.org/global-conflict-tracker/?category=us",
       "name": "Global Conflict Tracker",
       "category": "Conflict & Environment",
+      "categories": [
+        "Maps, Geolocation & Satellites",
+        "Websites, Domains & IPs"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -11564,6 +11902,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/global-fishing-watch",
       "name": "Global Fishing Watch",
       "category": "Conflict & Environment",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -11633,6 +11974,9 @@
       "url": "https://twitter.com/cyb_detective/status/1578772549919559681",
       "name": "Global Terriorism Database",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -11704,6 +12048,9 @@
       "url": "https://github.com/dwisiswant0/go-dork",
       "name": "GO DORK",
       "category": "Search & Dorking",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Dorking",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -11799,6 +12146,9 @@
       "url": "https://addons.mozilla.org/ru/firefox/addon/google-dork-builder/",
       "name": "Google (universal) Dork Builder",
       "category": "Search & Dorking",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Dorking",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -11913,6 +12263,9 @@
       "url": "https://taksec.github.io/google-dorks-bug-bounty/",
       "name": "Google Bug Bounty Dorks Generator",
       "category": "Search & Dorking",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Dorking",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -12157,6 +12510,9 @@
       "url": "https://chrome.google.com/webstore/detail/timeline-exporter/afalbippddliaaomolohcbfogogbjpkk/related",
       "name": "Google Maps Timeline Exporter",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -12351,6 +12707,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/govmap",
       "name": "GovMap",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Companies, Finance & Government"
+      ],
       "subcategory": "Basemaps",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -12787,6 +13146,9 @@
       "url": "https://www.splcenter.org/hate-map",
       "name": "Hate Map",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -12822,6 +13184,9 @@
       "url": "https://haveibeenpwned.com/",
       "name": "Have I Been Pwned: Check if your email has been compromised in a data breach",
       "category": "Breaches, Leaks & Dark Web",
+      "categories": [
+        "People & Identities"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -12903,6 +13268,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/hoaxy",
       "name": "Hoaxy",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "X / Twitter",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -13178,6 +13546,9 @@
       "url": "http://yandex.ru/",
       "name": "http://Yandex.ru",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Search & Dorking"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -13314,6 +13685,9 @@
       "url": "https://hungermap.wfp.org/",
       "name": "Hungermap",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -13430,6 +13804,9 @@
       "url": "https://i-intelligence.eu/training",
       "name": "i-intelligenceTraining",
       "category": "Learning & Resources",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "payload_type": "link",
       "source": "Ultimate OSINT Collection",
       "sources": [
@@ -13487,6 +13864,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/icij-offshore-leaks-database",
       "name": "ICIJ Offshore Leaks Database",
       "category": "Companies, Finance & Government",
+      "categories": [
+        "Breaches, Leaks & Dark Web"
+      ],
       "subcategory": "Company registries",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -13652,6 +14032,9 @@
       "url": "https://labs.google/fx/tools/image-fx",
       "name": "ImageFX - labs.google/fx",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Images, Video & Media Verification"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -13732,6 +14115,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/importgenius",
       "name": "ImportGenius",
       "category": "Transport & Logistics",
+      "categories": [
+        "Companies, Finance & Government"
+      ],
       "subcategory": "Trade & customs",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -13744,6 +14130,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/importyeti",
       "name": "ImportYeti",
       "category": "Transport & Logistics",
+      "categories": [
+        "Companies, Finance & Government"
+      ],
       "subcategory": "Trade & customs",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -13895,6 +14284,9 @@
       "url": "http://www.dgi.inpe.br/catalogo/",
       "name": "INPE Image Catalog",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Images, Video & Media Verification"
+      ],
       "subcategory": "Satellite & aerial",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -14026,6 +14418,9 @@
       "url": "https://www.google.com/search?client=ubuntu&hs=CzK&channel=fs&ei=Q1rhW9yIDI27rQHr_bDACw&q=site%3Ainstagram.com+%22person%22&oq=site%3Ainstagram.com+%22person%22&gs_l=psy-ab.3...4194.4916..5259...0.0..0.329.1218.0j4j1j1......0....1..gws-wiz.CPTTLh3l4Bk",
       "name": "Instagram Person Search (change \"person\" for name)",
       "category": "Social Media & Messengers",
+      "categories": [
+        "People & Identities"
+      ],
       "subcategory": "Instagram",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -14038,6 +14433,9 @@
       "url": "javascript:(function(){var newUrl=window.location.href+&#39;media/?size=l&#39;;var newWindow=window.open();newWindow.document.write(`&lt;html&gt;&lt;head&gt;&lt;title&gt;Image Viewer&lt;/title&gt;&lt;style&gt;body{display:flex;justify-content:center;align-items:center;height:100vh;margin:0;background-color:#f0f0f0;}img{max-width:100%;max-height:100%;border:1px solid #ccc;box-shadow:0 4px 8px rgba(0,0,0,0.1);}.message{position:fixed;top:10px;left:50%;transform:translateX(-50%);background-color:wh",
       "name": "Instagram Save Single Image Bookmarklet",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Instagram",
       "payload_type": "bookmarklet",
       "source": "MyOSINT.training",
@@ -14062,6 +14460,9 @@
       "url": "javascript:(function(){ try { var url=window.location.href; let userStr, displayName, username, instagramId; const metaDesc = document.querySelector(&#39;meta[name=&quot;description&quot;]&#39;); if (metaDesc) { const content = metaDesc.getAttribute(&#39;content&#39;); const userMatch = content ? content.match(/ - (.*?) on Instagram:/) : null; if (userMatch) { userStr = userMatch[1]; const nameMatch = userStr.match(/(.*?) ?\\(?@(.+?)\\)?$/); if (nameMatch) { displayName = nameMatch[1]; username = ",
       "name": "Instagram User ID Bookmarklet",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Instagram",
       "payload_type": "bookmarklet",
       "source": "MyOSINT.training",
@@ -14145,6 +14546,9 @@
       "url": "https://addons.mozilla.org/en-GB/firefox/addon/instant-data-scraper-reboot",
       "name": "Instant Data Scraper reboot – Get this Extension for 🦊 Firefox (en-GB)",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -14192,6 +14596,9 @@
       "url": "https://inteltechniques.com/training.html",
       "name": "Intel Techniques Online Training",
       "category": "Learning & Resources",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "payload_type": "link",
       "source": "Ultimate OSINT Collection",
       "sources": [
@@ -14804,6 +15211,9 @@
       "url": "https://www.itamilradar.com/",
       "name": "Itamilradar",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -15125,6 +15535,9 @@
       "url": "http://dnmugu4755642434.onion.pet/captcha",
       "name": "KILOS Darknet Search Engine",
       "category": "Search & Dorking",
+      "categories": [
+        "Breaches, Leaks & Dark Web"
+      ],
       "subcategory": "Search engines",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -15329,6 +15742,9 @@
       "url": "https://chrome.google.com/webstore/detail/legrooms-for-google-fligh/nhonfddkgankhjilponlbdccpabaaknp/related",
       "name": "Legrooms for Google Flights",
       "category": "Transport & Logistics",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "subcategory": "Aviation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -15471,6 +15887,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/license-plate-maps",
       "name": "License Plate Maps",
       "category": "Transport & Logistics",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Rail & road",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -15718,6 +16137,10 @@
       "url": "https://www.livecruiseshiptracker.com/",
       "name": "Live Cruise Ship Tracker",
       "category": "Transport & Logistics",
+      "categories": [
+        "Websites, Domains & IPs",
+        "Maps, Geolocation & Satellites"
+      ],
       "subcategory": "Maritime",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -15765,6 +16188,10 @@
       "url": "https://mobility.portal.geops.io/world.geops.transit?baselayer=world.geops.travic&layers=paerke,strassennamen,haltekanten,haltestellen,pois,world.geops.traviclive&x=810000&y=5900000&z=5.5",
       "name": "Live Train Tracker",
       "category": "Transport & Logistics",
+      "categories": [
+        "Maps, Geolocation & Satellites",
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Rail & road",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -16347,6 +16774,9 @@
       "url": "https://www.mapillary.com/app/?lat=20&lng=0&z=1.6875",
       "name": "Mapillary - Street-level imagery database",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Images, Video & Media Verification"
+      ],
       "subcategory": "Street-level & webcams",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -16427,6 +16857,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/mapswitcher",
       "name": "MapSwitcher",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "OPSEC & Tradecraft"
+      ],
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -16450,6 +16883,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/marinetraffic",
       "name": "MarineTraffic",
       "category": "Transport & Logistics",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Maritime",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -16462,6 +16898,9 @@
       "url": "https://www.marinetraffic.com/en/ais/home/centerx:100.5/centery:13.6/zoom:11",
       "name": "MarineTraffic: Global Ship Tracking Intelligence | AIS Marine Traffic",
       "category": "Transport & Logistics",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Maritime",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -16486,6 +16925,9 @@
       "url": "https://www.marinevesseltraffic.com/2013/02/military-ship-track.html",
       "name": "MarineVesselFinder",
       "category": "Transport & Logistics",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "subcategory": "Maritime",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -16498,6 +16940,10 @@
       "url": "https://map.nbr.org/interactivemap/",
       "name": "MARITIME AWARENESS PROJECT",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics",
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -16739,6 +17185,9 @@
       "url": "https://github.com/jvanasco/metadata_parser",
       "name": "Metadata Parser",
       "category": "Websites, Domains & IPs",
+      "categories": [
+        "Images, Video & Media Verification"
+      ],
       "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -17054,6 +17503,9 @@
       "url": "https://monitor.civicus.org/",
       "name": "Monitor Tracking Civic Space Worldwide Map",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -17089,6 +17541,9 @@
       "url": "https://kerrick.github.io/Mostly-Harmless/#features",
       "name": "Mostly Harmless: A Google Chrome extension for awesome redditors",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Facebook",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -17402,6 +17857,9 @@
       "url": "https://www.myshiptracking.com",
       "name": "My Ship Tracking Free Realtime AIS Vessel Tracking Vessels Finder Map - ship tracker",
       "category": "Transport & Logistics",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Maritime",
       "payload_type": "link",
       "source": "OSINT Research",
@@ -17564,6 +18022,9 @@
       "url": "https://native-land.ca/",
       "name": "Native-land.ca",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -17600,6 +18061,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/navtex",
       "name": "Navtex",
       "category": "Transport & Logistics",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Maritime",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -17635,6 +18099,9 @@
       "url": "https://github.com/nerrorsec/nDorker",
       "name": "nDorker",
       "category": "Search & Dorking",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Dorking",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -18194,6 +18661,9 @@
       "url": "https://www.ocearch.org/tracker/",
       "name": "Ocearch Shark Tracker",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -18421,6 +18891,9 @@
       "url": "https://onionsearchengine.com/",
       "name": "Onion Search Engine (+maps, mail and pastebin)",
       "category": "Breaches, Leaks & Dark Web",
+      "categories": [
+        "Search & Dorking"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -18488,6 +18961,9 @@
       "url": "javascript:!function()%7Btry%7Bvar%20app%3Ddocument.querySelector(&#39;%23app&#39;)%3Bif(!app%7C%7C!app.__vue__)return%20void%20alert(&#39;Could%20not%20find%20OnlyFans%20app%20state.&#39;)%3Bvar%20usersState%3Dapp.__vue__.%24store.state.users%2Cuid%3DusersState.currentUser%2Cd%3DusersState.items%5Buid%5D%3Bif(!d)return%20void%20alert(&#39;No%20profile%20data%20found%20in%20page%20state.&#39;)%3Bvar%20existing%3Ddocument.getElementById(&#39;of-profile-bm&#39;)%3Bfunction%20esc(s)%7Breturn%20Stri",
       "name": "OnlyFans User Bookmarklet",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "payload_type": "bookmarklet",
       "source": "MyOSINT.training",
       "sources": [
@@ -18533,6 +19009,9 @@
       "url": "https://openbenches.org/",
       "name": "Open Benches",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -18638,6 +19117,10 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/open-ownership",
       "name": "Open Ownership",
       "category": "Companies, Finance & Government",
+      "categories": [
+        "Transport & Logistics",
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Company registries",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -18685,6 +19168,10 @@
       "url": "https://github.com/eremit4/favihunter",
       "name": "Open Source Munitions Portal",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs",
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -18697,6 +19184,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/open-source-munitions-portal",
       "name": "Open Source Munitions Portal",
       "category": "Conflict & Environment",
+      "categories": [
+        "Images, Video & Media Verification"
+      ],
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -18812,6 +19302,9 @@
       "url": "https://app.openindoor.io/#17/48.11915/-1.70188",
       "name": "OpenIndoor",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -18918,6 +19411,10 @@
       "url": "https://wadouk.github.io/osm-public-transports/#3/27.29/5.45",
       "name": "OpenStreetMap Public Transport",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics",
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -19534,6 +20031,9 @@
       "url": "https://osmbuildings.org/",
       "name": "Osmbuildings.org",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -19909,6 +20409,9 @@
       "url": "https://pedestriansfirst.itdp.org/",
       "name": "Pedestriansfirst",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -20094,6 +20597,9 @@
       "url": "http://photo-map.ru/",
       "name": "photo-map.ru",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Images, Video & Media Verification"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -20234,6 +20740,9 @@
       "url": "https://pixlr.com/",
       "name": "Pixlr - Free Online AI Photo Editor, Image Generator & Design tool",
       "category": "Images, Video & Media Verification",
+      "categories": [
+        "Breaches, Leaks & Dark Web"
+      ],
       "subcategory": "Metadata & forensics",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -20280,6 +20789,10 @@
       "url": "https://planefinder.net/flight/ARMY",
       "name": "Planefinder Army Live Flight Tracker",
       "category": "Transport & Logistics",
+      "categories": [
+        "Maps, Geolocation & Satellites",
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Aviation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -20292,6 +20805,9 @@
       "url": "https://www.planet.com/latest-satellite-imagery-gallery/",
       "name": "Planet Gallery",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "subcategory": "Satellite & aerial",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -20485,6 +21001,10 @@
       "url": "https://ports.com/sea-route/",
       "name": "Ports.com",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics",
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -20519,6 +21039,9 @@
       "url": "https://poweroutage.com/",
       "name": "Poweroutage",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -20589,6 +21112,9 @@
       "url": "https://chromewebstore.google.com/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp",
       "name": "Privacy Badger - Chrome Web Store",
       "category": "Learning & Resources",
+      "categories": [
+        "OPSEC & Tradecraft"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -20763,6 +21289,9 @@
       "url": "https://github.com/blacknon/pydork",
       "name": "PyDork",
       "category": "Search & Dorking",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Dorking",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -21099,6 +21628,9 @@
       "url": "https://railcabrides.com/en/mapsearch",
       "name": "Railcabrides",
       "category": "Transport & Logistics",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -21134,6 +21666,9 @@
       "url": "https://www.rally-maps.com/map",
       "name": "Rally Maps",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -21170,6 +21705,9 @@
       "url": "https://rasp.yandex.ru/map/trains",
       "name": "Rasp.yandex.ru/map/trains",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -21847,6 +22385,9 @@
       "url": "https://www.riskmap.com/",
       "name": "RiskMap",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -21987,6 +22528,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/rupep",
       "name": "RuPEP",
       "category": "Companies, Finance & Government",
+      "categories": [
+        "People & Identities"
+      ],
       "subcategory": "Government & politics",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -22010,6 +22554,9 @@
       "url": "https://www.info-res.org/map",
       "name": "Russia-Ukraine Monitor Map",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -22022,6 +22569,9 @@
       "url": "http://rzjets.net/aircraft/",
       "name": "Rzjets.net",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -22069,6 +22619,9 @@
       "url": "https://safeairspace.net/",
       "name": "Safe Airspace",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -22298,6 +22851,9 @@
       "url": "https://4qrcode.com/scan-qr-code.php",
       "name": "Scan QR Code",
       "category": "Images, Video & Media Verification",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Reverse image search",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -22495,6 +23051,9 @@
       "url": "https://www.searates.com/container/tracking/",
       "name": "Searates container tracking",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -22519,6 +23078,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/search-by-image",
       "name": "Search by Image",
       "category": "Images, Video & Media Verification",
+      "categories": [
+        "OPSEC & Tradecraft"
+      ],
       "subcategory": "Reverse image search",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -22680,6 +23242,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/search4faces",
       "name": "Search4Faces",
       "category": "Images, Video & Media Verification",
+      "categories": [
+        "Social Media & Messengers"
+      ],
       "payload_type": "link",
       "source": "Bellingcat",
       "sources": [
@@ -23061,6 +23626,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/sherlock",
       "name": "Sherlock",
       "category": "People & Identities",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Username",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -23097,6 +23665,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/shipfinder",
       "name": "ShipFinder",
       "category": "Transport & Logistics",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Maritime",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -23292,6 +23863,9 @@
       "url": "https://github.com/Zarcolio/sitedorks",
       "name": "Site Dorks",
       "category": "Search & Dorking",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Dorking",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -23361,6 +23935,9 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/sky-follower-bridge",
       "name": "Sky Follower Bridge – Get this Extension for 🦊 Firefox (en-US)",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -23372,6 +23949,9 @@
       "url": "https://www.skydb.net/",
       "name": "SKYDB",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -23418,6 +23998,9 @@
       "url": "https://skyvector.com/",
       "name": "Skyvector",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -23567,6 +24150,9 @@
       "url": "https://map.snapchat.com/",
       "name": "Snapchat map",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Social Media & Messengers"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -23590,6 +24176,9 @@
       "url": "javascript:(function()%7Bfunction%20findNextData()%7Bconst%20script%3Ddocument.querySelector(&#39;script%23__NEXT_DATA__&#39;)%3Bif(%21script)return%20null%3Btry%7Breturn%20JSON.parse(script.textContent)%7Dcatch(e)%7Bconsole.error(&#39;Error%20parsing%20__NEXT_DATA__:&#39;,e)%3Breturn%20null%7D%7Dfunction%20extractImageId(url)%7Bif(url.includes(&#39;bolt_web&#39;))%7Btry%7Bconst%20base64Part%3Durl.split(&#39;/bolt_web/&#39;)%5B1%5D.split(&#39;._RS&#39;)%5B0%5D%3Bconst%20decoded%3Datob(base64Part",
       "name": "Snapchat Story/Spotlight Date Revealer Bookmarklet",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "payload_type": "bookmarklet",
       "source": "MyOSINT.training",
       "sources": [
@@ -23601,6 +24190,9 @@
       "url": "javascript:(function(){function findProfileInfo(){if(&#39;18&#39;==document.documentElement.innerHTML.match(/&quot;pageType&quot;:(\\d\\d)/)[1]){var e=document.documentElement.innerHTML.match(/&quot;dateCreated&quot;:&quot;(\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z)&quot;/);var o=document.documentElement.innerHTML.match(/&quot;dateModified&quot;:&quot;(\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z)&quot;/);var t=e?e[1]:&#39;[Not Present]&#39;;var n=o?o[1]:&#39;[Not Present]&#39;;var r=document.get",
       "name": "Snapchat User ID Bookmarklet",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "payload_type": "bookmarklet",
       "source": "MyOSINT.training",
       "sources": [
@@ -23843,6 +24435,9 @@
       "url": "https://sondehub.org/",
       "name": "Sondehub",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -24182,6 +24777,9 @@
       "url": "https://github.com/Zold1/sqli-dorks-generator",
       "name": "SQLI Dorks Generator",
       "category": "Search & Dorking",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Dorking",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -24331,6 +24929,9 @@
       "url": "https://streetartcities.com/",
       "name": "Street Art Cities",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -24403,6 +25004,9 @@
       "url": "https://www.marinevesseltraffic.com/submarine-vessels-tracking-map",
       "name": "Submarine Vessels Tracking Map",
       "category": "Transport & Logistics",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "subcategory": "Maritime",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -24658,6 +25262,9 @@
       "url": "https://www.talkyou.me/en/index.html",
       "name": "TalkU - Free Phone Calls, Texts & Walkie Talkie, PTT",
       "category": "People & Identities",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Phone",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -24878,6 +25485,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/telegram-phone-number-checker",
       "name": "Telegram Phone Number Checker",
       "category": "People & Identities",
+      "categories": [
+        "Social Media & Messengers"
+      ],
       "subcategory": "Phone",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -24890,6 +25500,9 @@
       "url": "javascript:(function(){var a=document.getElementsByClassName(&#39;tgme_page_description&#39;)[0];if(a){const modal=document.createElement(&#39;div&#39;);Object.assign(modal.style,{position:&#39;fixed&#39;,top:&#39;50%&#39;,left:&#39;50%&#39;,transform:&#39;translate(-50%, -50%)&#39;,backgroundColor:&#39;#022447&#39;,color:&#39;#FFF&#39;,padding:&#39;0&#39;,border:&#39;2px solid #FFF&#39;,borderRadius:&#39;10px&#39;,zIndex:&#39;10000&#39;,maxWidth:&#39;80%&#39;,maxHeight:&#39;80vh&#39;,overflowY:",
       "name": "Telegram Revealer Bookmarklet",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Telegram",
       "payload_type": "bookmarklet",
       "source": "MyOSINT.training",
@@ -25010,6 +25623,9 @@
       "url": "https://www.crazymailing.com/",
       "name": "Temporary Disposable Email - 10 minute mail",
       "category": "People & Identities",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -25368,6 +25984,9 @@
       "url": "https://bikesharingworldmap.com/",
       "name": "The Meddin Bike-sharing World Map",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -25426,6 +26045,9 @@
       "url": "https://hicsuntleones.nl/paintedplanet/",
       "name": "The Painted Planet",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -25461,6 +26083,9 @@
       "url": "https://theshippingdatabase.com/",
       "name": "The Shipping Database",
       "category": "Transport & Logistics",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "subcategory": "Maritime",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -25646,6 +26271,9 @@
       "url": "https://thisresumedoesnotexist.com/",
       "name": "This resume does not exist",
       "category": "Learning & Resources",
+      "categories": [
+        "People & Identities"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -25714,6 +26342,9 @@
       "url": "javascript:(function(){const pageSource=document.documentElement.outerHTML;try{if(window.trustedTypes&amp;&amp;window.trustedTypes.createPolicy){window.trustedTypes.createPolicy(&#39;default&#39;,{createHTML:(string,sink)=&gt;string})}}catch{};const decodeUnicode=str=&gt;{return str.replace(/\\\\u[\\dA-Fa-f]{4}/g,match=&gt;{return String.fromCharCode(parseInt(match.replace(/\\\\u/,&#39;&#39;),16))})};const extractValues=(regex,source)=&gt;{const matches=[];let match;while((match=regex.exec(source))!=",
       "name": "Threads User ID Bookmarklet",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "payload_type": "bookmarklet",
       "source": "MyOSINT.training",
       "sources": [
@@ -25819,6 +26450,9 @@
       "url": "javascript:(function(){function extractUnixTimestamp(vidId){const asBinary=BigInt(vidId).toString(2);const first31Chars=asBinary.slice(0,31);const timestamp=parseInt(first31Chars,2);return timestamp}function addDescriptions(){const videoCards=document.querySelectorAll(&#39;[data-e2e=&quot;user-post-item&quot;]&#39;);const repostCards=document.querySelectorAll(&#39;[data-e2e=&quot;user-repost-item&quot;]&#39;);const allCards=[...videoCards,...repostCards];if(allCards.length===0){alert(&#39;No Tik",
       "name": "TikTok Date Revealer Bookmarklet",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "TikTok",
       "payload_type": "bookmarklet",
       "source": "MyOSINT.training",
@@ -25891,6 +26525,9 @@
       "url": "javascript:(function(){function extractUnixTimestamp(vidId){const asBinary=BigInt(vidId).toString(2);const first31Chars=asBinary.slice(0,31);const timestamp=parseInt(first31Chars,2);return timestamp}function formatDate(timestamp){const date=new Date(timestamp*1e3);return date.toISOString()}const url=window.location.href;const vidIdMatch=url.match(/\\/(\\d+)$/);if(vidIdMatch){const vidId=vidIdMatch[1];const timestamp=extractUnixTimestamp(vidId);const humanReadableDate=formatDate(timestamp);const mo",
       "name": "TikTok URL Date Decoder Bookmarklet",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "TikTok",
       "payload_type": "bookmarklet",
       "source": "MyOSINT.training",
@@ -25903,6 +26540,9 @@
       "url": "javascript:void(function(){function e(e){var t=new Date(1e3*e);return t.getFullYear()+&quot;-&quot;+String(t.getMonth()+1).padStart(2,&quot;0&quot;)+&quot;-&quot;+String(t.getDate()).padStart(2,&quot;0&quot;)+&quot; &quot;+String(t.getHours()).padStart(2,&quot;0&quot;)+&quot;:&quot;+String(t.getMinutes()).padStart(2,&quot;0&quot;)+&quot;:&quot;+String(t.getSeconds()).padStart(2,&quot;0&quot;)}var t=document.getElementById(&quot;__UNIVERSAL_DATA_FOR_REHYDRATION__&quot;);if(t){var n=JSON.parse(t.t",
       "name": "TikTok User ID Bookmarklet",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "TikTok",
       "payload_type": "bookmarklet",
       "source": "MyOSINT.training",
@@ -26077,6 +26717,9 @@
       "url": "https://drfone.wondershare.com/message/receive-message-online.html",
       "name": "Top 10 Free Sites to Receive SMS Online Without Real Phone Number- dr.fone",
       "category": "People & Identities",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Phone",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -26218,6 +26861,9 @@
       "url": "https://www.track-trace.com/container",
       "name": "Track Trace",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -26253,6 +26899,10 @@
       "url": "https://tracker.geops.ch/",
       "name": "Transit Visualisation Client",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics",
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -26289,6 +26939,9 @@
       "url": "https://transtats.bts.gov/ONTIME/",
       "name": "Transtats.bts.gov",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -26734,6 +27387,9 @@
       "url": "https://www.twilio.com/try-twilio",
       "name": "Twilio | Try Twilio Free",
       "category": "Learning & Resources",
+      "categories": [
+        "People & Identities"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -27037,6 +27693,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/twitter-video-downloader",
       "name": "Twitter Video Downloader",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Images, Video & Media Verification"
+      ],
       "subcategory": "X / Twitter",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -27139,6 +27798,9 @@
       "url": "https://youmap.com/app/2-ufo-reporting/posts",
       "name": "UFO reporting map",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -27209,6 +27871,9 @@
       "url": "https://liveuamap.com/ru",
       "name": "Ukraine liveuamap.com",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -27292,6 +27957,9 @@
       "url": "https://www.understandingwar.org/map-room",
       "name": "Understanding War Map Room",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -27465,6 +28133,9 @@
       "url": "https://worldbeyondwar.org/no-bases/",
       "name": "US Military Bases Interactive Worldwide Map",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -27743,6 +28414,10 @@
       "url": "https://cipher387.github.io/venicle_number_search_toolbox/",
       "name": "Venicle Number Search Toolbox",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics",
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -27777,6 +28452,9 @@
       "url": "https://products.groupdocs.app/metadata/total",
       "name": "VERY QUICK and SIMPLE metadata online editor and remover",
       "category": "Websites, Domains & IPs",
+      "categories": [
+        "Images, Video & Media Verification"
+      ],
       "subcategory": "DNS & WHOIS",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -27789,6 +28467,9 @@
       "url": "http://www.equasis.org/EquasisWeb/public/HomePage",
       "name": "Vessel Ownership & ID Records",
       "category": "Transport & Logistics",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Maritime",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -27801,6 +28482,9 @@
       "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/vesselfinder",
       "name": "VesselFinder",
       "category": "Transport & Logistics",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Maritime",
       "payload_type": "link",
       "source": "Bellingcat",
@@ -27908,6 +28592,9 @@
       "url": "https://viewdns.info/reversewhois/",
       "name": "ViewDNS.info - Reverse Whois Email Lookup",
       "category": "People & Identities",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -28002,6 +28689,9 @@
       "url": "javascript:(function(){try{let userData=null;const scripts=document.querySelectorAll(&#39;script&#39;);for(let i=0;i&lt;scripts.length;i++){const scriptContent=scripts[i].textContent||scripts[i].innerText;if(scriptContent.includes(&#39;users.get&#39;)&amp;&amp;scriptContent.includes(&#39;last_seen&#39;)){try{const match=scriptContent.match(/&quot;method&quot;:&quot;users\\.get&quot;[^}]*&quot;response&quot;:\\[(\\{[^}]*&quot;last_seen&quot;[^}]*\\})\\]/);if(match){userData=JSON.parse(match[1]);break;",
       "name": "VK User Bookmarklet",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "VKontakte",
       "payload_type": "bookmarklet",
       "source": "MyOSINT.training",
@@ -28421,6 +29111,10 @@
       "url": "https://www.waze.com/en-GB/live-map/",
       "name": "Waze",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics",
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -29001,6 +29695,9 @@
       "url": "https://wheelmap.org/",
       "name": "Wheelmap.org",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -29035,6 +29732,9 @@
       "url": "https://www.whitepages.com.au/",
       "name": "White Pages® - Search for an Australian Business, Government Department or Person",
       "category": "People & Identities",
+      "categories": [
+        "Companies, Finance & Government"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -29568,6 +30268,9 @@
       "url": "https://www.ntsb.gov/_layouts/ntsb.aviation/index.aspx",
       "name": "World Aviation Accident Database 1962-2007",
       "category": "Transport & Logistics",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "subcategory": "Aviation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -29580,6 +30283,9 @@
       "url": "https://data.ntsb.gov/carol-main-public/basic-search",
       "name": "World Aviation Accident Database 2008-2021",
       "category": "Transport & Logistics",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "subcategory": "Aviation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -29638,6 +30344,9 @@
       "url": "https://luminocity3d.org/WorldPopDen/",
       "name": "World Population Density Map",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -29674,6 +30383,10 @@
       "url": "http://www.worldlicenseplates.com/",
       "name": "WorldLicensePlates",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics",
+        "Websites, Domains & IPs"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -29686,6 +30399,9 @@
       "url": "https://www.globaldetentionproject.org/detention-centres/map-view",
       "name": "Worldwide Detention Centres Map",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Conflict & Environment"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -29722,6 +30438,9 @@
       "url": "javascript:(async()=&gt;{try{const q=(s,r=document)=&gt;r.querySelector(s);const qa=(s,r=document)=&gt;Array.from(r.querySelectorAll(s));const t=s=&gt;typeof s==&#39;string&#39;?s.trim():&#39;&#39;;const esc=s=&gt;(s||&#39;&#39;).replace(/&amp;/g,&#39;&amp;&#39;).replace(/&lt;/g,&#39;&lt;&#39;).replace(/&gt;/g,&#39;&gt;&#39;).replace(/&quot;/g,&#39;&quot;&#39;).replace(/&#39;/g,&#39;&amp;#39;&#39;);const url=q(&#39;meta[property=&quot;og:url&quot;]&#39;)?.content||location.href;const u=new URL(u",
       "name": "X User ID Bookmarklet",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Learning & Resources"
+      ],
       "payload_type": "bookmarklet",
       "source": "MyOSINT.training",
       "sources": [
@@ -30189,6 +30908,9 @@
       "url": "https://mattw.io/youtube-geofind/",
       "name": "YouTube Geofind",
       "category": "Social Media & Messengers",
+      "categories": [
+        "Maps, Geolocation & Satellites"
+      ],
       "subcategory": "YouTube",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -30469,6 +31191,9 @@
       "url": "https://www.zugfinder.net/en/start",
       "name": "ZugFinder",
       "category": "Maps, Geolocation & Satellites",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "subcategory": "Geolocation",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
@@ -30503,6 +31228,9 @@
       "url": "http://www.guerrillamail.com/",
       "name": "✉ Guerrilla Mail - Disposable Temporary E-Mail Address",
       "category": "People & Identities",
+      "categories": [
+        "Learning & Resources"
+      ],
       "subcategory": "Email",
       "payload_type": "link",
       "source": "OSINT Combine",
@@ -30715,6 +31443,9 @@
       "url": "https://academy.osintcombine.com/",
       "name": "⭐OSINT Combine Training Courses",
       "category": "Learning & Resources",
+      "categories": [
+        "Transport & Logistics"
+      ],
       "payload_type": "link",
       "source": "Ultimate OSINT Collection",
       "sources": [
