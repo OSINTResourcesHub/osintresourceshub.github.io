@@ -1,0 +1,21 @@
+# Content licence — site copy & narrative
+
+The **written content** of the site — page copy, explanatory prose, and the
+narrative / conversational ("agentic") framing text, i.e. everything that is
+editorial writing rather than data or code — is licensed under:
+
+**Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**
+https://creativecommons.org/licenses/by-sa/4.0/
+
+You are free to share and adapt this content, for any purpose, provided you:
+
+- **Attribute** — credit "OSINT Resources Hub" with a link to
+  https://osintresourceshub.com, and
+- **ShareAlike** — distribute any derivative under the same CC BY-SA 4.0 terms.
+
+## What this does not cover
+
+- The **catalog database** (`data/tools.json`, `data/status.json`) — that is
+  under the **Open Database License (ODbL) v1.0**, see `DATA-LICENSE`.
+- The **code** (engine, scripts, portal) — under the **MIT** licence, see
+  `LICENSE`.

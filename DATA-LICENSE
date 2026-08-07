@@ -1,27 +1,40 @@
-# Data licence — the catalog
+# Data licence — the catalog database
 
-The **data** in this repository — `data/tools.json` and `data/status.json`, i.e.
-the catalog of tools, our taxonomy/tagging, and the link-health results — is
-licensed under:
+The **database** in this repository — `data/tools.json` and `data/status.json`
+(the collection of tools, our canonical taxonomy/tagging, provenance records,
+and link-health results) — is licensed under the:
 
-**Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**
-https://creativecommons.org/licenses/by-sa/4.0/
+**Open Database License (ODbL) v1.0**
+https://opendatacommons.org/licenses/odbl/1-0/
 
-You are free to share and adapt the catalog, for any purpose, provided you:
+ODbL is the database-specific copyleft licence used by OpenStreetMap. You are
+free to share, create works from, and adapt the database, including
+commercially, provided you:
 
 - **Attribute** — credit "OSINT Resources Hub" with a link to
-  https://osintresourceshub.com, and
-- **ShareAlike** — distribute any derived catalog under the same CC BY-SA 4.0
-  terms.
+  https://osintresourceshub.com;
+- **Share-Alike** — if you publicly use an adapted version of the database, or
+  produce a derived database, offer that adapted database under ODbL too; and
+- **Keep open** — if you redistribute the database (or a work produced from a
+  substantial extract), do not use technical measures that restrict others from
+  using what you distribute.
+
+The individual **contents** of the database (a single description, one record)
+are additionally made available under the **Database Contents License (DbCL)
+v1.0** — https://opendatacommons.org/licenses/dbcl/1-0/.
 
 ## What this does and does not cover
 
 - Individual **tool URLs are facts** and are not owned by anyone — they are
   listed here for reference and each links to its origin.
-- This licence covers **our contribution**: the selection, the canonical
+- ODbL covers **our contribution as a database**: the selection, the canonical
   taxonomy, the tagging, provenance records, and the health data.
 - It does **not** grant rights over the third-party tools/websites themselves,
   nor over any source collection's own structure. Sources are credited in
   `SOURCES.md`.
 
-The **code** in this repository is under the MIT licence — see `LICENSE`.
+## Related licences in this repository
+
+- **Site content & narrative** (prose, page copy, the conversational/agent
+  framing text) — **CC BY-SA 4.0**, see `CONTENT-LICENSE`.
+- **Code** (engine, scripts, portal) — **MIT**, see `LICENSE`.

@@ -20,7 +20,7 @@ This is the **public site repo** for OSINT Resources Hub. It contains only what'
 | `scripts/refresh.py` | Adapts `tools.json` → the checker → `status.json` |
 | `.github/workflows/freshness.yml` | Scheduled job that runs the health check and commits `status.json` |
 | `SOURCES.md` | Attribution — every collection we drew from, credited |
-| `LICENSE` / `DATA-LICENSE` | Code licence (MIT) and data licence (CC BY-SA 4.0) |
+| `LICENSE` / `DATA-LICENSE` / `CONTENT-LICENSE` | Code (MIT) · database (ODbL 1.0) · site content & narrative (CC BY-SA 4.0) |
 
 The engine that measures link rot (`rotbaseline`) lives in a **separate repo** and is installed as a dependency by the workflow — this repo carries no raw third-party corpora.
 
