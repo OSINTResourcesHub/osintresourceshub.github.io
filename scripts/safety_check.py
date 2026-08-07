@@ -12,17 +12,8 @@ Stdlib only, so it runs anywhere (CI, local). Fail-open: any provider error -> "
 from __future__ import annotations
 import json
 import os
-import socket
 import urllib.parse
 import urllib.request
-from urllib.parse import urlsplit
-
-
-def _host(url: str) -> str:
-    try:
-        return (urlsplit(url).netloc or "").split("@")[-1].split(":")[0].lower()
-    except Exception:
-        return ""
 
 
 def urlhaus(url: str, key: str | None):
@@ -68,26 +59,12 @@ def safebrowsing(url: str, key: str | None):
         return ("safebrowsing", "unknown")
 
 
-def spamhaus_dbl(url: str, key=None):
-    host = _host(url)
-    if not host:
-        return None
-    try:
-        res = socket.gethostbyname(f"{host}.dbl.spamhaus.org")
-        if res.startswith("127.0.1."):          # 127.0.1.x = listed
-            return ("spamhaus", "listed")
-        return ("spamhaus", "unknown")           # 127.255.255.x = query refused/rate-limited
-    except socket.gaierror:
-        return ("spamhaus", "clean")             # NXDOMAIN = not listed
-    except Exception:
-        return ("spamhaus", "unknown")
-
-
-# provider -> callable(url, key). Add PhishTank etc. here later.
+# provider -> callable(url, key). Two independent feeds (malware-hosting + malware/phishing).
+# Spamhaus was considered and dropped: redundant here, and its signup requires marketing consent
+# that clashes with the project's no-tracking ethos. Add PhishTank etc. here later if needed.
 PROVIDERS = [
     ("urlhaus", urlhaus, "URLHAUS_KEY"),
     ("safebrowsing", safebrowsing, "SAFEBROWSING_KEY"),
-    ("spamhaus", spamhaus_dbl, None),            # DNS, no key
 ]
 
 
