@@ -204,7 +204,7 @@ function badges(t){var b='';var st=t.st;
  if(t.review==='reviewed'||t.review==='partner')b+=ic('award','var(--curator)',t.review==='partner'?'partner-reviewed':'curator-vetted');
  if(t.cost&&/paid/i.test(t.cost))b+='<span class="ib euro" style="color:var(--dim)" title="access: '+t.cost+'">\\u20ac</span>';
  return '<span class="bdg">'+b+'</span>';}
-const LEGEND_HTML=[['check','var(--alive)','alive'],['ban','var(--warn)','blocked'],['x','var(--dead)','dead'],['shieldcheck','var(--alive)','safety-checked'],['users','var(--accent2)','community-vetted'],['award','var(--curator)','curator-vetted']].map(function(a){return '<span>'+ic(a[0],a[1],'')+a[2]+'</span>';}).join('');
+const LEGEND_HTML=[['check','var(--alive)','alive'],['ban','var(--warn)','blocked'],['x','var(--dead)','dead'],['shieldcheck','var(--alive)','safety-checked'],['user','var(--accent2)','user-submitted'],['users','var(--accent2)','community-vetted'],['award','var(--curator)','curator-vetted']].map(function(a){return '<span>'+ic(a[0],a[1],'')+a[2]+'</span>';}).join('');
 function toolsFor(cats,n){return DATA.tools.filter(t=>cats.includes(t.c)).filter(t=>t.st!=='dead'&&t.st!=='suspected_dead').sort((a,b)=>(a.st==='alive'?0:1)-(b.st==='alive'?0:1)||b.sc-a.sc).slice(0,n||4);}
 
 // ---- vocab ----
