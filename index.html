@@ -39,7 +39,7 @@
     flex: 1;
   }
   header {
-    padding-top: 12vh;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -170,6 +170,7 @@
     transition: transform 120ms ease, opacity 120ms ease;
   }
   .btn:hover { transform: translateY(-1px); }
+  .btn.big { font-size: 17px; padding: 16px 34px; border-radius: 11px; }
   .btn.primary {
     background: var(--amber);
     color: #14100a;
@@ -206,7 +207,7 @@
   }
   @media (max-width: 640px) {
     .pillars { grid-template-columns: 1fr; }
-    header { padding-top: 9vh; }
+    header { padding-top: 22px; }
   }
   .curators-note{font-size:13px;color:var(--fg-dim);text-align:center;max-width:520px;margin:-28px auto 26px;line-height:1.5}
   .curators-note .soon{display:inline-block;margin-left:6px;font-size:11px;color:var(--amber);border:1px solid var(--amber);border-radius:999px;padding:1px 8px;white-space:nowrap}
@@ -255,10 +256,9 @@
     <p class="curators-note">We’re looking for curators for the 8 topics above. <span class="soon">Coming soon</span></p>
 
     <div class="cta">
-      <a class="btn primary" href="https://github.com/osintresourceshub/osintresourceshub.github.io" target="_blank" rel="noopener">⭐ Watch on GitHub for launch</a>
-      <a class="btn ghost" href="https://github.com/osintresourceshub" target="_blank" rel="noopener">Browse the project</a>
+      <a class="btn primary big" href="/demo">Enter the Demo Hub →</a>
     </div>
-    <p class="cta-note">No sign-up, no mailing list, no tracking. Click <strong>Watch</strong> on the repo and GitHub notifies you at release — no personal details required.</p>
+    <p class="cta-note">A live preview — no sign-up, no mailing list, no tracking. The full catalogue and curator tools arrive at launch.</p>
   </div>
 
   <footer>
