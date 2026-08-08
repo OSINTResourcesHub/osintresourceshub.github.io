@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "name": "OSINT Pivot Graph",
+    "version": "0.2-draft",
+    "purpose": "Nodes = data types an investigator can hold. Edges = a transform (via one or more tools) that turns one data type into another. Powers input-first navigation, the 'what else could I look for' suggestions, and the assistant. Multi-seed: an investigation holds several nodes at once, across one or more entities (person of interest + associates).",
+    "footprint_legend": { "passive": "does not touch the target's infrastructure", "active": "target may see the request / be tipped off", "mixed": "depends on how the tool is used" },
+    "confidence_note": "edge.strength = how reliably this pivot yields something (high/medium/low). Curator-set, not behavioural.",
+    "entity_types": ["person", "company", "location", "asset", "infra", "artifact"],
+    "entity_subtypes_note": "'connection' and 'friend/family' are person entities carrying a closeness flag (loose | close). Closeness drives extra pivots (family → shared address / family registries) and a collateral-intrusion caution.",
+    "changelog": "v0.2 (2026-07-19, T-13): added held nodes name, password, keyword, url; social_account gains a multi-select 'platform' attribute (Bluesky, X/Twitter, …). Synced from B7 prototype."
+  },
+  "nodes": [
+    { "id": "seed_nothing", "label": "Nothing yet / a topic", "kind": "entrypoint", "icon": "compass", "blurb": "You have a subject area or a question but no concrete selector." },
+    { "id": "person", "label": "Real name / person", "kind": "entity", "icon": "user" },
+    { "id": "username", "label": "Username / handle", "kind": "selector", "icon": "at" },
+    { "id": "email", "label": "Email address", "kind": "selector", "icon": "mail", "pii": true },
+    { "id": "phone", "label": "Phone number", "kind": "selector", "icon": "phone", "pii": true },
+    { "id": "name", "label": "Name", "kind": "selector", "icon": "id-card", "pii": true, "attributes": { "have_flags": ["full name", "city", "country", "nationality"] }, "handling": "Categorical checkboxes only — capture WHICH attributes are held (incl. nationality → jurisdiction), never the values." },
+    { "id": "social_account", "label": "Social media account", "kind": "selector", "icon": "users", "attributes": { "platform": "multi-select: Bluesky, X/Twitter, Instagram, Facebook, TikTok, LinkedIn, Telegram, Reddit, YouTube, VK, Mastodon, Snapchat, other" } },
+    { "id": "password", "label": "Password", "kind": "selector", "icon": "key-round", "pii": true, "handling": "Never store/transmit the value; the pivot is reuse-across-breaches, not the string." },
+    { "id": "keyword", "label": "Keyword / phrase", "kind": "selector", "icon": "type" },
+    { "id": "url", "label": "URL (not necessarily a domain)", "kind": "selector", "icon": "link" },
+    { "id": "image", "label": "Photo / image", "kind": "artifact", "icon": "image" },
+    { "id": "video", "label": "Video", "kind": "artifact", "icon": "video" },
+    { "id": "geo", "label": "Location / coordinates", "kind": "artifact", "icon": "pin" },
+    { "id": "domain", "label": "Domain name", "kind": "infra", "icon": "globe", "attributes": { "tld": ["com", "net", "org", "gov", "edu", "de", "uk", "ru", "eu", "io", "ai", "other ccTLD"] } },
+    { "id": "ip", "label": "IP address", "kind": "infra", "icon": "server", "pii": true },
+    { "id": "company", "label": "Company / legal entity", "kind": "entity", "icon": "building" },
+    { "id": "ubo", "label": "Beneficial owner / director", "kind": "entity", "icon": "user-check" },
+    { "id": "address", "label": "Physical address", "kind": "selector", "icon": "home", "pii": true },
+    { "id": "wallet", "label": "Crypto wallet / tx", "kind": "selector", "icon": "coin" },
+    { "id": "vessel", "label": "Vessel (IMO/MMSI)", "kind": "asset", "icon": "ship" },
+    { "id": "aircraft", "label": "Aircraft (tail/ICAO)", "kind": "asset", "icon": "plane" },
+    { "id": "document", "label": "Document / file", "kind": "artifact", "icon": "file" },
+    { "id": "sanctions_hit", "label": "Sanctions / PEP / adverse-media flag", "kind": "signal", "icon": "flag" }
+  ],
+  "edges": [
+    { "from": "name", "to": "username", "label": "Names -> likely handles", "tools": ["WhatsMyName", "search operators"], "footprint": "passive", "strength": "medium" },
+    { "from": "name", "to": "company", "label": "Directorships / affiliations", "tools": ["OpenCorporates", "KVK"], "footprint": "passive", "strength": "high", "reuse_candidate": ["kyc", "corporate-investigations"] },
+    { "from": "name", "to": "sanctions_hit", "label": "Screen sanctions / PEP / adverse media", "tools": ["OpenSanctions", "Aleph"], "footprint": "passive", "strength": "high" },
+    { "from": "name", "to": "social_account", "label": "Social presence", "tools": ["platform search"], "footprint": "mixed", "strength": "medium" },
+    { "from": "social_account", "to": "social_account", "label": "Same handle on other platforms", "tools": ["Sherlock", "Maigret"], "footprint": "passive", "strength": "medium" },
+    { "from": "social_account", "to": "person", "label": "Followers/following network -> identity", "tools": ["network mapping"], "footprint": "active", "strength": "medium", "note": "Mapping the follow graph can be an active touch." },
+    { "from": "password", "to": "email", "label": "Linked accounts via credential reuse in breach corpora", "tools": ["breach-search"], "footprint": "passive", "strength": "low", "pivot_you_might_miss": true, "note": "Breach-data use is legally sensitive; never handle the plaintext value." },
+    { "from": "password", "to": "username", "label": "Reuse across breaches -> other handles", "tools": ["breach-search"], "footprint": "passive", "strength": "low", "note": "Legal/ethical caution: breach data." },
+    { "from": "keyword", "to": "social_account", "label": "Find mentions / set monitoring", "tools": ["social search", "monitoring/alerting"], "footprint": "passive", "strength": "medium", "reuse_candidate": ["disinfo", "protective"] },
+    { "from": "keyword", "to": "document", "label": "Dorking -> documents & pages", "tools": ["search operators", "Google dorks"], "footprint": "passive", "strength": "medium" },
+    { "from": "url", "to": "domain", "label": "Extract the domain -> pivot", "tools": ["parse"], "footprint": "passive", "strength": "high" },
+    { "from": "url", "to": "image", "label": "Reverse-search embedded media", "tools": ["reverse image"], "footprint": "passive", "strength": "low" },
+    { "from": "url", "to": "document", "label": "Archive before it changes / extract content", "tools": ["web.archive.org", "archive.today"], "footprint": "passive", "strength": "high", "pivot_you_might_miss": true, "note": "Archive-first: the page may change or vanish." },
+    { "from": "seed_nothing", "to": "person", "label": "Find the person behind a claim/topic", "tools": ["search operators", "news archives"], "footprint": "passive", "strength": "medium" },
+    { "from": "seed_nothing", "to": "company", "label": "Identify the entity behind a brand", "tools": ["registry search", "OpenCorporates"], "footprint": "passive", "strength": "medium" },
+
+    { "from": "person", "to": "username", "label": "Names -> likely handles", "tools": ["WhatsMyName", "namechk-style"], "footprint": "passive", "strength": "medium", "note": "Weak on common names; strong with a nickname." },
+    { "from": "person", "to": "email", "label": "Guess/verify work emails", "tools": ["email permutator", "hunter-style"], "footprint": "mixed", "strength": "medium" },
+    { "from": "person", "to": "company", "label": "Directorships / affiliations", "tools": ["OpenCorporates", "KVK", "Aleph"], "footprint": "passive", "strength": "high", "reuse_candidate": ["kyc", "corporate-investigations"] },
+    { "from": "person", "to": "social_account", "label": "Profiles across platforms", "tools": ["platform search", "Sherlock"], "footprint": "mixed", "strength": "medium" },
+    { "from": "person", "to": "sanctions_hit", "label": "Screen against sanctions/PEP/adverse media", "tools": ["OpenSanctions", "Aleph"], "footprint": "passive", "strength": "high", "reuse_candidate": ["kyc", "fin-crime"] },
+
+    { "from": "username", "to": "social_account", "label": "Enumerate accounts on this handle", "tools": ["WhatsMyName", "Sherlock", "Maigret"], "footprint": "passive", "strength": "high", "note": "Highest-yield first pivot from a username." },
+    { "from": "username", "to": "email", "label": "Breach/paste linkage", "tools": ["HIBP", "breach-search"], "footprint": "passive", "strength": "medium", "pivot_you_might_miss": true },
+    { "from": "username", "to": "person", "label": "Deanonymise via cross-post leaks", "tools": ["forum history", "gravatar"], "footprint": "passive", "strength": "low" },
+
+    { "from": "email", "to": "username", "label": "Gravatar / registration handle", "tools": ["Gravatar", "Epieos"], "footprint": "passive", "strength": "medium", "pivot_you_might_miss": true, "note": "People forget the email -> Gravatar -> username chain." },
+    { "from": "email", "to": "social_account", "label": "Account-existence checks", "tools": ["Epieos", "holehe"], "footprint": "active", "strength": "high", "note": "Active: some checks hit the platform's login/reset flow." },
+    { "from": "email", "to": "person", "label": "Breach records -> identity", "tools": ["HIBP", "Dehashed-style"], "footprint": "passive", "strength": "medium" },
+
+    { "from": "phone", "to": "person", "label": "Reverse-lookup / caller-id apps", "tools": ["reverse-phone", "Truecaller-style"], "footprint": "mixed", "strength": "medium" },
+    { "from": "phone", "to": "social_account", "label": "Messaging-app presence", "tools": ["account-existence checks"], "footprint": "active", "strength": "medium" },
+
+    { "from": "social_account", "to": "image", "label": "Profile & post media", "tools": ["profile scrapers"], "footprint": "mixed", "strength": "high" },
+    { "from": "social_account", "to": "person", "label": "Bio / connections -> identity", "tools": ["network mapping"], "footprint": "passive", "strength": "medium" },
+    { "from": "social_account", "to": "geo", "label": "Geotags / check-ins / background clues", "tools": ["metadata", "manual geolocation"], "footprint": "passive", "strength": "medium", "pivot_you_might_miss": true },
+
+    { "from": "image", "to": "geo", "label": "Geolocate the scene", "tools": ["reverse image", "GeoSpy-style", "sun/shadow"], "footprint": "passive", "strength": "medium" },
+    { "from": "image", "to": "image", "label": "Find other copies / earliest appearance", "tools": ["Yandex", "Google Lens", "TinEye"], "footprint": "passive", "strength": "high", "note": "Earliest-appearance is the fact-checker's key move." },
+    { "from": "image", "to": "document", "label": "Extract EXIF / C2PA provenance", "tools": ["ExifTool", "metadata viewers"], "footprint": "passive", "strength": "medium" },
+
+    { "from": "video", "to": "image", "label": "Keyframe extraction", "tools": ["frame grabbers"], "footprint": "passive", "strength": "high" },
+    { "from": "video", "to": "geo", "label": "Geolocate from frames", "tools": ["manual", "landmark search"], "footprint": "passive", "strength": "medium" },
+
+    { "from": "geo", "to": "image", "label": "Ground-truth imagery of a place", "tools": ["Street View", "Mapillary", "satellite"], "footprint": "passive", "strength": "high" },
+    { "from": "geo", "to": "company", "label": "Who is registered at this address", "tools": ["registry by address", "land registry"], "footprint": "passive", "strength": "medium" },
+
+    { "from": "domain", "to": "ip", "label": "Resolve / passive DNS", "tools": ["passive DNS", "SecurityTrails-style"], "footprint": "passive", "strength": "high", "reuse_candidate": ["cti"] },
+    { "from": "domain", "to": "person", "label": "Historical WHOIS -> registrant", "tools": ["WHOIS history", "cert transparency"], "footprint": "passive", "strength": "medium" },
+    { "from": "domain", "to": "domain", "label": "Sibling domains (same registrant/analytics)", "tools": ["reverse WHOIS", "analytics-ID pivot"], "footprint": "passive", "strength": "high", "pivot_you_might_miss": true, "reuse_candidate": ["cti", "disinfo"] },
+    { "from": "domain", "to": "company", "label": "Who operates the site", "tools": ["imprint/legal page", "registry"], "footprint": "passive", "strength": "medium" },
+
+    { "from": "ip", "to": "domain", "label": "Reverse IP / co-hosted sites", "tools": ["passive DNS"], "footprint": "passive", "strength": "high" },
+    { "from": "ip", "to": "geo", "label": "Geolocate infrastructure", "tools": ["IP geo", "Shodan"], "footprint": "passive", "strength": "medium" },
+
+    { "from": "company", "to": "ubo", "label": "Ownership / directors", "tools": ["KVK UBO", "OpenCorporates", "Aleph"], "footprint": "passive", "strength": "high", "reuse_candidate": ["kyc", "corporate-investigations", "fin-crime"] },
+    { "from": "company", "to": "sanctions_hit", "label": "Screen entity + owners", "tools": ["OpenSanctions"], "footprint": "passive", "strength": "high", "reuse_candidate": ["kyc", "fin-crime"] },
+    { "from": "company", "to": "company", "label": "Related entities / shared officers", "tools": ["OpenCorporates network", "Aleph"], "footprint": "passive", "strength": "high", "pivot_you_might_miss": true },
+    { "from": "company", "to": "vessel", "label": "Owned/operated vessels", "tools": ["Equasis", "vessel registries"], "footprint": "passive", "strength": "medium", "reuse_candidate": ["fin-crime", "geopolitical"] },
+    { "from": "company", "to": "document", "label": "Filings / procurement / court records", "tools": ["court records", "procurement DB", "Aleph"], "footprint": "passive", "strength": "medium" },
+
+    { "from": "ubo", "to": "person", "label": "Resolve owner to a real individual", "tools": ["registry cross-ref"], "footprint": "passive", "strength": "high" },
+
+    { "from": "wallet", "to": "wallet", "label": "Trace flows / cluster addresses", "tools": ["block explorer", "chain-analysis"], "footprint": "passive", "strength": "high", "reuse_candidate": ["fin-crime", "cti"] },
+    { "from": "wallet", "to": "person", "label": "Attribution via exchange/KYC leaks", "tools": ["chain-analysis", "OSINT"], "footprint": "passive", "strength": "low" },
+
+    { "from": "vessel", "to": "geo", "label": "Live/historic position", "tools": ["AIS trackers"], "footprint": "passive", "strength": "high", "reuse_candidate": ["geopolitical"] },
+    { "from": "vessel", "to": "company", "label": "Owner / operator / manager", "tools": ["Equasis", "flag registries"], "footprint": "passive", "strength": "medium" },
+
+    { "from": "aircraft", "to": "geo", "label": "Flight track", "tools": ["ADS-B trackers"], "footprint": "passive", "strength": "high" },
+    { "from": "aircraft", "to": "company", "label": "Registered owner", "tools": ["aviation registries"], "footprint": "passive", "strength": "medium" },
+
+    { "from": "document", "to": "person", "label": "Authors / named parties", "tools": ["metadata", "NER extraction"], "footprint": "passive", "strength": "medium" },
+    { "from": "document", "to": "geo", "label": "Places referenced", "tools": ["NER", "geoparse"], "footprint": "passive", "strength": "low" }
+  ]
+}

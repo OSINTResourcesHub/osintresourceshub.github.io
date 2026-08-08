@@ -421,18 +421,33 @@ function renderSummary(){const box=document.getElementById('summary');
 function confirmCase(){confirmed=true;renderCont();renderAgentBody();document.getElementById('cont').scrollIntoView({behavior:'smooth',block:'nearest'});}
 
 // ---- continuation ----
-function moveRow(label,fp,miss,cats,ctx){const id='t'+Math.random().toString(36).slice(2,8);const tools=toolsFor(cats,4);
+function moveRow(label,fp,miss,cats,ctx){const id='t'+Math.random().toString(36).slice(2,8);const tools=(Array.isArray(cats)&&cats.length&&typeof cats[0]==='object')?cats.slice(0,4):toolsFor(cats,4);
   return `<div class="mv ${miss?'miss':''}"><div class="t" onclick="document.getElementById('${id}').classList.toggle('show')">
     <span class="lbl"><span class="b ${fp}">${fp}</span>${label} <span style="color:var(--dim);font-weight:400">· ${ctx}</span></span><span class="cta">${tools.length} tools ▾</span></div>
     <div class="tools" id="${id}">${tools.map(t=>`<div class="tl"><div><span class="nm">${t.n}</span>${badges(t)}<div class="meta">${t.c}</div></div><div style="display:flex;gap:6px"><a class="mini" href="${t.u}" target="_blank" rel="noopener" title="Open in new tab" aria-label="Open in new tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a><span class="mini" onclick='addKit(${JSON.stringify(t).replace(/'/g,"&#39;")})' title="Add to Investigation Kit">+ 🧰</span></div></div>`).join('')||'<div class="empty">No sample tools here.</div>'}</div></div>`;}
+let PGRAPH=null, EDGES_FROM={};
+function indexGraph(){EDGES_FROM={};((PGRAPH&&PGRAPH.edges)||[]).forEach(function(e){(EDGES_FROM[e.from]=EDGES_FROM[e.from]||[]).push(e);});}
+const HELD2NODE={name:'name',email:'email',username:'username',social:'social_account',phone:'phone',domain:'domain',ip:'ip',url:'url',photo:'image',video:'video',address:'address',coords:'geo',officer:'person',owner:'person',reg:'company',assetid:'vessel',assetname:'name',country:'geo',city:'geo',industry:'keyword',evloc:'geo',evmedia:'image',actors:'person',claim:'keyword',date:null};
+const NODE2CAT={name:['People & Identities'],username:['People & Identities›Username'],email:['People & Identities›Email'],phone:['People & Identities›Phone'],social_account:['Social Media & Messengers'],person:['People & Identities'],password:['Breaches, Leaks & Dark Web'],keyword:['Search & Dorking'],url:['Websites, Domains & IPs'],image:['Images, Video & Media Verification›Reverse image search'],video:['Images, Video & Media Verification›Video verification'],geo:['Maps, Geolocation & Satellites'],domain:['Websites, Domains & IPs›DNS & WHOIS'],ip:['Websites, Domains & IPs›Hosting & infrastructure'],company:['Companies, Finance & Government›Company registries'],ubo:['Companies, Finance & Government'],address:['Maps, Geolocation & Satellites'],wallet:['Crypto & Money Flows'],vessel:['Transport & Logistics›Maritime'],aircraft:['Transport & Logistics›Aviation'],document:['Search & Dorking'],sanctions_hit:['Companies, Finance & Government›Sanctions & watchlists']};
+const ENT2NODE={company:'company',person:'person',place:'address',online:'domain',media:'image',asset:'vessel',time:null,connection:'person',family:'person',infra:'domain'};
+function matchTool(nameStr){var q=(nameStr||'').toLowerCase().replace(/[^a-z0-9]+/g,'');if(q.length<4)return [];return DATA.tools.filter(function(t){var n=(t.n||'').toLowerCase().replace(/[^a-z0-9]+/g,'');return n&&n.indexOf(q)>=0;}).filter(function(t){return t.st!=='dead'&&t.st!=='suspected_dead';});}
+function edgeTools(e){var out=[];(e.tools||[]).forEach(function(tn){matchTool(tn).forEach(function(t){if(out.indexOf(t)<0&&out.length<4)out.push(t);});});var fb=toolsFor(NODE2CAT[e.to]||[],6);fb.forEach(function(t){if(out.length<4&&out.indexOf(t)<0)out.push(t);});return out;}
+function graphMoves(node,ctx){var rows='';var seen={};(EDGES_FROM[node]||[]).forEach(function(e){var k=e.to+'|'+e.label;if(seen[k])return;seen[k]=1;rows+=moveRow(e.label,e.footprint||'passive',e.strength==='low'?1:0,edgeTools(e),ctx);});return rows;}
 function renderCont(){const c=document.getElementById('cont');c.classList.add('show');let html='';
   const role=task?task.role:'—', dom=why?why.l.replace(/^I |^it |^…of /,''):'general research';
   html+=`<span class="reading">reading you as: <b>${role}</b> · <b>${dom}</b></span>`;
   if(cse.ents.some(e=>e.close==='close'))html+=`<div style="border-left:3px solid var(--warn);background:rgba(227,179,65,.07);border-radius:0 9px 9px 0;padding:9px 12px;margin:10px 0;font-size:13px"><b style="color:var(--warn)">Friend / family opens strong pivots</b> — shared address, family registries, mutual connections. Mind collateral intrusion: they aren't your subject.</div>`;
-  cse.ents.forEach((ent,idx)=>{let rows='';ent.held.forEach(h=>{(HMOVES[h.id]||[]).forEach(m=>rows+=moveRow(m[0],m[1],m[2],m[3],`from ${idx===0?'them':ent.name}`));});
+  var useG=!!(PGRAPH&&PGRAPH.edges);
+  cse.ents.forEach((ent,idx)=>{let rows='';const ctx=`from ${idx===0?'them':ent.name}`;
+    if(useG){ent.held.forEach(h=>{const nd=HELD2NODE[h.id];if(nd)rows+=graphMoves(nd,ctx);});}
+    else{ent.held.forEach(h=>{(HMOVES[h.id]||[]).forEach(m=>rows+=moveRow(m[0],m[1],m[2],m[3],ctx));});}
     if(rows)html+=`<div class="grp">${idx===0?'Your subject':ent.name}</div>`+rows;});
-  if(cse.ents.length>=2){let cross='';for(let i=0;i<cse.ents.length;i++)for(let j=i+1;j<cse.ents.length;j++){
-    const k=[cse.ents[i].type,cse.ents[j].type].sort().join('|');(CROSS[k]||[]).forEach(m=>cross+=moveRow(m[0],m[1],m[2],m[3],`${cse.ents[i].name} ↔ ${cse.ents[j].name}`));}
+  if(cse.ents.length>=2){let cross='';
+    if(useG){var seenc={};for(let i=0;i<cse.ents.length;i++)for(let j=i+1;j<cse.ents.length;j++){
+      [[i,j],[j,i]].forEach(function(pr){var X=cse.ents[pr[0]],Y=cse.ents[pr[1]];var yn=ENT2NODE[Y.type];if(!yn)return;
+        X.held.forEach(function(h){var xn=HELD2NODE[h.id];if(!xn)return;(EDGES_FROM[xn]||[]).forEach(function(e){if(e.to!==yn)return;var kk=X.name+e.label+Y.name;if(seenc[kk])return;seenc[kk]=1;cross+=moveRow(e.label,e.footprint||'passive',1,edgeTools(e),`${X.name} → ${Y.name}`);});});});}}
+    else{for(let i=0;i<cse.ents.length;i++)for(let j=i+1;j<cse.ents.length;j++){
+      const k=[cse.ents[i].type,cse.ents[j].type].sort().join('|');(CROSS[k]||[]).forEach(m=>cross+=moveRow(m[0],m[1],m[2],m[3],`${cse.ents[i].name} ↔ ${cse.ents[j].name}`));}}
     if(cross)html+=`<div class="grp cross">Cross-entity — the forgotten moves</div>`+cross;}
   c.innerHTML=html;}
 
@@ -450,10 +465,12 @@ const catCount={};
 function fillCat(){for(const k in catCount)delete catCount[k];DATA.tools.forEach(t=>{catCount[t.c]=(catCount[t.c]||0)+1;(t.xc||[]).forEach(c=>catCount[c]=(catCount[c]||0)+1);});}
 fillCat();
 async function loadFullCatalog(){try{
-  const [tj,sj,at]=await Promise.all([
+  const [tj,sj,at,pg]=await Promise.all([
     fetch('../data/tools.json').then(r=>r.json()),
     fetch('../data/status.json').then(r=>r.json()),
-    fetch('../data/additions.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')]);
+    fetch('../data/additions.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
+    fetch('../data/pivot-graph.json').then(r=>r.ok?r.json():null).catch(()=>null)]);
+  PGRAPH=pg;indexGraph();
   const links=sj.links||{};
   const adds=at.trim()?at.trim().split('\n').map(l=>{try{return JSON.parse(l)}catch(e){return null}}).filter(Boolean):[];
   const seen=new Set(tj.tools.map(t=>t.url));
