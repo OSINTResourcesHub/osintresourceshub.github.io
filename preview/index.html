@@ -152,6 +152,12 @@
 .curcta{margin:14px 0 2px;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--dim);font-size:13px}
 .curcta b{color:var(--ink)}
 .curcta .soon{display:inline-block;margin-left:6px;font-size:11px;color:var(--curator);border:1px solid var(--curator);border-radius:999px;padding:1px 8px;white-space:nowrap}
+.notes{max-width:760px;margin:6px auto 0;padding:0 4px}
+.noteslab{font-size:12px;color:var(--dim);margin-bottom:5px}
+.notesta{width:100%;box-sizing:border-box;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 11px;color:var(--ink);font-size:13px;outline:none;resize:vertical;font-family:inherit}
+.notesta:focus{border-color:var(--accent2)}
+.pii-warn{margin-top:6px;font-size:12px;color:var(--warn);background:rgba(227,179,65,.08);border:1px solid rgba(227,179,65,.35);border-radius:8px;padding:7px 10px;line-height:1.5}
+.pii-mask{color:var(--accent2);cursor:pointer;text-decoration:underline;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -170,6 +176,11 @@
   <div class="picker" id="picker"></div>
   <div class="summary" id="summary"></div>
   <div class="cont" id="cont"></div>
+  <div class="notes" id="notesWrap" style="display:none">
+    <div class="noteslab"><span class="b passive" style="font-size:10px">private</span> Add context — optional, kept only on this device <span id="piiHint"></span></div>
+    <textarea id="notesTa" class="notesta" rows="2" placeholder="e.g. shipping company, Cyprus, suspected shell — describe the shape, not the selectors" oninput="onNotes(this.value)"></textarea>
+    <div class="pii-warn" id="piiWarn" style="display:none"></div>
+  </div>
   <div class="reset" id="reset" onclick="resetAll()">↺ start over</div>
 </div>
 <section class="blk">
@@ -400,11 +411,18 @@ function finishBundle(fromId){if(!draft.held.length)return;let target;
   draft={held:[]};active={t:null};document.getElementById('picker').innerHTML='';render();}
 function rmHeld(idx,j){cse.ents[idx].held.splice(j,1);if(idx>0&&!cse.ents[idx].held.length)cse.ents.splice(idx,1);render();}
 function quickAdd(id){if(!cse.ents.length)return;const t=cse.ents[0];if(!t.held.some(x=>x.id===id))t.held.push({id,detail:[]});render();}
-function resetAll(){task=null;why=null;letter={};cse.ents=[];draft={held:[]};active={t:null};confirmed=false;
+function resetAll(){task=null;why=null;letter={};cse.ents=[];draft={held:[]};active={t:null};confirmed=false;cse.notes='';
+  var _t=document.getElementById('notesTa');if(_t)_t.value='';var _w=document.getElementById('piiWarn');if(_w){_w.style.display='none';_w.innerHTML='';}
   document.getElementById('summary').classList.remove('show');document.getElementById('cont').classList.remove('show');render();}
+/* --- PII-guard (client-side; notes stay in memory, never persisted/sent in T1) --- */
+const PII=[['email',/\b[\w.+-]+@[\w-]+\.[\w.-]{2,}\b/g,'an email'],['url',/\b(?:https?:\/\/|www\.)\S+/gi,'a URL'],['wallet',/\b(?:0x[a-fA-F0-9]{40}|bc1[a-z0-9]{20,}|[13][a-km-zA-HJ-NP-Z1-9]{25,34})\b/g,'a crypto wallet'],['ip',/\b(?:\d{1,3}\.){3}\d{1,3}\b/g,'an IP address'],['phone',/(?:\+?\d[\d\s().-]{7,}\d)/g,'a phone number'],['handle',/@\w{3,}\b/g,'a handle'],['token',/\b[A-Za-z0-9_]{20,}\b/g,'a long token / ID']];
+function piiScan(t){var out=[],w=t;PII.forEach(function(p){p[1].lastIndex=0;if(p[1].test(w)){out.push(p[2]);w=w.replace(p[1],' ');}p[1].lastIndex=0;});return out;}
+function piiMask(t){PII.forEach(function(p){p[1].lastIndex=0;t=t.replace(p[1],'\u00ab'+p[0]+'\u00bb');});return t;}
+function onNotes(v){cse.notes=v;var hits=piiScan(v);var w=document.getElementById('piiWarn');if(!w)return;if(hits.length){w.innerHTML='\u26a0 Looks like this includes '+hits.join(', ')+'. The Hub works on the <b>shape</b> of what you hold, not the values \u2014 you can leave selectors out. <span class="pii-mask" onclick="maskNotes()">mask them</span>';w.style.display='block';}else{w.style.display='none';w.innerHTML='';}}
+function maskNotes(){var ta=document.getElementById('notesTa');if(!ta)return;ta.value=piiMask(ta.value);onNotes(ta.value);}
 
 // ---- summarize & check ----
-function render(){renderSentence();renderPicker();agentSync();if(confirmed)renderCont();}
+function render(){renderSentence();renderPicker();agentSync();var nw=document.getElementById('notesWrap');if(nw)nw.style.display=caseReady()?'block':'none';if(confirmed)renderCont();}
 function renderSummary(){const box=document.getElementById('summary');
   const p=cse.ents[0];
   const all=[];cse.ents.forEach((e,i)=>e.held.forEach(h=>all.push({h,ei:i})));
