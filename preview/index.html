@@ -149,6 +149,9 @@
 .gsearch{margin:0 0 12px}
 .catsearch input,.gsearch input{width:100%;box-sizing:border-box;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 11px;color:var(--ink);font-size:13px;outline:none}
 .catsearch input:focus,.gsearch input:focus{border-color:var(--accent2)}
+.curcta{margin:14px 0 2px;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--dim);font-size:13px}
+.curcta b{color:var(--ink)}
+.curcta .soon{display:inline-block;margin-left:6px;font-size:11px;color:var(--curator);border:1px solid var(--curator);border-radius:999px;padding:1px 8px;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -171,7 +174,7 @@
 </div>
 <section class="blk">
   <h2 class="acc" id="accGuide" onclick="acc('guide')">▾ Guide me — by field <span style="color:#b98bff;font-weight:400">(this is your “why”)</span></h2>
-  <div id="guideBody"><p class="sh">Eight lanes in your own vocabulary. Each maps to a Role × Domain underneath.</p><div class="lanes" id="lanes"></div></div>
+  <div id="guideBody"><p class="sh">Eight lanes in your own vocabulary. Each maps to a Role × Domain underneath.</p><div class="lanes" id="lanes"></div><div class="curcta"><b>Curators wanted</b> — we’re looking for curators for the 8 topics above. <span class="soon">Coming soon</span></div></div>
   <h2 class="acc" id="accBrowse" onclick="acc('browse')" style="margin-top:22px">▸ Browse the backbone — by category</h2>
   <div id="browseBody" style="display:none"><p class="sh">All tools filed once, into 16 categories. Counts &amp; health are live.</p><div class="gsearch"><input id="gq" type="text" placeholder="Search all tools by name…" oninput="globalSearch(this.value)"></div><div class="cats" id="cats"></div></div>
 </section>
