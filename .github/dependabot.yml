@@ -1,0 +1,10 @@
+version: 2
+updates:
+  # Keep GitHub Actions current (security-relevant, low noise). Grouped into one PR.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      actions:
+        patterns: ["*"]
