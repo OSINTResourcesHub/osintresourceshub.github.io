@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<meta name="robots" content="noindex,nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>OSINT Resources Hub</title>
@@ -160,6 +161,17 @@
 .pii-mask{color:var(--accent2);cursor:pointer;text-decoration:underline;white-space:nowrap}
 .foot a{color:var(--accent2)}
 .demobar{background:rgba(227,179,65,.12);color:var(--warn);text-align:center;font-size:12.5px;padding:7px 14px;border-bottom:1px solid rgba(227,179,65,.3)}
+.footlink,.curgo{color:var(--accent2);cursor:pointer;text-decoration:none}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;z-index:200;padding:20px}
+.modalbox{background:var(--panel);border:1px solid var(--line);border-radius:14px;max-width:520px;width:100%;padding:22px;position:relative;max-height:88vh;overflow:auto}
+.mx{position:absolute;top:12px;right:14px;color:var(--dim);cursor:pointer;font-size:15px}
+.modalbox h3{margin:0 0 4px;font-size:17px}
+.modalbox .mlab{font-size:12.5px;color:var(--dim);margin:12px 0 5px}
+.modalbox input,.modalbox select,.modalbox textarea{width:100%;box-sizing:border-box;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 11px;color:var(--ink);font-size:13px;outline:none;font-family:inherit}
+.modalbox input:focus,.modalbox select:focus,.modalbox textarea:focus{border-color:var(--accent2)}
+.mbtn{display:inline-block;margin-top:16px;background:var(--accent2);color:#08131f;font-weight:600;font-size:14px;padding:11px 20px;border-radius:9px;text-decoration:none;cursor:pointer}
+.mnote{font-size:12px;color:var(--dim);margin-top:10px;line-height:1.5}
+.mwarn{font-size:12px;margin-top:8px;color:var(--warn)}
 </style>
 </head>
 <body>
@@ -188,7 +200,7 @@
 </div>
 <section class="blk">
   <h2 class="acc" id="accGuide" onclick="acc('guide')">▾ Guide me — by field <span style="color:#b98bff;font-weight:400">(this is your “why”)</span></h2>
-  <div id="guideBody"><p class="sh">Eight lanes in your own vocabulary. Each maps to a Role × Domain underneath.</p><div class="lanes" id="lanes"></div><div class="curcta"><b>Curators wanted</b> — we’re looking for curators for the 8 topics above. <span class="soon">Coming soon</span></div></div>
+  <div id="guideBody"><p class="sh">Eight lanes in your own vocabulary. Each maps to a Role × Domain underneath.</p><div class="lanes" id="lanes"></div><div class="curcta"><b>Curators wanted</b> — we’re looking for curators for the 8 topics above. <span class="soon" id="curSoon">Coming soon</span><a href="#" class="curgo" id="curGo" style="display:none" onclick="becomeCurator();return false">Express interest →</a></div></div>
   <h2 class="acc" id="accBrowse" onclick="acc('browse')" style="margin-top:22px">▸ Browse the backbone — by category</h2>
   <div id="browseBody" style="display:none"><p class="sh">All tools filed once, into 16 categories. Counts &amp; health are live.</p><div class="gsearch"><input id="gq" type="text" placeholder="Search all tools by name…" oninput="globalSearch(this.value)"></div><div class="cats" id="cats"></div></div>
 </section>
@@ -423,6 +435,18 @@ function piiScan(t){var out=[],w=t;PII.forEach(function(p){p[1].lastIndex=0;if(p
 function piiMask(t){PII.forEach(function(p){p[1].lastIndex=0;t=t.replace(p[1],'\u00ab'+p[0]+'\u00bb');});return t;}
 function onNotes(v){cse.notes=v;var hits=piiScan(v);var w=document.getElementById('piiWarn');if(!w)return;if(hits.length){w.innerHTML='\u26a0 Looks like this includes '+hits.join(', ')+'. The Hub works on the <b>shape</b> of what you hold, not the values \u2014 you can leave selectors out. <span class="pii-mask" onclick="maskNotes()">mask them</span>';w.style.display='block';}else{w.style.display='none';w.innerHTML='';}}
 function maskNotes(){var ta=document.getElementById('notesTa');if(!ta)return;ta.value=piiMask(ta.value);onNotes(ta.value);}
+/* --- agent-conducted intake: pre-filled GitHub submissions (no backend) --- */
+const GH_REPO='https://github.com/OSINTResourcesHub/osintresourceshub.github.io';
+function ghIssue(tpl,fields,title){var p=['template='+encodeURIComponent(tpl)];if(title)p.push('title='+encodeURIComponent(title));Object.keys(fields||{}).forEach(function(k){if(fields[k])p.push(k+'='+encodeURIComponent(fields[k]));});return GH_REPO+'/issues/new?'+p.join('&');}
+function openModal(html){document.getElementById('modalbody').innerHTML=html;document.getElementById('modal').style.display='flex';}
+function closeModal(){document.getElementById('modal').style.display='none';}
+function catOpts(){return (DATA.categories||[]).filter(function(c){return c!=='Unsorted';}).map(function(c){return '<option>'+c+'</option>';}).join('');}
+function suggestTool(){openModal('<h3>Suggest a tool</h3><p class="mnote">Every submission is health-checked and safety-checked. It goes through GitHub, tied to your account \u2014 which keeps out spam and anonymous junk.</p><div class="mlab">Tool URL</div><input id="stUrl" type="url" placeholder="https://example.com" oninput="stDedupe()"><div id="stWarn" class="mwarn" style="display:none"></div><div class="mlab">Name</div><input id="stName" type="text" placeholder="Tool name"><div class="mlab">What it does</div><textarea id="stWhat" rows="2" placeholder="One line on what it is for"></textarea><div class="mlab">Access</div><select id="stAccess"><option>Free</option><option>Partially free</option><option>Paid with trial</option><option>Paid</option><option>Unknown</option></select><div class="mlab">Suggested category (a hint for our curators)</div><select id="stCat">'+catOpts()+'</select><a class="mbtn" href="#" onclick="stSubmit();return false">Submit on GitHub \u2192</a><p class="mnote">Opens a pre-filled GitHub issue \u2014 review it and click <b>Submit</b> (sign-in required).</p>');}
+function stDedupe(){var u=(document.getElementById('stUrl').value||'').trim().toLowerCase().replace(/\/+$/,'');var w=document.getElementById('stWarn');var hit=DATA.tools.filter(function(t){return (t.u||'').toLowerCase().replace(/\/+$/,'')===u;})[0];if(hit){w.innerHTML='Already in the Hub: <b>'+hit.n+'</b>';w.style.display='block';}else{w.style.display='none';}}
+function stSubmit(){var url=(document.getElementById('stUrl').value||'').trim();if(!url)return;var name=(document.getElementById('stName').value||'').trim();var what=(document.getElementById('stWhat').value||'').trim();var cat=document.getElementById('stCat').value;var access=document.getElementById('stAccess').value;var wf=what+(cat?(what?' ':'')+'[suggested category: '+cat+']':'');window.open(ghIssue('suggest-tool.yml',{url:url,what:wf,access:access},name||url),'_blank','noopener');}
+function becomeCurator(){var topics=['Cyber Intel','Corporate Intel','Fraud & Compliance','Geopolitics','Defence & Gov','Security Ops','Public Interest','Trust & Safety','Not sure yet / another area'];openModal('<h3>Become a curator</h3><p class="mnote">Help curate one of the eight topics. Goes through GitHub (tied to your account) \u2014 no email or phone needed.</p><div class="mlab">Topic</div><select id="cuTopic">'+topics.map(function(t){return '<option>'+t+'</option>';}).join('')+'</select><div class="mlab">Relevant background (a public link or a line \u2014 no personal contact details)</div><textarea id="cuBg" rows="3" placeholder="e.g. I verify open-source evidence for a newsroom; portfolio at ..." oninput="cuScan(this.value)"></textarea><div id="cuWarn" class="mwarn" style="display:none"></div><a class="mbtn" href="#" onclick="cuSubmit();return false">Continue on GitHub \u2192</a><p class="mnote">Opens a pre-filled GitHub issue to review and submit (sign-in required).</p>');}
+function cuScan(v){var hits=piiScan(v);var w=document.getElementById('cuWarn');if(hits.length){w.innerHTML='\u26a0 Leave out '+hits.join(', ')+' \u2014 a public link or a short line is enough.';w.style.display='block';}else{w.style.display='none';}}
+function cuSubmit(){var topic=document.getElementById('cuTopic').value;var bg=(document.getElementById('cuBg').value||'').trim();window.open(ghIssue('become-a-curator.yml',{topic:topic,background:bg},'Curator interest'),'_blank','noopener');}
 
 // ---- summarize & check ----
 function render(){renderSentence();renderPicker();agentSync();var nw=document.getElementById('notesWrap');if(nw)nw.style.display=caseReady()?'block':'none';if(confirmed)renderCont();}
@@ -553,7 +577,7 @@ function initFresh(){const b=DATA.by_state||{};document.getElementById('fCat').t
   document.getElementById('fAlive').textContent=b.alive||0;document.getElementById('fBlock').textContent=b.blocked_unknown||0;document.getElementById('fDead').textContent=(b.dead||0)+(b.suspected_dead||0);}
 document.getElementById('foot').innerHTML="<b>OSINT Resources Hub</b> — a self-updating, health-checked directory of OSINT tools. Read-only · no trackers · catalog refreshes live from <code>./data/tools.json</code> + <code>status.json</code>.<br>Licences: catalog database <a href='https://opendatacommons.org/licenses/odbl/1-0/' target='_blank' rel='noopener'>ODbL 1.0</a> · site content <a href='https://creativecommons.org/licenses/by-sa/4.0/' target='_blank' rel='noopener'>CC BY-SA 4.0</a> · code <a href='https://opensource.org/license/mit' target='_blank' rel='noopener'>MIT</a> · <a href='/licenses.html'>our notices</a>. Tool URLs are facts; each links to its origin.";
 kit=loadKit();
-initFresh();render();renderLanes();renderCats();renderKit();loadFullCatalog();if(DEMO){var _db=document.getElementById('demobar');if(_db)_db.style.display='block';}
+initFresh();render();renderLanes();renderCats();renderKit();loadFullCatalog();if(DEMO){var _db=document.getElementById('demobar');if(_db)_db.style.display='block';}else{var _qs=document.getElementById('curSoon'),_qg=document.getElementById('curGo');if(_qs)_qs.style.display='none';if(_qg)_qg.style.display='inline';var _qf=document.getElementById('foot');if(_qf)_qf.innerHTML+=' \u00b7 <a href="#" class="footlink" onclick="suggestTool();return false">Suggest a tool</a>';}
 setTimeout(()=>{if(!active.t&&!cse.ents.length&&!why){const b=document.getElementById('startBalloon');if(b)b.classList.add('show');}},1200);
 (function(){var HImg=document.getElementById('helpImg');if(!HImg)return;HImg.dataset.static=HImg.getAttribute('src');if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;var GIF='assets/osint-research-detective-badge.gif';function rest(){HImg.src=HImg.dataset.static;}function pulse(){var hp=document.getElementById('help');if(hp&&hp.classList.contains('open'))return;HImg.onerror=function(){HImg.onerror=null;rest();};HImg.src=GIF+'?'+Date.now();setTimeout(rest,5200);}setTimeout(pulse,4000);setInterval(pulse,45000);})();
 document.getElementById('persLocal').classList.toggle('on',persist==='local');document.getElementById('persSession').classList.toggle('on',persist==='session');
@@ -590,5 +614,6 @@ function helpSend(){const i=document.getElementById('helpin');const v=i.value.tr
   if(pii.some(re=>re.test(v))){setTimeout(()=>addMsg("That looks like a real selector — no need to share it with me. I only help with <i>using</i> the site.",'aa'),240);return;}
   setTimeout(()=>addMsg("In the real build I answer from the Hub's own docs (EU-hosted, zero-log). For now, try a topic above.",'aa'),240);}
 </script>
+<div class="modal" id="modal" style="display:none"><div class="modalbox"><span class="mx" onclick="closeModal()">✕</span><div id="modalbody"></div></div></div>
 </body>
 </html>
