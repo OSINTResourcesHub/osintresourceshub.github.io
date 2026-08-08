@@ -230,7 +230,7 @@ function badges(t){var b='';var st=t.st;
  if(t.cost&&/paid/i.test(t.cost))b+=ic('euro','var(--dim)','access: '+t.cost);
  return '<span class="bdg">'+b+'</span>';}
 const LEGEND_HTML=[['check','var(--alive)','alive'],['ban','var(--warn)','blocked'],['x','var(--dead)','dead'],['shieldcheck','var(--alive)','safety-checked'],['user','var(--accent2)','user-submitted'],['users','var(--accent2)','community-vetted'],['award','var(--curator)','curator-vetted']].map(function(a){return '<span>'+ic(a[0],a[1],'')+a[2]+'</span>';}).join('');
-function toolsFor(cats,n){return DATA.tools.filter(t=>cats.includes(t.c)).filter(t=>t.st!=='dead'&&t.st!=='suspected_dead').sort((a,b)=>(a.st==='alive'?0:1)-(b.st==='alive'?0:1)||b.sc-a.sc).slice(0,n||4);}
+function toolsFor(cats,n){return DATA.tools.filter(function(t){return cats.some(function(c){var p=c.split('›');if(p.length===2){return (t.c===p[0]||(t.xc&&t.xc.indexOf(p[0])>=0))&&t.sub===p[1];}return t.c===c||(t.xc&&t.xc.indexOf(c)>=0);});}).filter(function(t){return t.st!=='dead'&&t.st!=='suspected_dead';}).sort(function(a,b){return (a.st==='alive'?0:1)-(b.st==='alive'?0:1)||b.sc-a.sc;}).slice(0,n||4);}
 
 // ---- vocab ----
 const TASKS=[{id:"verify",l:"verify",role:"fact-checker"},{id:"investigate",l:"investigate",role:"investigator / journalist"},{id:"analyse",l:"analyse",role:"analyst"},{id:"screen",l:"screen / vet",role:"KYC / HR"},{id:"trace",l:"trace money / assets",role:"financial-crime analyst"},{id:"monitor",l:"monitor",role:"SOC / protective intel"},{id:"secure",l:"secure",role:"security operations"},{id:"prepare",l:"prepare for",role:"security ops / protective"}];
@@ -303,14 +303,14 @@ const CROSS={"company|person":[["Is this person an officer / UBO of it?","passiv
 /* --- Website Agent Increment 1: pivot-graph enrichment (merged, not overwriting) --- */
 const HMOVES_EXTRA={
  name:[["likely usernames / handles","passive",1,["People & Identities","Social Media & Messengers"]],["social accounts by name","mixed",1,["Social Media & Messengers"]]],
- email:[["breach exposure & password reuse","passive",1,["Breaches, Leaks & Dark Web"]]],
- username:[["same handle across platforms","passive",0,["Social Media & Messengers","People & Identities"]],["resolve the handle to a person","active",1,["Social Media & Messengers","People & Identities"]]],
+ email:[["email lookups & verification","passive",0,["People & Identities›Email"]],["breach exposure & password reuse","passive",1,["Breaches, Leaks & Dark Web"]]],
+ username:[["same handle across platforms","passive",0,["People & Identities›Username","Social Media & Messengers"]],["resolve the handle to a person","active",1,["Social Media & Messengers","People & Identities"]]],
  social:[["same handle elsewhere","passive",1,["Social Media & Messengers"]],["network -> the person behind it","active",1,["Social Media & Messengers","People & Identities"]]],
- phone:[["messaging-app presence / caller ID","mixed",1,["People & Identities","Social Media & Messengers"]]],
+ phone:[["messaging-app presence / caller ID","mixed",1,["People & Identities›Phone","Social Media & Messengers"]]],
  domain:[["certificates & subdomains","passive",1,["Websites, Domains & IPs"]],["resolve to hosting / IP","passive",0,["Websites, Domains & IPs"]]],
  ip:[["host geolocation & open services","passive",0,["Websites, Domains & IPs"]]],
  url:[["archive it before it changes","passive",0,["Archiving & Preservation","Websites, Domains & IPs"]],["reverse any images on the page","passive",1,["Images, Video & Media Verification"]]],
- photo:[["reverse-image search","passive",0,["Images, Video & Media Verification"]],["geolocate from the image","passive",1,["Maps, Geolocation & Satellites","Images, Video & Media Verification"]]],
+ photo:[["reverse-image search","passive",0,["Images, Video & Media Verification›Reverse image search"]],["geolocate from the image","passive",1,["Maps, Geolocation & Satellites","Images, Video & Media Verification"]]],
  video:[["keyframes -> reverse search","passive",1,["Images, Video & Media Verification"]],["archive before deletion","passive",0,["Archiving & Preservation"]]],
  coords:[["imagery & street-level context","passive",0,["Maps, Geolocation & Satellites"]]],
  address:[["map / registry by address","passive",1,["Maps, Geolocation & Satellites","Companies, Finance & Government"]]],
@@ -382,12 +382,12 @@ function renderPicker(){const p=document.getElementById('picker');const t=active
 function pl(x){return `<div class="pl">${x}</div>`}function opts(x){return `<div class="opts">${x}</div>`}
 function pickTask(id){task=TASKS.find(x=>x.id===id);active={t:cse.ents.length?'why':'primEnt'};render();}
 function skipTask(){task=null;active={t:cse.ents.length?'why':'primEnt'};render();}
-function pickWhy(id){why=WHY.find(x=>x.id===id);active={t:null};render();}
+function pickWhy(id){why=WHY.find(x=>x.id===id);if(cse.ents.length){draft={held:[]};active={t:'bundle'};}else{active={t:'primEnt'};}render();}
 function pickEnt(id){const cl=(eObj(id)||{}).close||null;
   if(!cse.ents.length){cse.ents.push({id:'e1',type:id,name:autoName(id),held:[],time:null,close:cl});}
   else{cse.ents[0].type=id;cse.ents[0].close=cl;}
-  active={t:id==='time'?'eventTime:0':(why?null:'why')};render();}
-function pickTime(i,val){cse.ents[i].time=val;active={t:why?null:'why'};render();}
+  if(id==='time'){active={t:'eventTime:0'};}else if(!why){active={t:'why'};}else{draft={held:[]};active={t:'bundle'};}render();}
+function pickTime(i,val){cse.ents[i].time=val;if(!why){active={t:'why'};}else{draft={held:[]};active={t:'bundle'};}render();}
 function startBundle(){draft={held:[]};active={t:'bundle'};hideBalloon();renderPicker();}
 function toggleDraftHeld(id){const i=draft.held.findIndex(x=>x.id===id);if(i>=0)draft.held.splice(i,1);else draft.held.push({id,detail:[]});renderPicker();}
 function toggleDraftDetail(id,val){const hh=draft.held.find(x=>x.id===id);if(!hh)return;const k=hh.detail.indexOf(val);if(k>=0)hh.detail.splice(k,1);else hh.detail.push(val);renderPicker();}
