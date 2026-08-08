@@ -115,7 +115,7 @@
 .startballoon{display:none;width:fit-content;margin-top:12px;background:var(--accent2);color:#0a0f16;font-size:13px;font-weight:700;padding:6px 12px;border-radius:8px;animation:bob 1.1s ease-in-out infinite}
 .startballoon.show{display:block}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
-.kitline{padding:10px 22px 0}
+.kitline{padding:10px 22px 0;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .kitbtn.big{font-size:14px;padding:8px 14px}
 .cathead{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px;border-bottom:1px solid var(--line);padding-bottom:9px;margin:18px 0 12px}
 .cathead .h{font-size:19px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
@@ -171,6 +171,8 @@
 .mbtn{display:inline-block;margin-top:16px;background:var(--accent2);color:#08131f;font-weight:600;font-size:14px;padding:11px 20px;border-radius:9px;text-decoration:none;cursor:pointer}
 .mnote{font-size:12px;color:var(--dim);margin-top:10px;line-height:1.5}
 .mwarn{font-size:12px;margin-top:8px;color:var(--warn)}
+.suggesttop{color:var(--accent2);text-decoration:none;font-size:13px;cursor:pointer;white-space:nowrap}
+.suggesttop:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -181,7 +183,7 @@
   <span class="last">last 24h: <b>412</b> re-checked → <span class="a">6 changed</span></span>
   </div>
 <div class="subline">a project by <a href="https://osint-research.com" target="_blank" rel="noopener">OSINT-Research · osint-research.com</a></div>
-<div class="kitline"><span class="kitbtn big" onclick="openKit()" title="Your private shortlist — collect tools as you browse, then export as Markdown. Stored only on your device. Click to open in a separate panel.">🧰 Investigation Kit <b id="kitn">0</b></span></div>
+<div class="kitline"><span class="kitbtn big" onclick="openKit()" title="Your private shortlist — collect tools as you browse, then export as Markdown. Stored only on your device. Click to open in a separate panel.">🧰 Investigation Kit <b id="kitn">0</b></span><a href="#" class="suggesttop" onclick="suggestTool();return false">+ Suggest a tool</a></div>
 
 <div class="hero">
   <div class="kick"><span class="eyewrap"><img src="assets/osint-research-lens-1024.png" alt=""></span> Here to help</div>
@@ -576,7 +578,7 @@ function initFresh(){const b=DATA.by_state||{};document.getElementById('fCat').t
   document.getElementById('fAlive').textContent=b.alive||0;document.getElementById('fBlock').textContent=b.blocked_unknown||0;document.getElementById('fDead').textContent=(b.dead||0)+(b.suspected_dead||0);}
 document.getElementById('foot').innerHTML="<b>OSINT Resources Hub</b> — a self-updating, health-checked directory of OSINT tools. Read-only · no trackers · catalog refreshes live from <code>./data/tools.json</code> + <code>status.json</code>.<br>Licences: catalog database <a href='https://opendatacommons.org/licenses/odbl/1-0/' target='_blank' rel='noopener'>ODbL 1.0</a> · site content <a href='https://creativecommons.org/licenses/by-sa/4.0/' target='_blank' rel='noopener'>CC BY-SA 4.0</a> · code <a href='https://opensource.org/license/mit' target='_blank' rel='noopener'>MIT</a> · <a href='/licenses.html'>our notices</a>. Tool URLs are facts; each links to its origin.";
 kit=loadKit();
-initFresh();render();renderLanes();renderCats();renderKit();loadFullCatalog();if(DEMO){var _db=document.getElementById('demobar');if(_db)_db.style.display='block';}var _qs=document.getElementById('curSoon'),_qg=document.getElementById('curGo');if(_qs)_qs.style.display='none';if(_qg)_qg.style.display='inline';var _qf=document.getElementById('foot');if(_qf)_qf.innerHTML+=' \u00b7 <a href="#" class="footlink" onclick="suggestTool();return false">Suggest a tool</a>';
+initFresh();render();renderLanes();renderCats();renderKit();loadFullCatalog();if(DEMO){var _db=document.getElementById('demobar');if(_db)_db.style.display='block';}var _qs=document.getElementById('curSoon'),_qg=document.getElementById('curGo');if(_qs)_qs.style.display='none';if(_qg)_qg.style.display='inline';
 setTimeout(()=>{if(!active.t&&!cse.ents.length&&!why){const b=document.getElementById('startBalloon');if(b)b.classList.add('show');}},1200);
 (function(){var HImg=document.getElementById('helpImg');if(!HImg)return;HImg.dataset.static=HImg.getAttribute('src');if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;var GIF='assets/osint-research-detective-badge.gif';function rest(){HImg.src=HImg.dataset.static;}function pulse(){var hp=document.getElementById('help');if(hp&&hp.classList.contains('open'))return;HImg.onerror=function(){HImg.onerror=null;rest();};HImg.src=GIF+'?'+Date.now();setTimeout(rest,5200);}setTimeout(pulse,4000);setInterval(pulse,45000);})();
 document.getElementById('persLocal').classList.toggle('on',persist==='local');document.getElementById('persSession').classList.toggle('on',persist==='session');
