@@ -158,6 +158,7 @@
 .notesta:focus{border-color:var(--accent2)}
 .pii-warn{margin-top:6px;font-size:12px;color:var(--warn);background:rgba(227,179,65,.08);border:1px solid rgba(227,179,65,.35);border-radius:8px;padding:7px 10px;line-height:1.5}
 .pii-mask{color:var(--accent2);cursor:pointer;text-decoration:underline;white-space:nowrap}
+.foot a{color:var(--accent2)}
 </style>
 </head>
 <body>
@@ -548,7 +549,7 @@ function exportKit(){const md='# OSINT kit\n\n'+kit.map(k=>`- [${k.n}](${k.u}) �
 // ---- init ----
 function initFresh(){const b=DATA.by_state||{};document.getElementById('fCat').textContent=(DATA.catalog_total||2657).toLocaleString();
   document.getElementById('fAlive').textContent=b.alive||0;document.getElementById('fBlock').textContent=b.blocked_unknown||0;document.getElementById('fDead').textContent=(b.dead||0)+(b.suspected_dead||0);}
-document.getElementById('foot').innerHTML="<b>OSINT Resources Hub</b> — a self-updating, health-checked directory of OSINT tools. Read-only · no trackers · catalog refreshes live from <code>./data/tools.json</code> + <code>status.json</code>.<br>Licences: catalog database <a href='https://opendatacommons.org/licenses/odbl/1-0/' target='_blank' rel='noopener'>ODbL 1.0</a> · site content <a href='https://creativecommons.org/licenses/by-sa/4.0/' target='_blank' rel='noopener'>CC BY-SA 4.0</a> · code <a href='https://opensource.org/license/mit' target='_blank' rel='noopener'>MIT</a> · <a href='https://github.com/OSINTResourcesHub/osintresourceshub.github.io/blob/main/DATA-LICENSE' target='_blank' rel='noopener'>our notices</a>. Tool URLs are facts; each links to its origin.";
+document.getElementById('foot').innerHTML="<b>OSINT Resources Hub</b> — a self-updating, health-checked directory of OSINT tools. Read-only · no trackers · catalog refreshes live from <code>./data/tools.json</code> + <code>status.json</code>.<br>Licences: catalog database <a href='https://opendatacommons.org/licenses/odbl/1-0/' target='_blank' rel='noopener'>ODbL 1.0</a> · site content <a href='https://creativecommons.org/licenses/by-sa/4.0/' target='_blank' rel='noopener'>CC BY-SA 4.0</a> · code <a href='https://opensource.org/license/mit' target='_blank' rel='noopener'>MIT</a> · <a href='/licenses.html'>our notices</a>. Tool URLs are facts; each links to its origin.";
 kit=loadKit();
 initFresh();render();renderLanes();renderCats();renderKit();loadFullCatalog();
 setTimeout(()=>{if(!active.t&&!cse.ents.length&&!why){const b=document.getElementById('startBalloon');if(b)b.classList.add('show');}},1200);
