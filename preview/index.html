@@ -300,6 +300,30 @@ const CROSS={"company|person":[["Is this person an officer / UBO of it?","passiv
  "person|person":[["Shared companies / addresses / associates","passive",1,["Companies, Finance & Government"]]],
  "person|time":[["Was this person at / behind it?","passive",1,["People & Identities","Maps, Geolocation & Satellites"]]],
  "company|time":[["Is this company involved in it?","passive",0,["Companies, Finance & Government"]]]};
+/* --- Website Agent Increment 1: pivot-graph enrichment (merged, not overwriting) --- */
+const HMOVES_EXTRA={
+ name:[["likely usernames / handles","passive",1,["People & Identities","Social Media & Messengers"]],["social accounts by name","mixed",1,["Social Media & Messengers"]]],
+ email:[["breach exposure & password reuse","passive",1,["Breaches, Leaks & Dark Web"]]],
+ username:[["same handle across platforms","passive",0,["Social Media & Messengers","People & Identities"]],["resolve the handle to a person","active",1,["Social Media & Messengers","People & Identities"]]],
+ social:[["same handle elsewhere","passive",1,["Social Media & Messengers"]],["network -> the person behind it","active",1,["Social Media & Messengers","People & Identities"]]],
+ phone:[["messaging-app presence / caller ID","mixed",1,["People & Identities","Social Media & Messengers"]]],
+ domain:[["certificates & subdomains","passive",1,["Websites, Domains & IPs"]],["resolve to hosting / IP","passive",0,["Websites, Domains & IPs"]]],
+ ip:[["host geolocation & open services","passive",0,["Websites, Domains & IPs"]]],
+ url:[["archive it before it changes","passive",0,["Archiving & Preservation","Websites, Domains & IPs"]],["reverse any images on the page","passive",1,["Images, Video & Media Verification"]]],
+ photo:[["reverse-image search","passive",0,["Images, Video & Media Verification"]],["geolocate from the image","passive",1,["Maps, Geolocation & Satellites","Images, Video & Media Verification"]]],
+ video:[["keyframes -> reverse search","passive",1,["Images, Video & Media Verification"]],["archive before deletion","passive",0,["Archiving & Preservation"]]],
+ coords:[["imagery & street-level context","passive",0,["Maps, Geolocation & Satellites"]]],
+ address:[["map / registry by address","passive",1,["Maps, Geolocation & Satellites","Companies, Finance & Government"]]],
+ assetid:[["track the asset (AIS / ADS-B)","passive",0,["Transport & Logistics"]]]
+};
+const CROSS_EXTRA={
+ "online|person":[["Does this person own or run the domain? (WHOIS history, registrant)","passive",1,["Websites, Domains & IPs","People & Identities"]]],
+ "company|online":[["Is the domain / infra tied to the company?","passive",0,["Websites, Domains & IPs","Companies, Finance & Government"]]],
+ "media|place":[["Does the media place them here? (geolocate -> match)","passive",1,["Images, Video & Media Verification","Maps, Geolocation & Satellites"]]],
+ "person|place":[["Put the person at the place (addresses, check-ins)","mixed",1,["People & Identities","Maps, Geolocation & Satellites"]]]
+};
+Object.keys(HMOVES_EXTRA).forEach(function(k){HMOVES[k]=(HMOVES[k]||[]).concat(HMOVES_EXTRA[k]);});
+Object.keys(CROSS_EXTRA).forEach(function(k){CROSS[k]=(CROSS[k]||[]).concat(CROSS_EXTRA[k]);});
 
 // ---- state ----
 let task=null, why=null, letter={};
