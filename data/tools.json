@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T14:08:09+00:00",
+  "generated_at": "2026-08-09T14:12:16+00:00",
   "count": 2653,
   "categories": [
     "Analysis, Collaboration & Reporting",
@@ -5392,7 +5392,7 @@
     {
       "url": "https://chrome.google.com/webstore/detail/auto-tab-discard/jhnleheckmknfcgijgkadoemagpecfol?hl=en",
       "name": "Chrome Web Store - Auto Tab Discard",
-      "category": "Unsorted",
+      "category": "Browser Helper Tools",
       "ext": true,
       "ext_src": [
         "chrome"
