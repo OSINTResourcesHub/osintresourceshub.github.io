@@ -175,6 +175,7 @@
 .suggesttop{color:var(--accent2);text-decoration:none;font-size:13px;cursor:pointer;white-space:nowrap}
 .suggesttop:hover{text-decoration:underline}
 .topacts{display:flex;gap:14px;flex-wrap:wrap}
+.brz{display:inline-block;font-size:10px;font-weight:700;line-height:13px;height:15px;min-width:14px;text-align:center;border:1px solid;border-radius:4px;margin-left:4px;vertical-align:1px;padding:0 3px}
 </style>
 </head>
 <body>
@@ -245,6 +246,8 @@ const ICO={
  puzzle:'<path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.98.98 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77c.24-.24.581-.353.917-.303.515.077.877.528 1.073 1.01a2.5 2.5 0 1 0 3.259-3.259c-.482-.196-.933-.558-1.01-1.073-.05-.336.062-.676.303-.917l1.525-1.525A2.402 2.402 0 0 1 12 1.998c.617 0 1.234.236 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02Z"/>',
  euro:'<path d="M4 10h12"/><path d="M4 14h9"/><path d="M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8 2 0 3.8-.8 5.2-2"/>'};
 function ic(name,color,title){return '<span class="ib" style="color:'+color+'" title="'+title+'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+ICO[name]+'</svg></span>';}
+const BRZ={chrome:['C','#4c8bf5','Chrome'],firefox:['F','#ff9500','Firefox'],edge:['E','#2fb8c9','Edge'],opera:['O','#ee3d55','Opera']};
+function srcBadges(xs){return (xs||[]).map(function(s){var d=BRZ[s]||[s.charAt(0).toUpperCase(),'var(--dim)',s];return '<span class="brz" title="'+d[2]+' extension" style="color:'+d[1]+';border-color:'+d[1]+'">'+d[0]+'</span>';}).join('');}
 function badges(t){var b='';var st=t.st;
  if(st==='alive')b+=ic('check','var(--alive)','alive \u2014 reachable, serving content');
  else if(st==='blocked_unknown')b+=ic('ban','var(--warn)','blocked \u2014 a bot-wall answered; health unknown');
@@ -258,7 +261,7 @@ function badges(t){var b='';var st=t.st;
  if((t.sc||1)>=2)b+=ic('users','var(--accent2)','community-vetted \u2014 listed in '+t.sc+' independent collections');
  if(t.review==='reviewed'||t.review==='partner')b+=ic('award','var(--curator)',t.review==='partner'?'partner-reviewed':'curator-vetted');
  if(t.cost&&/paid/i.test(t.cost))b+=ic('euro','var(--dim)','access: '+t.cost);
- if(t.x)b+=ic('puzzle','var(--accent2)','browser extension'+((t.xs&&t.xs.length)?' \u2014 '+t.xs.join(', '):''));
+ if(t.x){if(t.xs&&t.xs.length)b+=srcBadges(t.xs);else b+=ic('puzzle','var(--accent2)','browser extension');}
  return '<span class="bdg">'+b+'</span>';}
 const LEGEND_HTML=[['check','var(--alive)','alive'],['ban','var(--warn)','blocked'],['x','var(--dead)','dead'],['shieldcheck','var(--alive)','safety-checked'],['user','var(--accent2)','user-submitted'],['users','var(--accent2)','community-vetted'],['award','var(--curator)','curator-vetted']].map(function(a){return '<span>'+ic(a[0],a[1],'')+a[2]+'</span>';}).join('');
 function toolsFor(cats,n){return DATA.tools.filter(function(t){return cats.some(function(c){var p=c.split('›');if(p.length===2){return (t.c===p[0]||(t.xc&&t.xc.indexOf(p[0])>=0))&&t.sub===p[1];}return t.c===c||(t.xc&&t.xc.indexOf(c)>=0);});}).filter(function(t){return t.st!=='dead'&&t.st!=='suspected_dead';}).sort(function(a,b){return (a.st==='alive'?0:1)-(b.st==='alive'?0:1)||b.sc-a.sc;}).slice(0,n||4);}
