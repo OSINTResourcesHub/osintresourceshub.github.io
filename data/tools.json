@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T22:59:48+00:00",
+  "generated_at": "2026-08-09T11:32:55+00:00",
   "count": 2655,
   "categories": [
     "Analysis, Collaboration & Reporting",
@@ -2065,6 +2065,10 @@
       "url": "https://chrome.google.com/webstore/detail/aha-music-song-finder-for/dpacanjfikmhoddligfbehkpomnbgblf/related",
       "name": "AHA Music",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -2327,6 +2331,10 @@
       "url": "https://chrome.google.com/webstore/detail/amazinghiring/didkfdopbffjkpolefhpcjkohcpalicd",
       "name": "Amazing Hiring",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -3212,6 +3220,10 @@
       "url": "https://chrome.google.com/webstore/detail/auto-scroll-search/ieceeinfkigfaeoomfimmecebngempef/related",
       "name": "Auto Scroll Search",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -3224,6 +3236,10 @@
       "name": "Auto Scroll Search",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -3235,6 +3251,10 @@
       "url": "https://chrome.google.com/webstore/detail/auto-searcher/hhggekcjcdgenbgejmkhineppclnkbkn/related",
       "name": "Auto Searcher",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -3248,6 +3268,10 @@
       "category": "Social Media & Messengers",
       "categories": [
         "Conflict & Environment"
+      ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
       ],
       "payload_type": "link",
       "source": "OSINT Research",
@@ -3337,6 +3361,10 @@
       "name": "Awesome Screen Recorder & Screenshot - Chrome Web Store",
       "category": "Websites, Domains & IPs",
       "subcategory": "Tools",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -3662,6 +3690,10 @@
       "name": "BetterViewer",
       "category": "Images, Video & Media Verification",
       "subcategory": "Reverse image search",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -3953,6 +3985,10 @@
       "url": "https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb",
       "name": "Bitwarden - Free Password Manager - Chrome Web Store",
       "category": "Companies, Finance & Government",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -4198,6 +4234,10 @@
         "Conflict & Environment"
       ],
       "subcategory": "Telegram",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -4359,6 +4399,10 @@
       "name": "Broken Link Checker",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -4428,6 +4472,10 @@
       "url": "https://chromewebstore.google.com/detail/builtwith-technology-prof/dapjbgnjinbpoindlpdmhochffioedbn",
       "name": "BuiltWith Technology Profiler",
       "category": "Websites, Domains & IPs",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -4452,6 +4500,10 @@
       "category": "Social Media & Messengers",
       "categories": [
         "Conflict & Environment"
+      ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
       ],
       "payload_type": "link",
       "source": "OSINT Research",
@@ -4946,6 +4998,10 @@
       "url": "https://chrome.google.com/webstore/detail/chatgpt-chrome-extension/cdjifpfganmhoojfclednjdnnpooaojb",
       "name": "ChatGPT Chrome Extension - Chrome Web Store",
       "category": "Analysis, Collaboration & Reporting",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -4957,6 +5013,10 @@
       "url": "https://chromewebstore.google.com/detail/chatgpt-for-google/jgjaeacdkonaoafenlfkkkmbaopkbilf",
       "name": "ChatGPT for Google - Chrome Web Store",
       "category": "Analysis, Collaboration & Reporting",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -4970,6 +5030,10 @@
       "category": "Social Media & Messengers",
       "categories": [
         "Conflict & Environment"
+      ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
       ],
       "payload_type": "link",
       "source": "OSINT Research",
@@ -5029,6 +5093,10 @@
       "name": "Check my links",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -5309,6 +5377,10 @@
       "name": "Chrome Web Store - Archive Page",
       "category": "Archiving & Preservation",
       "subcategory": "Web archiving",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5320,6 +5392,10 @@
       "url": "https://chrome.google.com/webstore/detail/auto-refresh-plus-page-mo/hgeljhfekpckiiplhkigfehkdpldcggm?hl=en",
       "name": "Chrome Web Store - Auto Refresh Plus",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5331,6 +5407,10 @@
       "url": "https://chrome.google.com/webstore/detail/auto-tab-discard/jhnleheckmknfcgijgkadoemagpecfol?hl=en",
       "name": "Chrome Web Store - Auto Tab Discard",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5342,6 +5422,10 @@
       "url": "https://chrome.google.com/webstore/detail/autoscroll/occjjkgifpmdgodlplnacmkejpdionan",
       "name": "Chrome Web Store - AutoScroll",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5353,6 +5437,10 @@
       "url": "https://chrome.google.com/webstore/detail/axiom-browser-automation/cpgamigjcbffkaiciiepndmonbfdimbb",
       "name": "Chrome Web Store - Axiom Browser Automation",
       "category": "OPSEC & Tradecraft",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5364,6 +5452,10 @@
       "url": "https://chrome.google.com/webstore/detail/bearlyai/lkennebljmnnpimcgdjlocbncpamgipp",
       "name": "Chrome Web Store - Bearly.ai",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5375,6 +5467,10 @@
       "url": "https://chrome.google.com/webstore/detail/bookmarker-by-startme/obgopghdefjihikoknnjfooahlleabno/related",
       "name": "Chrome Web Store - Bookmarker by start.me",
       "category": "Learning & Resources",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5386,6 +5482,10 @@
       "url": "https://chrome.google.com/webstore/detail/bulk-media-downloader/ehfdcgbfcboceiclmjaofdannmjdeaoi?hl=en",
       "name": "Chrome Web Store - Bulk Media Downloader",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5397,6 +5497,10 @@
       "url": "https://chrome.google.com/webstore/detail/bulk-url-opener-extension/hgenngnjgfkdggambccohomebieocekm?hl=en",
       "name": "Chrome Web Store - Bulk URL Opener",
       "category": "Websites, Domains & IPs",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5408,6 +5512,10 @@
       "url": "https://chrome.google.com/webstore/detail/chatgpt-for-google/jgjaeacdkonaoafenlfkkkmbaopkbilf",
       "name": "Chrome Web Store - ChatGPT for Google",
       "category": "Analysis, Collaboration & Reporting",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5419,6 +5527,10 @@
       "url": "https://chrome.google.com/webstore/detail/clearurls/lckanjgmijmafbedllaakclkaicjfmnk?hl=en",
       "name": "Chrome Web Store - ClearURLs",
       "category": "Websites, Domains & IPs",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5430,6 +5542,10 @@
       "url": "https://chrome.google.com/webstore/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm?hl=en",
       "name": "Chrome Web Store - Cookie Editor",
       "category": "Breaches, Leaks & Dark Web",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5441,6 +5557,10 @@
       "url": "https://chrome.google.com/webstore/detail/data-scraper-easy-web-scr/nndknepjnldbdbepjfgmncbggmopgden",
       "name": "Chrome Web Store - Data Scraper",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5452,6 +5572,10 @@
       "url": "https://chrome.google.com/webstore/detail/deepl-translate-reading-w/cofdbpoegempjloogbagkncekinflcnj",
       "name": "Chrome Web Store - DeepL Translate",
       "category": "Analysis, Collaboration & Reporting",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5463,6 +5587,10 @@
       "url": "https://chrome.google.com/webstore/detail/distill-web-monitor/inlikjemeeknofckkjolnjbpehgadgge?hl=en",
       "name": "Chrome Web Store - Distill Web Monitor",
       "category": "Breaches, Leaks & Dark Web",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5474,6 +5602,10 @@
       "url": "https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg?hl=en",
       "name": "Chrome Web Store - EditThisCookie",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5485,6 +5617,10 @@
       "url": "https://chromewebstore.google.com/detail/extension-manager/efajbgpnlnobnkgdcgcnclngeolnmggp",
       "name": "Chrome Web Store - Extension Manager",
       "category": "OPSEC & Tradecraft",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5496,6 +5632,10 @@
       "url": "https://chromewebstore.google.com/detail/extension-manager/gjldcdngmdknpinoemndlidpcabkggco",
       "name": "Chrome Web Store - Extension Manager",
       "category": "OPSEC & Tradecraft",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5507,6 +5647,10 @@
       "url": "https://chrome.google.com/webstore/detail/fake-news-debunker-by-inv/mhccpoafgdgbhnjfhkcmgknndkeenfhe?hl=en",
       "name": "Chrome Web Store - Fake News Debunker",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5518,6 +5662,10 @@
       "url": "https://chrome.google.com/webstore/detail/fetcher/hcjoaaeflhldlbmadokknllgaagbonla",
       "name": "Chrome Web Store - Fetcher",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5530,6 +5678,10 @@
       "name": "Chrome Web Store - Forensic OSINT Capture",
       "category": "Images, Video & Media Verification",
       "subcategory": "Metadata & forensics",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5541,6 +5693,10 @@
       "url": "https://chrome.google.com/webstore/detail/frame-by-frame/cclnaabdfgnehogonpeddbgejclcjneh",
       "name": "Chrome Web Store - Frame By Frame",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5553,6 +5709,10 @@
       "name": "Chrome Web Store - GHunt Companion",
       "category": "Companies, Finance & Government",
       "subcategory": "Company registries",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5564,6 +5724,10 @@
       "url": "https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl",
       "name": "Chrome Web Store - GoFullPage Capture",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5576,6 +5740,10 @@
       "name": "Chrome Web Store - Google Analytics Opt-out",
       "category": "Websites, Domains & IPs",
       "subcategory": "Hosting & infrastructure",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5587,6 +5755,10 @@
       "url": "https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb?hl=en",
       "name": "Chrome Web Store - Google Translate",
       "category": "Analysis, Collaboration & Reporting",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5598,6 +5770,10 @@
       "url": "https://chromewebstore.google.com/detail/highlight-this-finds-and/fgmbnmjmbjenlhbefngfibmjkpbcljaj?hl=en-US",
       "name": "Chrome Web Store - Highlight This",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5609,6 +5785,10 @@
       "url": "https://chrome.google.com/webstore/detail/highlight-this-finds-and/fgmbnmjmbjenlhbefngfibmjkpbcljaj?hl=en",
       "name": "Chrome Web Store - Highlight This",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5620,6 +5800,10 @@
       "url": "https://chrome.google.com/webstore/detail/hunchly-20/amfnegileeghgikpggcebehdepknalbf?hl=en",
       "name": "Chrome Web Store - Hunchly 2.0",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5631,6 +5815,10 @@
       "url": "https://chrome.google.com/webstore/detail/imagus/immpkjjlgappgfkkfieppnmlhakdmaab?hl=en",
       "name": "Chrome Web Store - Imagus",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5642,6 +5830,10 @@
       "url": "https://chrome.google.com/webstore/detail/instant-data-scraper/ofaokhiedipichpaobibbnahnkdoiiah",
       "name": "Chrome Web Store - Instant Data Scraper",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5653,6 +5845,10 @@
       "url": "https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd?hl=nl",
       "name": "Chrome Web Store - LastPass",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5664,6 +5860,10 @@
       "url": "https://chrome.google.com/webstore/detail/link-gopher/bpjdkodgnbfalgghnbeggfbfjpcfamkf?hl=en",
       "name": "Chrome Web Store - Link Gopher",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5675,6 +5875,10 @@
       "url": "https://chrome.google.com/webstore/detail/link-redirect-trace/nnpljppamoaalgkieeciijbcccohlpoh?utm_source=website&utm_medium=landingpage&utm_campaign=link-redirect-trace&utm_content=install-cta-button&track=website-landingpage-link-redirect-trace-install-cta-button",
       "name": "Chrome Web Store - Link Redirect Trace",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5686,6 +5890,10 @@
       "url": "https://chrome.google.com/webstore/detail/lunapic-right-click-edit/oglcbfocdkemachifmnimbblndgmlhbi",
       "name": "Chrome Web Store - Lunapic Edit",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5698,6 +5906,10 @@
       "name": "Chrome Web Store - Map Switcher",
       "category": "Maps, Geolocation & Satellites",
       "subcategory": "Basemaps",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5709,6 +5921,10 @@
       "url": "https://chrome.google.com/webstore/detail/multifind/amegoafkcikfmdbfeldmchinkjfdgoog",
       "name": "Chrome Web Store - MultiFind",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5720,6 +5936,10 @@
       "url": "https://chrome.google.com/webstore/detail/openswitchmaps/cfkddjlocfecchnemnnmmpdjcohgmkij",
       "name": "Chrome Web Store - OpenSwitchMaps",
       "category": "Maps, Geolocation & Satellites",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5731,6 +5951,10 @@
       "url": "https://chrome.google.com/webstore/detail/overload-search-advanced/knihkdaajdhpjgeiadaefmjmpbnlojbg",
       "name": "Chrome Web Store - Overload Search",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5870,6 +6094,10 @@
       "categories": [
         "Conflict & Environment"
       ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -5881,6 +6109,10 @@
       "url": "https://microsoftedge.microsoft.com/addons/detail/clearurls/mdkdmaickkfdekbjdoojfalpbkgaddei",
       "name": "ClearURLs - Microsoft Edge Addons",
       "category": "Websites, Domains & IPs",
+      "ext": true,
+      "ext_src": [
+        "edge"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -6442,6 +6674,10 @@
       "categories": [
         "Conflict & Environment"
       ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -6513,6 +6749,10 @@
       "name": "Copy all links and image links to CSV or JSON",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -6527,6 +6767,10 @@
       "categories": [
         "Conflict & Environment"
       ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -6538,6 +6782,10 @@
       "url": "https://chromewebstore.google.com/detail/copyfish-%F0%9F%90%9F-free-ocr-soft/eenjdnjldapjajjofmldgmkjaienebbj",
       "name": "Copyfish 🐟 Free OCR Software",
       "category": "Analysis, Collaboration & Reporting",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -6574,6 +6822,10 @@
       "name": "Core SERP Vitals",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7396,6 +7648,10 @@
       "url": "https://chromewebstore.google.com/detail/deepl-translate/cofdbpoegempjloogbagkncekinflcnj",
       "name": "DeepL Translate - Chrome Web Store",
       "category": "Analysis, Collaboration & Reporting",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -7407,6 +7663,10 @@
       "url": "https://microsoftedge.microsoft.com/addons/detail/deepl-translate-reading-/fancfknaplihpclbhbpclnmmjcjanbaf",
       "name": "DeepL Translate: Reading & writing translator - Microsoft Edge Addons",
       "category": "Analysis, Collaboration & Reporting",
+      "ext": true,
+      "ext_src": [
+        "edge"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -7632,6 +7892,10 @@
       "name": "Developer search tool",
       "category": "Websites, Domains & IPs",
       "subcategory": "Hosting & infrastructure",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -7892,6 +8156,10 @@
       "url": "https://chromewebstore.google.com/detail/distill-web-monitor/inlikjemeeknofckkjolnjbpehgadgge",
       "name": "Distill Web Monitor",
       "category": "Websites, Domains & IPs",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -8120,6 +8388,10 @@
       "categories": [
         "Conflict & Environment"
       ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -8253,6 +8525,10 @@
       "name": "Download Albums for Facebook™ - Chrome Web Store",
       "category": "Social Media & Messengers",
       "subcategory": "Facebook",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -8275,6 +8551,10 @@
       "url": "https://chrome.google.com/webstore/detail/download-sorter/mebfblkahpknogabckmdjcmjbnpfdpcj/related",
       "name": "Download Sorter",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -8309,6 +8589,10 @@
       "url": "https://chrome.google.com/webstore/detail/downthemall/nljkibfhlpcnanjgbnlnbjecgicbjkge/related",
       "name": "DownThemAll! - Chrome Web Store",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -8322,6 +8606,10 @@
       "category": "Social Media & Messengers",
       "categories": [
         "Conflict & Environment"
+      ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
       ],
       "payload_type": "link",
       "source": "OSINT Research",
@@ -8439,6 +8727,10 @@
       "url": "https://chrome.google.com/webstore/detail/duckduckgo-bangs/hdjfebkndhmegijlghjcdghdbealibeb/related",
       "name": "DuckDuckGo!bangs",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -8450,6 +8742,10 @@
       "url": "https://chromewebstore.google.com/detail/dumpitblue+/igmgknoioooacbcpcfgjigbaajpelbfe",
       "name": "DumpItBlue+",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -8461,6 +8757,10 @@
       "url": "https://chrome.google.com/webstore/detail/dumpitblue%20/igmgknoioooacbcpcfgjigbaajpelbfe",
       "name": "DumpItBlue+ - Chrome Web Store",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -8473,6 +8773,10 @@
       "name": "Dumplt Blue",
       "category": "Social Media & Messengers",
       "subcategory": "Facebook",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -8735,6 +9039,10 @@
       "name": "Eightify",
       "category": "Social Media & Messengers",
       "subcategory": "YouTube",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -9024,6 +9332,10 @@
       "name": "Ericom Page Risk Analysis",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -9178,6 +9490,10 @@
       "name": "EXIF QuickView - Chrome Web Store",
       "category": "Images, Video & Media Verification",
       "subcategory": "Video verification",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -9192,6 +9508,10 @@
       "categories": [
         "Conflict & Environment"
       ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -9204,6 +9524,10 @@
       "name": "EXIF Viewer Classic",
       "category": "Images, Video & Media Verification",
       "subcategory": "Video verification",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -9216,6 +9540,10 @@
       "name": "EXIF Viewer Pro - Chrome Web Store",
       "category": "Images, Video & Media Verification",
       "subcategory": "Video verification",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -9335,6 +9663,10 @@
       "name": "Export Chrome History",
       "category": "Websites, Domains & IPs",
       "subcategory": "Hosting & infrastructure",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -9359,6 +9691,10 @@
       "name": "Exporter for IG - Chrome Web Store",
       "category": "Websites, Domains & IPs",
       "subcategory": "Hosting & infrastructure",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -9809,6 +10145,10 @@
       "name": "Fake Profile Detector (Deepfake, GAN)",
       "category": "Images, Video & Media Verification",
       "subcategory": "Deepfake detection",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10243,6 +10583,10 @@
       "name": "find+",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -10305,6 +10649,10 @@
       "categories": [
         "Social Media & Messengers"
       ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10318,6 +10666,10 @@
       "category": "Social Media & Messengers",
       "categories": [
         "Conflict & Environment"
+      ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
       ],
       "payload_type": "link",
       "source": "OSINT Research",
@@ -10333,6 +10685,10 @@
       "categories": [
         "Conflict & Environment"
       ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10346,6 +10702,10 @@
       "category": "Social Media & Messengers",
       "categories": [
         "Conflict & Environment"
+      ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
       ],
       "payload_type": "link",
       "source": "OSINT Research",
@@ -10361,6 +10721,10 @@
       "categories": [
         "Conflict & Environment"
       ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10374,6 +10738,10 @@
       "category": "Social Media & Messengers",
       "categories": [
         "Conflict & Environment"
+      ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
       ],
       "payload_type": "link",
       "source": "OSINT Research",
@@ -10389,6 +10757,10 @@
       "categories": [
         "Conflict & Environment"
       ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10402,6 +10774,10 @@
       "category": "Social Media & Messengers",
       "categories": [
         "Conflict & Environment"
+      ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
       ],
       "payload_type": "link",
       "source": "OSINT Research",
@@ -10417,6 +10793,10 @@
       "categories": [
         "Conflict & Environment"
       ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10428,6 +10808,10 @@
       "url": "https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg?hl=en",
       "name": "FireShot - Webpage Screenshots",
       "category": "Conflict & Environment",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -10895,6 +11279,10 @@
       "url": "https://addons.mozilla.org/ru/firefox/addon/foxyrecon/",
       "name": "FoxyRecon",
       "category": "Learning & Resources",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -11042,6 +11430,10 @@
       "url": "https://chrome.google.com/webstore/detail/freshstart-cross-browser/nmidkjogcjnnlfimjcedenagjfacpobb?hl=ru",
       "name": "FreshStart",
       "category": "OPSEC & Tradecraft",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -11724,6 +12116,10 @@
       "name": "Github Hovercard",
       "category": "Websites, Domains & IPs",
       "subcategory": "Hosting & infrastructure",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -11760,6 +12156,10 @@
       "name": "GitHub Repository Size",
       "category": "Websites, Domains & IPs",
       "subcategory": "Hosting & infrastructure",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -11796,6 +12196,10 @@
       "name": "GitHub-Chart",
       "category": "Websites, Domains & IPs",
       "subcategory": "Hosting & infrastructure",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12037,6 +12441,10 @@
       "name": "Gmaps Extractor",
       "category": "Maps, Geolocation & Satellites",
       "subcategory": "Geolocation",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12150,6 +12558,10 @@
         "Websites, Domains & IPs"
       ],
       "subcategory": "Dorking",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12279,6 +12691,10 @@
       "name": "Google Chrome webpage Regexp search",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12324,6 +12740,10 @@
       "url": "https://chrome.google.com/webstore/detail/record-voice-comments-in/lbfofpndjldbnhnhibhmggblcbpoomon",
       "name": "Google Docs Voice Comments",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12394,6 +12814,10 @@
       "name": "Google Email Extractor",
       "category": "People & Identities",
       "subcategory": "Email",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12514,6 +12938,10 @@
         "Websites, Domains & IPs"
       ],
       "subcategory": "Geolocation",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12616,6 +13044,10 @@
       "url": "https://chromewebstore.google.com/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb",
       "name": "Google Translate - Chrome Web Store",
       "category": "Analysis, Collaboration & Reporting",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -12661,6 +13093,10 @@
       "url": "https://chromewebstore.google.com/detail/googleswitch/gleogimfdeaapagejhfmlgkgenfiaoha",
       "name": "GoogleSwitch",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -12696,6 +13132,10 @@
       "name": "Gotanda",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -12995,6 +13435,10 @@
       "url": "https://chrome.google.com/webstore/detail/hack-this-page/nbfegodimhenhkghjeppighcbpdinhdp/related",
       "name": "Hack This Page",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -13018,6 +13462,10 @@
       "url": "https://chrome.google.com/webstore/detail/hackers-toolkit/iebkeiopbbfnmieadmojmocohdmaghmb/related",
       "name": "Hackers toolkit",
       "category": "Learning & Resources",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -13724,6 +14172,10 @@
       "name": "Hunter - Email Finder Extension - Chrome Web Store",
       "category": "People & Identities",
       "subcategory": "Email",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -13770,6 +14222,10 @@
       "name": "HypeStat Analyzer Plugin",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -13928,6 +14384,10 @@
       "name": "Image Analyzer Addon",
       "category": "Images, Video & Media Verification",
       "subcategory": "Reverse image search",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -13998,6 +14458,10 @@
       "name": "Image Search Assistant",
       "category": "Images, Video & Media Verification",
       "subcategory": "Reverse image search",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14146,6 +14610,10 @@
       "name": "Improve YouTube",
       "category": "Social Media & Messengers",
       "subcategory": "YouTube",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14312,6 +14780,10 @@
       "name": "InsFo",
       "category": "Social Media & Messengers",
       "subcategory": "Instagram",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -14548,6 +15020,10 @@
       "category": "Social Media & Messengers",
       "categories": [
         "Conflict & Environment"
+      ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
       ],
       "payload_type": "link",
       "source": "OSINT Research",
@@ -15249,6 +15725,10 @@
       "url": "https://chrome.google.com/webstore/detail/jasper-%E2%80%94-your-ai-content/bpiohchncadidhohcajcnoelomephkdd",
       "name": "Jasper — Your AI content assistant - Chrome Web Store",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -15375,6 +15855,10 @@
       "name": "Jump Cutter",
       "category": "Social Media & Messengers",
       "subcategory": "YouTube",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -15663,6 +16147,10 @@
       "url": "https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd",
       "name": "LastPass: Free Password Manager - Chrome Web Store",
       "category": "Companies, Finance & Government",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -15746,6 +16234,10 @@
         "Maps, Geolocation & Satellites"
       ],
       "subcategory": "Aviation",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -15950,6 +16442,10 @@
       "name": "Liner: ChatGPT AI Copilot for Web&YouTube&PDF - Chrome Web Store",
       "category": "Social Media & Messengers",
       "subcategory": "YouTube",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -15973,6 +16469,10 @@
       "url": "https://chrome.google.com/webstore/detail/link-redirect-trace/nnpljppamoaalgkieeciijbcccohlpoh",
       "name": "Link Redirect Trace - Chrome Web Store",
       "category": "Companies, Finance & Government",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -16021,6 +16521,10 @@
       "name": "linkKlipper",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16068,6 +16572,10 @@
       "name": "Listly",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -16103,6 +16611,10 @@
       "url": "https://chrome.google.com/webstore/detail/liuchan-chinese-popup-dic/hjpjmkjmkgedphipmbnmejlnfndjcgdf/related?hl=en",
       "name": "LiuChan Chinese Popup Dictionary - Chrome Web Store",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -16177,6 +16689,10 @@
       "name": "Live Stream Downloader",
       "category": "Images, Video & Media Verification",
       "subcategory": "Video verification",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -16425,6 +16941,10 @@
       "url": "https://chrome.google.com/webstore/detail/magical-text-expander/iibninhmiggehlcdolcilmhacighjamp/related",
       "name": "Magical. Text Expander",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -17409,6 +17929,10 @@
       "url": "https://chromewebstore.google.com/detail/mitaka/bfjbejmeoibbdpfdbmbacmefcbannnbg",
       "name": "Mitaka",
       "category": "Websites, Domains & IPs",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -17469,6 +17993,10 @@
       "name": "moarTLS Analyzer",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -17590,6 +18118,10 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/hls-stream-detector",
       "name": "Mozilla - Stream Detector",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -17601,6 +18133,10 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/tamper-data-for-ff-quantum",
       "name": "Mozilla - Tamper Data",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -17612,6 +18148,10 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/tampermonkey",
       "name": "Mozilla - Tampermonkey",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -17623,6 +18163,10 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/transover-ff",
       "name": "Mozilla - TransOver",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -17634,6 +18178,10 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/ublock-origin",
       "name": "Mozilla - uBlock Origin",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -17645,6 +18193,10 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/unpaywall",
       "name": "Mozilla - Unpaywall",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -17656,6 +18208,10 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/user-agent-string-switcher",
       "name": "Mozilla - User-Agent Switcher",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -17667,6 +18223,10 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/video-downloadhelper",
       "name": "Mozilla - Video DownloadHelper",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -17678,6 +18238,10 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/view-page-archive",
       "name": "Mozilla - Web Archives",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -17755,6 +18319,10 @@
       "url": "https://chrome.google.com/webstore/detail/multilogin/ijfgglilaeakmoilplpcjcgjaoleopfi?hl=ru",
       "name": "MultiLogin",
       "category": "OPSEC & Tradecraft",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -18372,6 +18940,10 @@
       "url": "https://chrome.google.com/webstore/detail/nordvpn-vpn-proxy-for-pri/fjoaledfpmneenckfbpdfhkmimnjocfa/related?hl=en",
       "name": "NordVPN - VPN Proxy for Privacy and Security - Chrome Web Store",
       "category": "OPSEC & Tradecraft",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -18441,6 +19013,10 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/noscript/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=featured",
       "name": "NoScript - Security Suite",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -18869,6 +19445,10 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/onetab",
       "name": "OneTab - Tab Manager",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -19060,6 +19640,10 @@
       "name": "Open Link Structured Data Sniffer",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19318,6 +19902,10 @@
       "name": "OpenLink Structured Data Sniffer",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -19440,6 +20028,10 @@
       "name": "OpenSwitchMaps - Map Extension",
       "category": "Maps, Geolocation & Satellites",
       "subcategory": "Basemaps",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -20008,6 +20600,10 @@
       "name": "OSM Smart Menu",
       "category": "Maps, Geolocation & Satellites",
       "subcategory": "Geolocation",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20079,6 +20675,10 @@
       "url": "https://chrome.google.com/webstore/detail/overload-search-advanced/knihkdaajdhpjgeiadaefmjmpbnlojbg/related",
       "name": "Overload Search",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20183,6 +20783,10 @@
       "url": "https://chrome.google.com/webstore/detail/page-marker-draw-on-web/jfiihjeimjpkpoaekpdpllpaeichkiod?hl=en",
       "name": "Page Marker - Draw on Web",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -20217,6 +20821,10 @@
       "url": "https://chrome.google.com/webstore/detail/paperpanda-%E2%80%94-get-millions/ggjlkinaanncojaippgbndimlhcdlohf/related?utm_source=web",
       "name": "PaperPanda",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20342,6 +20950,10 @@
       "url": "https://chrome.google.com/webstore/detail/pdf-mage/gknphemhpcknkhegndlihchfonpdcben?hl=en",
       "name": "PDF Mage",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -20493,6 +21105,10 @@
       "name": "Perceptual image analysis",
       "category": "Images, Video & Media Verification",
       "subcategory": "Reverse image search",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20515,6 +21131,10 @@
       "url": "https://chromewebstore.google.com/detail/perplexity-ai/ifhigdhiifbnjanhacoedbadhmlkjgae",
       "name": "Perplexity AI - Chrome Web Store",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -20613,6 +21233,10 @@
       "name": "PhotoOSINT",
       "category": "Images, Video & Media Verification",
       "subcategory": "Reverse image search",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -20922,6 +21546,10 @@
       "name": "PocketTube",
       "category": "Social Media & Messengers",
       "subcategory": "YouTube",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -21078,6 +21706,10 @@
       "name": "Presto Map lead extractor",
       "category": "Maps, Geolocation & Satellites",
       "subcategory": "Geolocation",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -21101,6 +21733,10 @@
       "url": "https://chrome.google.com/webstore/detail/print-friendly-pdf/ohlencieiipommannpdfcmfdpjjmeolj?hl=en",
       "name": "Print Friendly & PDF",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -21115,6 +21751,10 @@
       "categories": [
         "OPSEC & Tradecraft"
       ],
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -21126,6 +21766,10 @@
       "url": "https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp",
       "name": "Privacy Badger - Chrome Web Store",
       "category": "OPSEC & Tradecraft",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -21137,6 +21781,10 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=featured",
       "name": "Privacy Badger - Tracker Blocker",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -21207,6 +21855,10 @@
       "name": "Protractor",
       "category": "Images, Video & Media Verification",
       "subcategory": "Video verification",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -21582,6 +22234,10 @@
       "url": "https://chromewebstore.google.com/detail/radaratlas/kgionpkdifedafldjflcbeojkencnaja",
       "name": "RadarAtlas",
       "category": "Conflict & Environment",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -22000,6 +22656,10 @@
       "name": "Regex Checker",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22232,6 +22892,10 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/resurrect-pages",
       "name": "Resurrect Pages - Page Recovery",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -22244,6 +22908,10 @@
       "name": "Retire.js",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22256,6 +22924,10 @@
       "name": "Return YouTube Comment Username",
       "category": "Social Media & Messengers",
       "subcategory": "YouTube",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22280,6 +22952,10 @@
       "name": "Reveddit real - time",
       "category": "Social Media & Messengers",
       "subcategory": "Reddit",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -22315,6 +22991,10 @@
       "url": "https://addons.mozilla.org/nl/firefox/addon/reveye-ris",
       "name": "RevEye - Reverse Image Search",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -22327,6 +23007,10 @@
       "name": "RevEye Reverse Image Search - Chrome Web Store",
       "category": "Images, Video & Media Verification",
       "subcategory": "Reverse image search",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -22471,6 +23155,10 @@
       "url": "https://chromewebstore.google.com/detail/rss-feed-reader/pnjaodmkngahhkoihejjehlcdlnohgmp",
       "name": "RSS Feed Reader - Chrome Web Store",
       "category": "Learning & Resources",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -22670,6 +23358,10 @@
       "url": "https://chromewebstore.google.com/detail/sanitize-it/cdihhogfljcidhcpjdhhelbmbhbeafgd",
       "name": "Sanitize It",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -22681,6 +23373,10 @@
       "url": "https://microsoftedge.microsoft.com/addons/detail/sanitize-it/agaghmjjnhddaoneohbdgmemdmekanph",
       "name": "Sanitize It - Microsoft Edge Addons",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "edge"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -22773,6 +23469,10 @@
       "name": "Save as PDF - Chrome Web Store",
       "category": "Websites, Domains & IPs",
       "subcategory": "Tools",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -22784,6 +23484,10 @@
       "url": "https://chrome.google.com/webstore/detail/save-page-we/dhhpefjklgkmgeafimnjhojgjamoafof",
       "name": "Save Page WE",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -22795,6 +23499,10 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/save-page-we",
       "name": "Save Page WE - Page Saver",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -22971,6 +23679,10 @@
       "name": "Scrappy!",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -22982,6 +23694,10 @@
       "url": "https://chrome.google.com/webstore/detail/screen-recorder/jgmmgiojkjopgnanopiamhbhnpaednfg/related",
       "name": "Screenshot - Full Page Screen Capture",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23005,6 +23721,10 @@
       "url": "https://chrome.google.com/webstore/detail/scrollmaps/jifommjndpnefcfplgnbhabocomgdjjg?hl=en",
       "name": "ScrollMaps",
       "category": "Maps, Geolocation & Satellites",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -23093,6 +23813,10 @@
       "url": "https://chromewebstore.google.com/detail/search-by-image/cnojnbdhbhnkbcieeekonklommdnndci",
       "name": "Search by Image - Chrome Web Store",
       "category": "Learning & Resources",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Combine",
       "sources": [
@@ -23105,6 +23829,10 @@
       "name": "Search by Image - Chrome Web Store",
       "category": "Images, Video & Media Verification",
       "subcategory": "Video verification",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -23117,6 +23845,10 @@
       "name": "Search by Image - Image Search",
       "category": "Images, Video & Media Verification",
       "subcategory": "Reverse image search",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -23128,6 +23860,10 @@
       "url": "https://chrome.google.com/webstore/detail/search-commands/ggjakfijchdkbmmhbfemjciidhnipgoe/related",
       "name": "Search Commands",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23173,6 +23909,10 @@
       "url": "https://chrome.google.com/webstore/detail/search-investigative-and/idgjbdfnngdcenpahfalcamfmcjdfbcj/related",
       "name": "SEARCH Investigative and Forensic Toolbar",
       "category": "Learning & Resources",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23185,6 +23925,10 @@
       "name": "Search on Google Lens - Lens Search",
       "category": "Images, Video & Media Verification",
       "subcategory": "Reverse image search",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -23197,6 +23941,10 @@
       "name": "Search Patterns",
       "category": "Search & Dorking",
       "subcategory": "Search engines",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23396,6 +24144,10 @@
       "url": "https://chromewebstore.google.com/detail/selection-search/gipnlpdeieaidmmeaichnddnmjmcakoe",
       "name": "Selection Search",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -23523,6 +24275,10 @@
       "url": "https://chrome.google.com/webstore/detail/sessionbox-multi-login-to/megbklhjamjbcafknkgmokldgolkdfig?hl=ru",
       "name": "SessionBox",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -23681,6 +24437,10 @@
       "name": "Shodan",
       "category": "Websites, Domains & IPs",
       "subcategory": "Hosting & infrastructure",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -23693,6 +24453,10 @@
       "name": "Shodan",
       "category": "Websites, Domains & IPs",
       "subcategory": "Hosting & infrastructure",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -23807,6 +24571,10 @@
       "url": "https://chromewebstore.google.com/detail/simple-translate/ibplnjkanclpjokhdolnendpplpjiace",
       "name": "Simple Translate",
       "category": "Analysis, Collaboration & Reporting",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -23818,6 +24586,10 @@
       "url": "https://chromewebstore.google.com/detail/simplescraper-%E2%80%94-a-fast-an/lnddbhdmiciimpkbilgpklcglkdegdkg",
       "name": "Simplescraper - Fast & Free Web Scraper",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -23841,6 +24613,10 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/single-file",
       "name": "SingleFile - Save Web Pages",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -23924,6 +24700,10 @@
       "url": "https://chromewebstore.google.com/detail/sky-follower-bridge/behhbpbpmailcnfbjagknjngnfdojpko",
       "name": "Sky Follower Bridge - Chrome Web Store",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -23937,6 +24717,10 @@
       "category": "Social Media & Messengers",
       "categories": [
         "Conflict & Environment"
+      ],
+      "ext": true,
+      "ext_src": [
+        "firefox"
       ],
       "payload_type": "link",
       "source": "OSINT Research",
@@ -24083,6 +24867,10 @@
       "name": "Smart ruler",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24345,6 +25133,10 @@
       "name": "SOC Multi Tool",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24356,6 +25148,10 @@
       "url": "https://chrome.google.com/webstore/detail/socialanalyzer-social-sen/efeikkcpimdfpdlmlbjdecnmkknjcfcp",
       "name": "Social Analyzer",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24590,6 +25386,10 @@
       "name": "Speak subtitles to YouTube",
       "category": "Social Media & Messengers",
       "subcategory": "YouTube",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24683,6 +25483,10 @@
       "name": "Sputnik",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24792,6 +25596,10 @@
       "url": "https://chrome.google.com/webstore/detail/sshgate-ssh-client-and-te/akjclknoaegmfejdhkncppnmjemkohdg?hl=en",
       "name": "SSHGate ssh client and terminal emulator - Chrome Web Store",
       "category": "Companies, Finance & Government",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -25239,6 +26047,10 @@
       "name": "Take Webpage Screenshots Entirely - FireShot - Chrome Web Store",
       "category": "Websites, Domains & IPs",
       "subcategory": "Tools",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -25251,6 +26063,10 @@
       "name": "Talend API Tester Free Edition",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -25311,6 +26127,10 @@
       "url": "https://chromewebstore.google.com/detail/tamper-dev/mdemppnhjflbejfbnlddahjbpdbeejnn",
       "name": "Tamper Dev",
       "category": "Websites, Domains & IPs",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -25322,6 +26142,10 @@
       "url": "https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en",
       "name": "Tampermonkey",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -25764,6 +26588,10 @@
       "name": "TextGrab",
       "category": "Images, Video & Media Verification",
       "subcategory": "Video verification",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26356,6 +27184,10 @@
       "url": "https://chrome.google.com/webstore/detail/threatpinch-lookup/ljdgplocfnmnofbhpkjclbefmjoikgke/related",
       "name": "ThreatPinch Lookup",
       "category": "Learning & Resources",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -26478,6 +27310,10 @@
       "name": "TikTok Downloader",
       "category": "Social Media & Messengers",
       "subcategory": "TikTok",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -26603,6 +27439,10 @@
       "name": "TinEye Reverse Image Search",
       "category": "Images, Video & Media Verification",
       "subcategory": "Reverse image search",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -26615,6 +27455,10 @@
       "name": "TinEye Reverse Image Search - Chrome Web Store",
       "category": "Images, Video & Media Verification",
       "subcategory": "Reverse image search",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -26928,6 +27772,10 @@
       "name": "TransOver - Chrome Web Store",
       "category": "Images, Video & Media Verification",
       "subcategory": "Video verification",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -27095,6 +27943,10 @@
       "name": "Trufflepiggy (Context Search)",
       "category": "Search & Dorking",
       "subcategory": "Search engines",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27196,6 +28048,10 @@
       "url": "https://chrome.google.com/webstore/detail/tunnelbear-vpn/omdakjcmkglenbhjadbccaookpfjihpa/related?hl=en-US",
       "name": "TunnelBear VPN - Chrome Web Store",
       "category": "OPSEC & Tradecraft",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -27352,6 +28208,10 @@
       "name": "Twemex",
       "category": "Social Media & Messengers",
       "subcategory": "X / Twitter",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27402,6 +28262,10 @@
       "name": "Twish",
       "category": "Social Media & Messengers",
       "subcategory": "X / Twitter",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27526,6 +28390,10 @@
       "name": "Twitter account detector",
       "category": "Social Media & Messengers",
       "subcategory": "X / Twitter",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27730,6 +28598,10 @@
       "url": "https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en",
       "name": "uBlock Origin - Chrome Web Store",
       "category": "Companies, Finance & Government",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -27741,6 +28613,10 @@
       "url": "https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh",
       "name": "uBlock Origin Lite",
       "category": "Companies, Finance & Government",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -27775,6 +28651,10 @@
       "url": "https://chrome.google.com/webstore/detail/udemy-video-playback-spee/jipobffkabkgddgmdmmgjoaopbnjnffn/related",
       "name": "Udemy Video Playback Speed",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -27899,6 +28779,10 @@
       "name": "uMatrix",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -28266,6 +29150,10 @@
       "url": "https://chromewebstore.google.com/detail/user-agent-switcher-and-m/bhchdcejhohfmigjafbampogmaanbfkg?hl=en",
       "name": "User-Agent Switcher and Manager",
       "category": "Companies, Finance & Government",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -28277,6 +29165,10 @@
       "url": "https://chrome.google.com/webstore/detail/user-agent-switcher-and-m/bhchdcejhohfmigjafbampogmaanbfkg?hl=en-US",
       "name": "User-Agent Switcher and Manager - Chrome Web Store",
       "category": "Companies, Finance & Government",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -28288,6 +29180,10 @@
       "url": "https://chrome.google.com/webstore/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg",
       "name": "User-Agent Switcher for Chrome - Chrome Web Store",
       "category": "Companies, Finance & Government",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -28346,6 +29242,10 @@
       "name": "Vandal",
       "category": "Archiving & Preservation",
       "subcategory": "Web archiving",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -28533,6 +29433,10 @@
       "name": "Video Downloader Plus",
       "category": "Images, Video & Media Verification",
       "subcategory": "Video verification",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -28545,6 +29449,10 @@
       "name": "Video Downloader PLUS",
       "category": "Images, Video & Media Verification",
       "subcategory": "Video verification",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -28557,6 +29465,10 @@
       "name": "Video Downloader PLUS - Chrome Web Store",
       "category": "Images, Video & Media Verification",
       "subcategory": "Video verification",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -28569,6 +29481,10 @@
       "name": "Video DownloadHelper",
       "category": "Images, Video & Media Verification",
       "subcategory": "Video verification",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -28581,6 +29497,10 @@
       "name": "View Rendered Source",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -28784,6 +29704,10 @@
       "url": "https://chrome.google.com/webstore/detail/vortimo-osint-tool/mnakbpdnkedaegeiaoakkjafhoidklnf?hl=en",
       "name": "Vortimo OSINT Tool",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -28934,6 +29858,10 @@
       "url": "https://chromewebstore.google.com/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg?hl=en",
       "name": "Wappalyzer - Technology profiler",
       "category": "Websites, Domains & IPs",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -29017,6 +29945,10 @@
       "name": "Wayback Machine",
       "category": "Archiving & Preservation",
       "subcategory": "Web archiving",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -29028,6 +29960,10 @@
       "url": "https://chromewebstore.google.com/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak",
       "name": "Wayback Machine",
       "category": "Websites, Domains & IPs",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -29151,6 +30087,10 @@
       "name": "Web Archives",
       "category": "Archiving & Preservation",
       "subcategory": "Web archiving",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -29163,6 +30103,10 @@
       "name": "Web Archives",
       "category": "Archiving & Preservation",
       "subcategory": "Web archiving",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -29174,6 +30118,10 @@
       "url": "https://chromewebstore.google.com/detail/web-archives/hkligngkgcpcolhcnkgccglchdafcnao",
       "name": "Web Archives",
       "category": "Websites, Domains & IPs",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -29209,6 +30157,10 @@
       "url": "https://chrome.google.com/webstore/detail/web-history-stat/fccaimiahhpljpnlnheimldcfhdhjgdl/related",
       "name": "Web history stat",
       "category": "OPSEC & Tradecraft",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -29220,6 +30172,10 @@
       "url": "https://chromewebstore.google.com/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn",
       "name": "Web Scraper",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -29337,6 +30293,10 @@
       "url": "https://chrome.google.com/webstore/detail/webdext/jkgddhdaaejpmlmddpbedgnkdgiacblk/related",
       "name": "Webdext",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -29372,6 +30332,10 @@
       "url": "https://chrome.google.com/webstore/detail/webmapper/foachceonkmkeiigdbkjcihnaabppicf/related",
       "name": "Webmapper",
       "category": "Maps, Geolocation & Satellites",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -29638,6 +30602,10 @@
       "name": "WhatRuns",
       "category": "Websites, Domains & IPs",
       "subcategory": "DNS & WHOIS",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -30130,6 +31098,10 @@
       "url": "https://chromewebstore.google.com/detail/windscribe-experimental-m/fgcngeihbacfndglmmmdkkdlhgndkaaf?hl=en",
       "name": "Windscribe - Experimental MV3",
       "category": "Companies, Finance & Government",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -30141,6 +31113,10 @@
       "url": "https://chrome.google.com/webstore/detail/windscribe-free-proxy-and/hnmpcagpplmpfojmgmnngilcnanddlhb?hl=en",
       "name": "Windscribe - Free Proxy and Ad Blocker - Chrome Web Store",
       "category": "OPSEC & Tradecraft",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -30152,6 +31128,10 @@
       "url": "https://addons.mozilla.org/en-US/firefox/addon/windscribe",
       "name": "Windscribe - Free VPN & Ad Blocker",
       "category": "Social Media & Messengers",
+      "ext": true,
+      "ext_src": [
+        "firefox"
+      ],
       "payload_type": "link",
       "source": "OSINT Research",
       "sources": [
@@ -30729,6 +31709,10 @@
       "name": "YouFilter – YouTube Advanced Search Filter",
       "category": "Social Media & Messengers",
       "subcategory": "YouTube",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -30753,6 +31737,10 @@
       "name": "Youtube Actual Top Comments",
       "category": "Social Media & Messengers",
       "subcategory": "YouTube",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -30765,6 +31753,10 @@
       "name": "Youtube Actual Top Comments",
       "category": "Social Media & Messengers",
       "subcategory": "YouTube",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -30777,6 +31769,10 @@
       "name": "YouTube Booster",
       "category": "Social Media & Messengers",
       "subcategory": "YouTube",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -30789,6 +31785,10 @@
       "name": "YouTube Caption Searcher",
       "category": "Social Media & Messengers",
       "subcategory": "YouTube",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -30849,6 +31849,10 @@
       "name": "YouTube Comment Search Chrome Extension",
       "category": "Social Media & Messengers",
       "subcategory": "YouTube",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -30984,6 +31988,10 @@
       "name": "YouTube Timestamp Comments",
       "category": "Social Media & Messengers",
       "subcategory": "YouTube",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -31032,6 +32040,10 @@
       "name": "YouTube word search",
       "category": "Social Media & Messengers",
       "subcategory": "YouTube",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -31079,6 +32091,10 @@
       "url": "https://chrome.google.com/webstore/detail/z-history-dump/ahpkicobhkchblogldpjchdhmdnblpkm/related",
       "name": "Z History Dump",
       "category": "Unsorted",
+      "ext": true,
+      "ext_src": [
+        "chrome"
+      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
