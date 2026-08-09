@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T14:12:16+00:00",
+  "generated_at": "2026-08-09T14:18:32+00:00",
   "count": 2653,
   "categories": [
     "Analysis, Collaboration & Reporting",
@@ -5542,7 +5542,7 @@
     {
       "url": "https://chrome.google.com/webstore/detail/data-scraper-easy-web-scr/nndknepjnldbdbepjfgmncbggmopgden",
       "name": "Chrome Web Store - Data Scraper",
-      "category": "Unsorted",
+      "category": "Browser Helper Tools",
       "ext": true,
       "ext_src": [
         "chrome"
@@ -23637,7 +23637,7 @@
     {
       "url": "https://www.scrapersnbots.com/webtools/",
       "name": "Scrapersnbots",
-      "category": "Unsorted",
+      "category": "Browser Helper Tools",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
@@ -24556,7 +24556,7 @@
     {
       "url": "https://chromewebstore.google.com/detail/simplescraper-%E2%80%94-a-fast-an/lnddbhdmiciimpkbilgpklcglkdegdkg",
       "name": "Simplescraper - Fast & Free Web Scraper",
-      "category": "Unsorted",
+      "category": "Browser Helper Tools",
       "ext": true,
       "ext_src": [
         "chrome"
@@ -30142,7 +30142,7 @@
     {
       "url": "https://chromewebstore.google.com/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn",
       "name": "Web Scraper",
-      "category": "Unsorted",
+      "category": "Browser Helper Tools",
       "ext": true,
       "ext_src": [
         "chrome"
@@ -31933,7 +31933,7 @@
     {
       "url": "https://apify.com/bernardo/youtube-scraper",
       "name": "YouTube Scraper",
-      "category": "Social Media & Messengers",
+      "category": "Browser Helper Tools",
       "subcategory": "YouTube",
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
