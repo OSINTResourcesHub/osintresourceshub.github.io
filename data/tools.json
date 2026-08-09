@@ -1,10 +1,11 @@
 {
-  "generated_at": "2026-08-09T13:48:26+00:00",
-  "count": 2654,
+  "generated_at": "2026-08-09T14:08:09+00:00",
+  "count": 2653,
   "categories": [
     "Analysis, Collaboration & Reporting",
     "Archiving & Preservation",
     "Breaches, Leaks & Dark Web",
+    "Browser Helper Tools",
     "Companies, Finance & Government",
     "Conflict & Environment",
     "Crypto & Money Flows",
@@ -3250,7 +3251,7 @@
     {
       "url": "https://addons.mozilla.org/en-US/firefox/addon/auto-tab-discard/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=featured",
       "name": "Auto Tab Discard - Firefox Extension",
-      "category": "Social Media & Messengers",
+      "category": "Browser Helper Tools",
       "categories": [
         "Conflict & Environment"
       ],
@@ -5406,7 +5407,7 @@
     {
       "url": "https://chrome.google.com/webstore/detail/autoscroll/occjjkgifpmdgodlplnacmkejpdionan",
       "name": "Chrome Web Store - AutoScroll",
-      "category": "Unsorted",
+      "category": "Browser Helper Tools",
       "ext": true,
       "ext_src": [
         "chrome"
@@ -5829,7 +5830,7 @@
     {
       "url": "https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd?hl=nl",
       "name": "Chrome Web Store - LastPass",
-      "category": "Unsorted",
+      "category": "Browser Helper Tools",
       "ext": true,
       "ext_src": [
         "chrome"
@@ -15002,7 +15003,7 @@
     {
       "url": "https://addons.mozilla.org/en-GB/firefox/addon/instant-data-scraper-reboot",
       "name": "Instant Data Scraper reboot – Get this Extension for 🦊 Firefox (en-GB)",
-      "category": "Social Media & Messengers",
+      "category": "Browser Helper Tools",
       "categories": [
         "Conflict & Environment"
       ],
@@ -16125,21 +16126,6 @@
       "source": "Cyber Detective (cipher387)",
       "sources": [
         "Cyber Detective (cipher387)"
-      ],
-      "source_count": 1
-    },
-    {
-      "url": "https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd",
-      "name": "LastPass: Free Password Manager - Chrome Web Store",
-      "category": "Companies, Finance & Government",
-      "ext": true,
-      "ext_src": [
-        "chrome"
-      ],
-      "payload_type": "link",
-      "source": "OSINT Research",
-      "sources": [
-        "OSINT Research"
       ],
       "source_count": 1
     },
