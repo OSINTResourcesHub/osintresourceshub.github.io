@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-09T13:00:05+00:00",
-  "count": 2655,
+  "generated_at": "2026-08-09T13:48:26+00:00",
+  "count": 2654,
   "categories": [
     "Analysis, Collaboration & Reporting",
     "Archiving & Preservation",
@@ -2054,21 +2054,6 @@
       "url": "https://afrobarometer.org/online-data-analysis/analyse-online",
       "name": "Afrobarometer",
       "category": "Unsorted",
-      "payload_type": "link",
-      "source": "Cyber Detective (cipher387)",
-      "sources": [
-        "Cyber Detective (cipher387)"
-      ],
-      "source_count": 1
-    },
-    {
-      "url": "https://chrome.google.com/webstore/detail/aha-music-song-finder-for/dpacanjfikmhoddligfbehkpomnbgblf/related",
-      "name": "AHA Music",
-      "category": "Unsorted",
-      "ext": true,
-      "ext_src": [
-        "chrome"
-      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
