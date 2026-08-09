@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-09T14:18:32+00:00",
-  "count": 2653,
+  "generated_at": "2026-08-09T16:43:12+00:00",
+  "count": 2652,
   "categories": [
     "Analysis, Collaboration & Reporting",
     "Archiving & Preservation",
@@ -12665,22 +12665,6 @@
         "Websites, Domains & IPs"
       ],
       "subcategory": "Dorking",
-      "payload_type": "link",
-      "source": "Cyber Detective (cipher387)",
-      "sources": [
-        "Cyber Detective (cipher387)"
-      ],
-      "source_count": 1
-    },
-    {
-      "url": "https://chrome.google.com/webstore/detail/chrome-regex-search/bpelaihoicobbkgmhcbikncnpacdbknn",
-      "name": "Google Chrome webpage Regexp search",
-      "category": "Websites, Domains & IPs",
-      "subcategory": "DNS & WHOIS",
-      "ext": true,
-      "ext_src": [
-        "chrome"
-      ],
       "payload_type": "link",
       "source": "Cyber Detective (cipher387)",
       "sources": [
