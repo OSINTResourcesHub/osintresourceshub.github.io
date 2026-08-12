@@ -1,0 +1,21 @@
+# Public site repo — keep it lean. Nothing sensitive should ever live here;
+# the private working folder holds strategy, legal, drafts and raw corpora.
+
+# Python / tooling
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Local checker scratch (the workflow writes status.json; caches stay local)
+scripts/out/
+*.tmp
+http_cache.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# CI intake scratch (written by scripts/ci-intake.py; never commit)
+intake-comment.md
