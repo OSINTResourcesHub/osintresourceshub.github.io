@@ -32,6 +32,20 @@ def norm(url: str) -> str:
     return k[4:] if k.startswith("www.") else k
 
 
+# Browser-extension detection from store URLs. MUST stay in sync with the same set in
+# tools/export_catalog.py (this script runs in CI and can't import the private tools/ helpers,
+# so the store regexes are duplicated by hand — update both if you touch either).
+_STORES = [("chrome", re.compile(r"chromewebstore\.google\.com|chrome\.google\.com/webstore")),
+           ("firefox", re.compile(r"addons\.mozilla\.org")),
+           ("edge", re.compile(r"microsoftedge\.microsoft\.com/addons")),
+           ("opera", re.compile(r"addons\.opera\.com"))]
+
+
+def ext_src(u: str) -> list[str]:
+    u = (u or "").lower()
+    return [n for n, rx in _STORES if rx.search(u)]
+
+
 def parse_issue(body: str) -> dict:
     """GitHub issue-form body renders as '### Label\\n\\nvalue' blocks."""
     fields = {}
@@ -115,12 +129,15 @@ def main() -> int:
                  else "safety: not fully checked (reputation providers unconfigured or unavailable)")
 
     cat = categorize(f"{name} {what}") or "Unsorted"
+    exts = ext_src(url)                                   # [] unless it's a known extension-store URL
     status = probe(url)
     health = (f"reachable (HTTP {status})" if status and status < 400
               else ("no response" if status is None else f"HTTP {status}"))
 
     row = {
-        "url": url, "name": name or url, "category": cat, "payload_type": "link",
+        "url": url, "name": name or url, "category": cat,
+        **({"ext": True, "ext_src": exts} if exts else {}),   # browser extension (auto, from store URL)
+        "payload_type": "link",
         **({"cost": lic} if lic and lic != "Unknown" else {}),
         "safety": safety["status"],
         **({"safety_sources": safety["sources"]} if safety["sources"] else {}),
@@ -132,8 +149,9 @@ def main() -> int:
     with ADD.open("a", encoding="utf-8") as fh:
         fh.write(json.dumps(row, ensure_ascii=False) + "\n")
 
+    ext_note = f" · detected as a **{'/'.join(exts)}** browser extension" if exts else ""
     COMMENT.write_text(
-        f"Queued **{name or url}** → suggested category **{cat}** · {safe_line} · reachability: {health}.\n\n"
+        f"Queued **{name or url}** → suggested category **{cat}**{ext_note} · {safe_line} · reachability: {health}.\n\n"
         "A pull request was opened to add it (Community tier); a curator reviews and merges to "
         "publish. Authoritative health appears after the next daily check.", encoding="utf-8")
     title = re.sub(r"\s+", " ", f"Add tool: {name or url}")[:80]
