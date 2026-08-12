@@ -1,19 +1,22 @@
-name: Suggest a tool
-description: Suggest an OSINT tool for the Hub catalog
+name: Suggest a tool or extension
+description: Suggest an OSINT tool or browser extension for the Hub catalog
 labels: ["suggest-tool"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for suggesting a tool. **Use the tool's name as the issue title.**
+        Thanks for suggesting a tool or extension. **Use its name as the issue title.**
         We keep the **URL** (a fact) and add our own category and health-check — we don't republish
         any source's structure, and we don't collect personal data. Please only suggest legitimate
         OSINT / research tools (no malware, no doxxing/harassment tooling).
+
+        **Adding a browser extension?** Paste its store-page URL (Chrome Web Store, Firefox Add-ons,
+        Edge Add-ons, Opera) and we'll tag it as an extension automatically.
   - type: input
     id: url
     attributes:
       label: URL
-      description: The tool's homepage or repo.
+      description: The tool's homepage or repo — or a browser extension's store page.
       placeholder: https://example.com
     validations:
       required: true
