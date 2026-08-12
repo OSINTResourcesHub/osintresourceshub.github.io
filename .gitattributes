@@ -1,0 +1,6 @@
+# The intake pipeline appends one line per tool to additions.jsonl, so parallel/sequential
+# intake PRs always clash at end-of-file once main has advanced. `merge=union` tells git to
+# keep BOTH sides' added lines automatically instead of raising a conflict. Safe here: the
+# entries are line-independent JSON objects, and the catalog reader (catalog_union.py /
+# ci-intake.py) de-duplicates by normalised URL, so an accidental duplicate line is harmless.
+data/additions.jsonl merge=union
